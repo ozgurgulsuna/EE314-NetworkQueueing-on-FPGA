@@ -1,0 +1,16 @@
+
+15.06.22
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+T_sample_size = 80000;  % Simulation Duration in Seconds
+T_in_step_per_sec = 4; % Simulation time step is 250 ms
+T_time = 0;            % Simulation time
+T_out = 3 ;             % Output Data Period 5 Seconds
+T_in_mean = 3;         % Input Data Mean Period 3 Seconds
+T_in_jitter = 2.5;      % Input Data Jitter ±3 Seconds 
+
+Wl=[0.80 0.4 0.2 0.1];          % Latency Weight Constant  
+Wr=[3 6 8 10];          % Reliability Weight Constant
+
+% X = Wl.*t+Wr.*(f.^2);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
