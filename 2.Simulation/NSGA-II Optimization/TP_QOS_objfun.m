@@ -7,7 +7,7 @@ cons = [];
 
 
 L=[4 3 2 1];
-D=[1 2 3 4];
+D=31*[1 2 3 4];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 T_sample_size = 2000;      % Simulation Duration in Seconds
@@ -51,8 +51,8 @@ T_time_array=linspace(0.25,T_sample_size,T_sample_size*T_in_step_per_sec);
 
 % Period Randomization
 for i=1:T_sample_size*T_in_step_per_sec/2
-    r(i)=round((T_in_jitter*T_in_step_per_sec)*(sin(i/10))+(T_in_mean*T_in_step_per_sec));
-    s(i)=round((T_in_jitter*T_in_step_per_sec)*(randi([-1,1]))+(T_in_mean*T_in_step_per_sec));
+    s(i)=round((T_in_jitter*T_in_step_per_sec)*(sin(i/10))+(T_in_mean*T_in_step_per_sec));
+    r(i)=round((T_in_jitter*T_in_step_per_sec)*(randi([-1,1]))+(T_in_mean*T_in_step_per_sec));
     %r(i)=round((T_in_mean*T_in_step_per_sec-T_in_jitter*T_in_step_per_sec+T_in_mean*T_in_step_per_sec)*randi([0,1])+(T_in_mean*T_in_step_per_sec-T_in_jitter*T_in_step_per_sec));
 end
 
@@ -206,11 +206,11 @@ d_pi=d./(read_count+d);  % drop per input
 a=T./(read_count+d);     % average latency per output
 
 
-%%%%%%%
+%%%
 % Geldik yoktun Özgürüm
 %Şu an o kadar mahsunum
 %Sanma ki sana dargınım
 %Ben yine sana vurgunum
 %                   pis ul tan 
-y(1) = sum(D.*d_pi);
-y(2) = sum(L.*a);
+y(1) = sum(D.^2.*d_pi);
+y(2) = sum(L.^2.*a);

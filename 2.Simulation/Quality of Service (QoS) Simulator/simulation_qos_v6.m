@@ -3,16 +3,16 @@
 clear all;
 clc ; 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 80000;      % Simulation Duration in Seconds
+T_sample_size = 20000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
 T_in_mean = 3;              % Input Data Mean Period 3 Seconds
 T_in_jitter = 2.5;          % Input Data Jitter ±3 Seconds 
 
-Wl=[0.9 0.4 0.22 0.1];      % Latency Weight Constant  
-Wr=1.8*[3 6 8 10];              % Reliability Weight Constant
-k = 4;                      % Drop penalty
+Wl=[100	70.2365420020873	72.3171717071660	18.2844240463927];      % Latency Weight Constant  
+Wr=[91.6610560604790	66.4327288161774	56.1127516490490	49.7789457622167];              % Reliability Weight Constant
+k = 2;                      % Drop penalty
 % X = Wl.*t+Wr.*(f.^2);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -44,8 +44,8 @@ T_time_array=linspace(0.25,T_sample_size,T_sample_size*T_in_step_per_sec);
 
 % Period Randomization
 for i=1:T_sample_size*T_in_step_per_sec/2
-    r(i)=round((T_in_jitter*T_in_step_per_sec)*(sin(i/10))+(T_in_mean*T_in_step_per_sec));
-    s(i)=round((T_in_jitter*T_in_step_per_sec)*(randi([-1,1]))+(T_in_mean*T_in_step_per_sec));
+    s(i)=round((T_in_jitter*T_in_step_per_sec)*(sin(i/10))+(T_in_mean*T_in_step_per_sec));
+    r(i)=round((T_in_jitter*T_in_step_per_sec)*(randi([-1,1]))+(T_in_mean*T_in_step_per_sec));
     %r(i)=round((T_in_mean*T_in_step_per_sec-T_in_jitter*T_in_step_per_sec+T_in_mean*T_in_step_per_sec)*randi([0,1])+(T_in_mean*T_in_step_per_sec-T_in_jitter*T_in_step_per_sec));
 end
 
