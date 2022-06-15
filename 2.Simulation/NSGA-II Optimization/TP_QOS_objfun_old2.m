@@ -3,22 +3,24 @@ function [y, cons] = TP_QOS_objfun(x)
 %*************************************************************************
 
 y = [0,0];
-cons = [0,0,0,0,0,0];
+cons = [];
 
 
+L=[4 3 2 1];
+D=31*[1 2 3 4];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 200;      % Simulation Duration in Seconds
+T_sample_size = 2000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
-T_in_mean = 1;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 6;          % Input Data Jitter ±3 Seconds 
+T_in_mean = 3;              % Input Data Mean Period 3 Seconds
+T_in_jitter = 2.5;          % Input Data Jitter ±3 Seconds 
 
 Wl=[x(1) x(2) x(3) x(4)];          % Latency Weight Constant
 Wr=[x(5) x(6) x(7) x(8)];          % Reliability Weight Constant
-k = 3;                      % Drop penalty
-% X = Wl.*t+Wr.*f;
+k = 4;                      % Drop penalty
+% X = Wl.*t+Wr.*(f.^2);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 counter = 0;
@@ -210,38 +212,5 @@ a=T./(read_count+d);     % average latency per output
 %Sanma ki sana dargınım
 %Ben yine sana vurgunum
 %                   pis ul tan 
-
-y(1) = sum(d_pi);
-y(2) = sum(a);
-
-
-
-c=x(1)-x(2);
-if (c<0)
-    cons(1) = abs(c);
-end
-
-c=x(2)-x(3);
-if (c<0)
-    cons(2) = abs(c);
-end
-
-c=x(3)-x(4);
-if (c<0)
-    cons(3) = abs(c);
-end
-
-c=x(8)-x(7);
-if (c<0)
-    cons(4) = abs(c);
-end
-
-c=x(7)-x(6);
-if (c<0)
-    cons(5) = abs(c);
-end
-
-c=x(6)-x(5);
-if (c<0)
-    cons(6) = abs(c);
-end
+y(1) = sum(D.^2.*d_pi);
+y(2) = sum(L.^2.*a);

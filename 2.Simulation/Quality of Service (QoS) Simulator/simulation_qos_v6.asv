@@ -8,11 +8,11 @@ T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
 T_in_mean = 3;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 2.5;          % Input Data Jitter ±3 Seconds 
+T_in_jitter = 3;          % Input Data Jitter ±3 Seconds 
 
-Wl=[0.8 0.4 0.2 0.1];      % Latency Weight Constant  
-Wr=[1 2 3 4];              % Reliability Weight Constant
-k = 2;                      % Drop penalty
+Wl=[943.468	601.413	474.983	239.427	]/10;      % Latency Weight Constant  
+Wr=[247.41	307.899	409.254	658.336];              % Reliability Weight Constant
+k = 3 ;                      % Drop penalty
 % X = Wl.*t+Wr.*(f.^2);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

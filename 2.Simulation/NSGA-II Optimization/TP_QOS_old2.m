@@ -10,14 +10,14 @@
 clc
 clear all
 options = nsgaopt();                    % create default options structure
-options.popsize = 50;                   % populaion size
+options.popsize = 10;                   % populaion size
 options.maxGen  = 20;                   % max generation
 
 options.numObj = 2;                     % number of objectives
 options.numVar = 8;                     % number of design variables
-options.numCons = 6;                    % number of constraints
-options.lb = [0 0 0 0 0 0 0 0 ];                % lower bound of x
-options.ub = [1000 1000 1000 1000 1000 1000 1000 1000];                  % upper bound of x
+options.numCons = 0;                    % number of constraints
+options.lb = [0 0 0 0 0 0 0 0];                % lower bound of x
+options.ub = [100 100 100 100 100 100 100 100];                  % upper bound of x
 
 options.objfun = @TP_QOS_objfun;        % objective function handle
 

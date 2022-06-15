@@ -1,24 +1,19 @@
-function [y, cons] = TP_QOS_objfun(x)
-% Objective function : Test problem 'QOS'.
-%*************************************************************************
+%% Quality of Service (QoS) Simulator %%
 
-y = [0,0];
-cons = [0,0,0,0,0,0];
-
-
-
+clear all;
+clc ; 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 200;      % Simulation Duration in Seconds
+T_sample_size = 40000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
-T_in_mean = 1;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 6;          % Input Data Jitter ±3 Seconds 
+T_in_mean = 3;              % Input Data Mean Period 3 Seconds
+T_in_jitter = 2.5;          % Input Data Jitter ±3 Seconds 
 
-Wl=[x(1) x(2) x(3) x(4)];          % Latency Weight Constant
-Wr=[x(5) x(6) x(7) x(8)];          % Reliability Weight Constant
-k = 3;                      % Drop penalty
-% X = Wl.*t+Wr.*f;
+Wl=[756.97	469.253	262.97	64.4336]/10;      % Latency Weight Constant  
+Wr=[220.408	657.113	790.989	971.413];              % Reliability Weight Constant
+k = 4 ;                      % Drop penalty
+% X = Wl.*t+Wr.*(f.^2);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 counter = 0;
@@ -203,45 +198,5 @@ end
 d_pi=d./(read_count+d);  % drop per input
 a=T./(read_count+d);     % average latency per output
 
+% 4.62536598665238	2.64147390882448	2.27016506027572	1.66617193587623	2.81002645322608	-1.82470119865187	2.69544383651092	2.54335164446693
 
-%%%
-% Geldik yoktun Özgürüm
-%Şu an o kadar mahsunum
-%Sanma ki sana dargınım
-%Ben yine sana vurgunum
-%                   pis ul tan 
-
-y(1) = sum(d_pi);
-y(2) = sum(a);
-
-
-
-c=x(1)-x(2);
-if (c<0)
-    cons(1) = abs(c);
-end
-
-c=x(2)-x(3);
-if (c<0)
-    cons(2) = abs(c);
-end
-
-c=x(3)-x(4);
-if (c<0)
-    cons(3) = abs(c);
-end
-
-c=x(8)-x(7);
-if (c<0)
-    cons(4) = abs(c);
-end
-
-c=x(7)-x(6);
-if (c<0)
-    cons(5) = abs(c);
-end
-
-c=x(6)-x(5);
-if (c<0)
-    cons(6) = abs(c);
-end
