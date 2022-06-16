@@ -10,26 +10,26 @@
 clc
 clear all
 options = nsgaopt();                    % create default options structure
-options.popsize = 50;                   % populaion size
+options.popsize = 20;                   % populaion size
 options.maxGen  = 20;                   % max generation
 
-options.numObj = 2;                     % number of objectives
+options.numObj = 8;                     % number of objectives
 options.numVar = 8;                     % number of design variables
 options.numCons = 6;                    % number of constraints
 options.lb = [0 0 0 0 0 0 0 0 ];                % lower bound of x
-options.ub = [1 1 1 1 1 1 1 1 ];                  % upper bound of x
+options.ub = [1000 1000 1000 1000 1000 1000 1000 1000 ];                  % upper bound of x
 
-options.objfun = @TP_QOS_objfun;        % objective function handle
+options.objfun = @TP_QOS_objfun8objwRef;        % objective function handle
 
 
-% options.plotInterval = 10;              % large interval for efficiency
+options.plotInterval = 1;              % large interval for efficiency
 % options.outputInterval = 10;
+% 
+%  options.refPoints = [700 600 500 400 400 500 600 700];
+%  options.refEpsilon = 0.002;
 
-options.refPoints = [0.5 0.5 0.5 0.5 0.5; 0.2 0.2 0.2 0.2 0.8;];
-options.refEpsilon = 0.002;
-
-options.useParallel = 'no';             % parallel computation is non-essential here
-options.poolsize = 2;                   % (not use) number of worker processes
+% options.useParallel = 'no';             % parallel computation is non-essential here
+% options.poolsize = 2;                   % (not use) number of worker processes
 
 result = nsga2(options);                % begin the optimization!
 

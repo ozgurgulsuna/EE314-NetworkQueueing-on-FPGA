@@ -8,7 +8,7 @@ cons = [0,0,0,0,0,0];
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 200;      % Simulation Duration in Seconds
+T_sample_size = 4000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
@@ -18,6 +18,10 @@ T_in_jitter = 6;          % Input Data Jitter ±3 Seconds
 Wl=[x(1) x(2) x(3) x(4)];          % Latency Weight Constant
 Wr=[x(5) x(6) x(7) x(8)];          % Reliability Weight Constant
 k = 3;                      % Drop penalty
+
+L = [4 3 2 1];
+D = [1 2 3 4];
+
 % X = Wl.*t+Wr.*f;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -200,7 +204,7 @@ all_data=all_data+ones(s_all_data(1),s_all_data(2)).*fillmissing((all_data./all_
 all_data;
 end
 
-d_pi=d./(read_count+d);  % drop per input
+d_pi=d./(read_count+d);  % drop per input ????
 a=T./(read_count+d);     % average latency per output
 
 
@@ -211,8 +215,8 @@ a=T./(read_count+d);     % average latency per output
 %Ben yine sana vurgunum
 %                   pis ul tan 
 
-y(1) = sum(d_pi);
-y(2) = sum(a);
+y(1) = sum(D.*d_pi);
+y(2) = sum(L.*a);
 
 
 
