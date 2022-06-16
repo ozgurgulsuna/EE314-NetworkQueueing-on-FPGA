@@ -227,33 +227,33 @@ y(8) = a(4)*4;
 
 
 
-% 
-% c=x(1)-x(2);
-% if (c<0)
-%     cons(1) = abs(c);
-% end
-% 
-% c=x(2)-x(3);
-% if (c<0)
-%     cons(2) = abs(c);
-% end
-% 
-% c=x(3)-x(4);
-% if (c<0)
-%     cons(3) = abs(c);
-% end
-% 
-% c=x(8)-x(7);
-% if (c<0)
-%     cons(4) = abs(c);
-% end
-% 
-% c=x(7)-x(6);
-% if (c<0)
-%     cons(5) = abs(c);
-% end
-% 
-% c=x(6)-x(5);
-% if (c<0)
-%     cons(6) = abs(c);
-% end
+
+c=x(1)-x(2);
+if (c<0)
+    cons(1) = abs(c);
+end
+
+c=x(2)-x(3);
+if (c<0)
+    cons(2) = abs(c);
+end
+
+c=x(3)-x(4);
+if (c<0)
+    cons(3) = abs(c);
+end
+
+c=x(8)-x(7);
+if (c<0)
+    cons(4) = abs(c);
+end
+
+c=x(7)-x(6);
+if (c<0)
+    cons(5) = abs(c);
+end
+
+c=x(6)-x(5);
+if (c<0)
+    cons(6) = abs(c);
+end
