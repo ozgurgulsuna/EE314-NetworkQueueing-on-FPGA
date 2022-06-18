@@ -1,28 +1,21 @@
-function [y, cons] = TP_QOS_objfun_obj4(x)
-% Objective function : Test problem 'QOS'.
-%*************************************************************************
+%% Quality of Service (QoS) Simulator %%
 
-y = [0,0];
-cons = [0,0,0,0,0,0];
-
-
-
+clear all;
+clc ; 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 10000;      % Simulation Duration in Seconds
+% x=[0.461893	232.667];
+
+T_sample_size = 20000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
 T_in_mean = 2;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 4;          % Input Data Jitter ±3 Seconds 
+T_in_jitter = 10;          % Input Data Jitter ±3 Seconds 
 
-Wl=[x(1) x(2) x(3) x(4)];          % Latency Weight Constant
-Wr=[x(5) x(6) x(7) x(8)];          % Reliability Weight Constant
-k = 0;                      % Drop penalty ZEROOOO
-
-L = [4 3 2 1];
-D = [1 2 3 4]*1000;
-
-% X = Wl.*t+Wr.*f;
+Wl=[0.985722	0.817221	0.715284	0.48444	]/15;          % Latency Weight Constant
+Wr=[0.0466107	0.257682	0.631371	0.802644];          % Reliability Weight Constant
+k = 0 ;                      % Drop penalty
+% X = Wl.*t+Wr.*(f.^2);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 counter = 0;
@@ -204,73 +197,8 @@ all_data=all_data+ones(s_all_data(1),s_all_data(2)).*fillmissing((all_data./all_
 all_data;
 end
 
-d_pi=d./(read_count+d);  % drop per input 
+d_pi=d./(read_count+d);  % drop per input
 a=T./(read_count+d);     % average latency per output
 
+% 4.62536598665238	2.64147390882448	2.27016506027572	1.66617193587623	2.81002645322608	-1.82470119865187	2.69544383651092	2.54335164446693
 
-%%%
-% Geldik yoktun Özgürüm
-%Şu an o kadar mahsunum
-%Sanma ki sana dargınım
-%Ben yine sana vurgunum
-%                   pis ul tan 
-
-% y(1) = sum(d_pi);
-% y(2) = sum(a);
-
-% d1>d2>d3>d4
-
-% y(1) = (d_pi(4)>d_pi(3))*(d_pi(4)-d_pi(3))+(d_pi(4)>d_pi(2))*(d_pi(4)-d_pi(2))*10+(d_pi(4)>d_pi(1))*(d_pi(4)-d_pi(1))*100+...
-%        (d_pi(3)>d_pi(2))*(d_pi(3)-d_pi(2))+(d_pi(3)>d_pi(1))*(d_pi(3)-d_pi(1))*10+ ...
-%        (d_pi(2)>d_pi(1))*(d_pi(2)-d_pi(1))...
-%        ;
-
-y(1) = (d_pi(1)<d_pi(2))*(d_pi(2)-d_pi(1))+(d_pi(2)==d_pi(1))*10+(d_pi(1)>d_pi(2))/(d_pi(1)-d_pi(2)+0.1)+...
-       10*((d_pi(1)<d_pi(3))*(d_pi(3)-d_pi(1))+(d_pi(3)==d_pi(1))*10+(d_pi(1)>d_pi(3))/(d_pi(1)-d_pi(3)+0.1))+...
-       100*((d_pi(1)<d_pi(4))*(d_pi(4)-d_pi(1))+(d_pi(4)==d_pi(1))*10+(d_pi(1)>d_pi(4))/(d_pi(1)-d_pi(4)+0.1))+...
-       (d_pi(2)<d_pi(3))*(d_pi(3)-d_pi(2))+(d_pi(3)==d_pi(2))*10+(d_pi(2)>d_pi(3))/(d_pi(2)-d_pi(3)+0.1)+...
-       10*((d_pi(2)<d_pi(4))*(d_pi(4)-d_pi(2))+(d_pi(4)==d_pi(2))*10+(d_pi(2)>d_pi(4))/(d_pi(2)-d_pi(4)+0.1))+...
-       (d_pi(3)<d_pi(4))*(d_pi(4)-d_pi(3))+(d_pi(4)==d_pi(3))*10+(d_pi(3)>d_pi(4))/(d_pi(3)-d_pi(4)+0.1);
-
-y(2) = (a(4)<a(3))*(a(3)-a(4))+(a(3)==a(4))*10+(a(4)>a(3))/(a(4)-a(3)+0.1)+...
-       10*((a(4)<a(2))*(a(2)-a(4))+(a(2)==a(4))*10+(a(4)>a(2))/(a(4)-a(2)+0.1))+...
-       100*((a(4)<a(1))*(a(1)-a(4))+(a(1)==a(4))*10+(a(4)>a(1))/(a(4)-a(1)+0.1))+...
-       (a(3)<a(2))*(a(2)-a(3))+(a(2)==a(3))*10+(a(3)>a(2))/(a(3)-a(2)+0.1)+...
-       10*((a(3)<a(1))*(a(1)-a(3))+(a(1)==a(3))*10+(a(3)>a(1))/(a(3)-a(1)+0.1))+...
-       (a(2)<a(1))*(a(1)-a(2))+(a(1)==a(2))*10+(a(2)>a(1))/(a(2)-a(1)+0.1);
-   
-   
-% y(2) = (a(4)<a(3))*(a(3)-a(4))+(a(4)<a(2))*(a(2)-a(4))*10+(a(4)<a(1))*(a(1)-a(4))*100+...
-%        (a(3)<a(2))*(a(2)-a(3))+(a(3)<a(1))*(a(1)-a(3))*10+...
-%        (a(2)<a(1))*(a(1)-a(2));
-
-
-c=x(1)-x(2)-0.1;
-if (c<0)
-    cons(1) = abs(c);
-end
-
-c=x(2)-x(3)-0.1;
-if (c<0)
-    cons(2) = abs(c);
-end
-
-c=x(3)-x(4)-0.1;
-if (c<0)
-    cons(3) = abs(c);
-end
-
-c=x(8)-x(7)-0.1;
-if (c<0)
-    cons(4) = abs(c);
-end
-
-c=x(7)-x(6)-0.1;
-if (c<0)
-    cons(5) = abs(c);
-end
-
-c=x(6)-x(5)-0.1;
-if (c<0)
-    cons(6) = abs(c);
-end

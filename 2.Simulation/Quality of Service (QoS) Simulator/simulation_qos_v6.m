@@ -3,16 +3,18 @@
 clear all;
 clc ; 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 4000;      % Simulation Duration in Seconds
+x=[0.461893	232.667];
+
+T_sample_size = 10000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
-T_in_mean = 1;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 6;          % Input Data Jitter ±3 Seconds 
+T_in_mean = 2;              % Input Data Mean Period 3 Seconds
+T_in_jitter = 4;          % Input Data Jitter ±3 Seconds 
 
-Wl=[904.793	795.245	700.455	628.99]/8;      % Latency Weight Constant  
-Wr=[336.661	553.436	679.771	747.541];              % Reliability Weight Constant
-k = 3 ;                      % Drop penalty
+Wl=20*[1 (1+((x(1)-1)/3)) (1+2*((x(1)-1)/3)) x(1)]/(x(2));          % Latency Weight Constant
+Wr=[x(1) 2*x(1) 3*x(1) 4*x(1)];          % Reliability Weight Constant
+k = 0 ;                      % Drop penalty
 % X = Wl.*t+Wr.*(f.^2);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

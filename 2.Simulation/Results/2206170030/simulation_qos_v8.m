@@ -7,8 +7,8 @@ T_sample_size = 10000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
-T_in_mean = 1;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 1;          % Input Data Jitter ±3 Seconds 
+T_in_mean = 2;              % Input Data Mean Period 3 Seconds
+T_in_jitter = 4;          % Input Data Jitter ±3 Seconds 
 
 Wl=[0.644712615940114	0.556252268162593	0.518780016664869	0.432445070055629]/10;      % Latency Weight Constant  
 Wr=[0.324108345861147	0.505473639064703	0.652856504618155	0.857702599433149];              % Reliability Weight Constant

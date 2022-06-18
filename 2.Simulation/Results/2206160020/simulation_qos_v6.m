@@ -3,12 +3,12 @@
 clear all;
 clc ; 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-T_sample_size = 40000;      % Simulation Duration in Seconds
+T_sample_size = 10000;      % Simulation Duration in Seconds
 T_in_step_per_sec = 4;      % Simulation time step is 250 ms
 T_time = 0;                 % Simulation time
 T_out = 3 ;                 % Output Data Period 5 Seconds
-T_in_mean = 3;              % Input Data Mean Period 3 Seconds
-T_in_jitter = 2.5;          % Input Data Jitter ±3 Seconds 
+T_in_mean = 2;              % Input Data Mean Period 3 Seconds
+T_in_jitter = 4;          % Input Data Jitter ±3 Seconds 
 
 Wl=[756.97	469.253	262.97	64.4336]/10;      % Latency Weight Constant  
 Wr=[220.408	657.113	790.989	971.413];              % Reliability Weight Constant
