@@ -1,0 +1,11 @@
+5 saat, 200 gen, 50 indv, 10000 sim time, 3 obj (toplam sıralama, sum(a),sum(d_pi))
+limit var
+güzel pareto surface
+
+notlar
+güzel çalışıuor ancak sıralama objectifi hala birbirine yaklaştırıp ters sıralama vermesini destekliyor
+drop compensation (weight adjustemnt parameter) olayı çözüyor.
+çok uzun ve çok veri var çöpe atma.
+
+
+bunun sıkıntısı birbirine çok yakın ters değerlerde de güzel sonuç buluyor
