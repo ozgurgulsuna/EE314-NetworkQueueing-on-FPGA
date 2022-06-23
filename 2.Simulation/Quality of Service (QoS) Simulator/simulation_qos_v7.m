@@ -12,6 +12,8 @@ T_out = 3 ;                 % Output Data Period 5 Seconds
 T_in_mean = 2;              % Input Data Mean Period 3 Seconds
 T_in_jitter = 4;          % Input Data Jitter ±3 Seconds 
 
+% 0.0673066	0.0462036	0.0228374	0.00636174	0.0252483	0.379696	0.707815	0.988165
+
 Wl=[0.0674858	0.0462036	0.0228374	0.00636174]	;          % Latency Weight Constant
 Wr=[0.0252483	0.370587	0.707815	0.988165];          % Reliability Weight Constant
 k = 0 ;                      % Drop penalty
