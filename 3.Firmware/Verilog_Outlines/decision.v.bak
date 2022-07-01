@@ -1,0 +1,17 @@
+module decision(
+	input clk,
+	input [2:0] fullness_1,
+	input [2:0] fullness_2,
+	input [2:0] fullness_3,
+	input [2:0] fullness_4,
+	
+	output reg [1:0]
+	input [3:0] p_in,
+	input read, // Read data from buffer if read = 1
+	input write, // Write data to buffer if write = 1
+	output reg [23:0] memory,
+	output reg [2:0] fullness
+);
+
+
+// ASLA IKI OKUMAYI BIRDEN YAPMA DIYE KONTROL
