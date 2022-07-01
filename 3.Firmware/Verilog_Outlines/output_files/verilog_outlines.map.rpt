@@ -1,5 +1,5 @@
 Analysis & Synthesis report for verilog_outlines
-Fri Jul 01 23:55:19 2022
+Sat Jul 02 00:46:58 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jul 01 23:55:19 2022      ;
+; Analysis & Synthesis Status     ; Successful - Sat Jul 02 00:46:58 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; verilog_outlines                           ;
 ; Top-level Entity Name           ; buffer_sim                                 ;
@@ -258,13 +258,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Jul 01 23:55:18 2022
+    Info: Processing started: Sat Jul 02 00:46:57 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off verilog_outlines -c verilog_outlines
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file buffer.v
     Info (12023): Found entity 1: buffer
 Info (12021): Found 1 design units, including 1 entities, in source file buffer_sim.bdf
     Info (12023): Found entity 1: buffer_sim
+Info (12021): Found 1 design units, including 1 entities, in source file main.v
+    Info (12023): Found entity 1: main
 Info (12127): Elaborating entity "buffer_sim" for the top level hierarchy
 Info (12128): Elaborating entity "buffer" for hierarchy "buffer:inst"
 Warning (10230): Verilog HDL assignment warning at buffer.v(28): truncated value with size 32 to match size of target (3)
@@ -277,8 +279,8 @@ Info (21057): Implemented 95 device resources after synthesis - the final resour
     Info (21059): Implemented 27 output pins
     Info (21061): Implemented 61 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4721 megabytes
-    Info: Processing ended: Fri Jul 01 23:55:19 2022
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Sat Jul 02 00:46:58 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
