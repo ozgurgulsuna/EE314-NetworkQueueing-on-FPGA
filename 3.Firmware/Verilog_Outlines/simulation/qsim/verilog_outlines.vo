@@ -1,0 +1,2541 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "07/01/2022 23:56:40"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module buffer_sim (
+	fullness,
+	clk,
+	read,
+	write,
+	p_in,
+	memory);
+output 	[2:0] fullness;
+input 	clk;
+input 	read;
+input 	write;
+input 	[3:0] p_in;
+output 	[23:0] memory;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \fullness[2]~output_o ;
+wire \fullness[1]~output_o ;
+wire \fullness[0]~output_o ;
+wire \memory[23]~output_o ;
+wire \memory[22]~output_o ;
+wire \memory[21]~output_o ;
+wire \memory[20]~output_o ;
+wire \memory[19]~output_o ;
+wire \memory[18]~output_o ;
+wire \memory[17]~output_o ;
+wire \memory[16]~output_o ;
+wire \memory[15]~output_o ;
+wire \memory[14]~output_o ;
+wire \memory[13]~output_o ;
+wire \memory[12]~output_o ;
+wire \memory[11]~output_o ;
+wire \memory[10]~output_o ;
+wire \memory[9]~output_o ;
+wire \memory[8]~output_o ;
+wire \memory[7]~output_o ;
+wire \memory[6]~output_o ;
+wire \memory[5]~output_o ;
+wire \memory[4]~output_o ;
+wire \memory[3]~output_o ;
+wire \memory[2]~output_o ;
+wire \memory[1]~output_o ;
+wire \memory[0]~output_o ;
+wire \clk~input_o ;
+wire \write~input_o ;
+wire \read~input_o ;
+wire \inst|fullness~2_combout ;
+wire \inst|fullness~1_combout ;
+wire \inst|fullness~0_combout ;
+wire \p_in[3]~input_o ;
+wire \inst|memory[23]~0_combout ;
+wire \p_in[2]~input_o ;
+wire \p_in[1]~input_o ;
+wire \p_in[0]~input_o ;
+wire \inst|memory[19]~1_combout ;
+wire \inst|memory~2_combout ;
+wire \inst|memory~3_combout ;
+wire \inst|memory~4_combout ;
+wire \inst|memory~5_combout ;
+wire \inst|memory~6_combout ;
+wire \inst|fullness~3_combout ;
+wire \inst|memory[15]~7_combout ;
+wire \inst|memory~8_combout ;
+wire \inst|memory~9_combout ;
+wire \inst|memory~10_combout ;
+wire \inst|memory~11_combout ;
+wire \inst|memory~12_combout ;
+wire \inst|memory~13_combout ;
+wire \inst|memory~14_combout ;
+wire \inst|memory~15_combout ;
+wire \inst|memory~16_combout ;
+wire \inst|memory~17_combout ;
+wire \inst|memory~18_combout ;
+wire \inst|memory~19_combout ;
+wire \inst|memory[11]~20_combout ;
+wire \inst|memory~21_combout ;
+wire \inst|memory~22_combout ;
+wire \inst|memory~23_combout ;
+wire \inst|memory~24_combout ;
+wire \inst|memory~25_combout ;
+wire \inst|memory~26_combout ;
+wire \inst|memory~27_combout ;
+wire \inst|memory~28_combout ;
+wire \inst|memory~29_combout ;
+wire \inst|memory~30_combout ;
+wire \inst|memory~31_combout ;
+wire \inst|memory~32_combout ;
+wire \inst|memory[7]~33_combout ;
+wire \inst|memory~34_combout ;
+wire \inst|memory~35_combout ;
+wire \inst|memory~36_combout ;
+wire \inst|memory~37_combout ;
+wire \inst|memory~38_combout ;
+wire \inst|memory~39_combout ;
+wire \inst|memory~40_combout ;
+wire \inst|memory~41_combout ;
+wire \inst|memory~42_combout ;
+wire \inst|memory~43_combout ;
+wire \inst|memory~44_combout ;
+wire \inst|memory~45_combout ;
+wire \inst|Decoder3~0_combout ;
+wire \inst|memory[3]~46_combout ;
+wire \inst|memory~47_combout ;
+wire \inst|memory[3]~48_combout ;
+wire \inst|memory~49_combout ;
+wire \inst|memory~50_combout ;
+wire \inst|memory~51_combout ;
+wire [23:0] \inst|memory ;
+wire [2:0] \inst|fullness ;
+
+
+cyclonev_io_obuf \fullness[2]~output (
+	.i(\inst|fullness [2]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\fullness[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \fullness[2]~output .bus_hold = "false";
+defparam \fullness[2]~output .open_drain_output = "false";
+defparam \fullness[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \fullness[1]~output (
+	.i(\inst|fullness [1]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\fullness[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \fullness[1]~output .bus_hold = "false";
+defparam \fullness[1]~output .open_drain_output = "false";
+defparam \fullness[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \fullness[0]~output (
+	.i(\inst|fullness [0]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\fullness[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \fullness[0]~output .bus_hold = "false";
+defparam \fullness[0]~output .open_drain_output = "false";
+defparam \fullness[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[23]~output (
+	.i(\inst|memory [23]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[23]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[23]~output .bus_hold = "false";
+defparam \memory[23]~output .open_drain_output = "false";
+defparam \memory[23]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[22]~output (
+	.i(\inst|memory [22]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[22]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[22]~output .bus_hold = "false";
+defparam \memory[22]~output .open_drain_output = "false";
+defparam \memory[22]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[21]~output (
+	.i(\inst|memory [21]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[21]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[21]~output .bus_hold = "false";
+defparam \memory[21]~output .open_drain_output = "false";
+defparam \memory[21]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[20]~output (
+	.i(\inst|memory [20]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[20]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[20]~output .bus_hold = "false";
+defparam \memory[20]~output .open_drain_output = "false";
+defparam \memory[20]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[19]~output (
+	.i(\inst|memory [19]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[19]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[19]~output .bus_hold = "false";
+defparam \memory[19]~output .open_drain_output = "false";
+defparam \memory[19]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[18]~output (
+	.i(\inst|memory [18]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[18]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[18]~output .bus_hold = "false";
+defparam \memory[18]~output .open_drain_output = "false";
+defparam \memory[18]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[17]~output (
+	.i(\inst|memory [17]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[17]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[17]~output .bus_hold = "false";
+defparam \memory[17]~output .open_drain_output = "false";
+defparam \memory[17]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[16]~output (
+	.i(\inst|memory [16]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[16]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[16]~output .bus_hold = "false";
+defparam \memory[16]~output .open_drain_output = "false";
+defparam \memory[16]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[15]~output (
+	.i(\inst|memory [15]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[15]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[15]~output .bus_hold = "false";
+defparam \memory[15]~output .open_drain_output = "false";
+defparam \memory[15]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[14]~output (
+	.i(\inst|memory [14]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[14]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[14]~output .bus_hold = "false";
+defparam \memory[14]~output .open_drain_output = "false";
+defparam \memory[14]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[13]~output (
+	.i(\inst|memory [13]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[13]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[13]~output .bus_hold = "false";
+defparam \memory[13]~output .open_drain_output = "false";
+defparam \memory[13]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[12]~output (
+	.i(\inst|memory [12]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[12]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[12]~output .bus_hold = "false";
+defparam \memory[12]~output .open_drain_output = "false";
+defparam \memory[12]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[11]~output (
+	.i(\inst|memory [11]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[11]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[11]~output .bus_hold = "false";
+defparam \memory[11]~output .open_drain_output = "false";
+defparam \memory[11]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[10]~output (
+	.i(\inst|memory [10]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[10]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[10]~output .bus_hold = "false";
+defparam \memory[10]~output .open_drain_output = "false";
+defparam \memory[10]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[9]~output (
+	.i(\inst|memory [9]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[9]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[9]~output .bus_hold = "false";
+defparam \memory[9]~output .open_drain_output = "false";
+defparam \memory[9]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[8]~output (
+	.i(\inst|memory [8]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[8]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[8]~output .bus_hold = "false";
+defparam \memory[8]~output .open_drain_output = "false";
+defparam \memory[8]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[7]~output (
+	.i(\inst|memory [7]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[7]~output .bus_hold = "false";
+defparam \memory[7]~output .open_drain_output = "false";
+defparam \memory[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[6]~output (
+	.i(\inst|memory [6]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[6]~output .bus_hold = "false";
+defparam \memory[6]~output .open_drain_output = "false";
+defparam \memory[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[5]~output (
+	.i(\inst|memory [5]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[5]~output .bus_hold = "false";
+defparam \memory[5]~output .open_drain_output = "false";
+defparam \memory[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[4]~output (
+	.i(\inst|memory [4]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[4]~output .bus_hold = "false";
+defparam \memory[4]~output .open_drain_output = "false";
+defparam \memory[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[3]~output (
+	.i(\inst|memory [3]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[3]~output .bus_hold = "false";
+defparam \memory[3]~output .open_drain_output = "false";
+defparam \memory[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[2]~output (
+	.i(\inst|memory [2]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[2]~output .bus_hold = "false";
+defparam \memory[2]~output .open_drain_output = "false";
+defparam \memory[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[1]~output (
+	.i(\inst|memory [1]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[1]~output .bus_hold = "false";
+defparam \memory[1]~output .open_drain_output = "false";
+defparam \memory[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \memory[0]~output (
+	.i(\inst|memory [0]),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\memory[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \memory[0]~output .bus_hold = "false";
+defparam \memory[0]~output .open_drain_output = "false";
+defparam \memory[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \clk~input (
+	.i(clk),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clk~input_o ));
+// synopsys translate_off
+defparam \clk~input .bus_hold = "false";
+defparam \clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \write~input (
+	.i(write),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\write~input_o ));
+// synopsys translate_off
+defparam \write~input .bus_hold = "false";
+defparam \write~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_io_ibuf \read~input (
+	.i(read),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\read~input_o ));
+// synopsys translate_off
+defparam \read~input .bus_hold = "false";
+defparam \read~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|fullness~2 (
+// Equation(s):
+// \inst|fullness~2_combout  = ( \read~input_o  & ( (!\inst|fullness [0] & (!\write~input_o  $ (((!\inst|fullness [2] & !\inst|fullness [1]))))) # (\inst|fullness [0] & (\write~input_o  & ((!\inst|fullness [2]) # (!\inst|fullness [1])))) ) ) # ( 
+// !\read~input_o  & ( !\inst|fullness [0] $ (((!\write~input_o ) # ((\inst|fullness [2] & \inst|fullness [1])))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|fullness~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|fullness~2 .extended_lut = "off";
+defparam \inst|fullness~2 .lut_mask = 64'h0FE1708E0FE1708E;
+defparam \inst|fullness~2 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|fullness[0] (
+	.clk(\clk~input_o ),
+	.d(\inst|fullness~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|fullness [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|fullness[0] .is_wysiwyg = "true";
+defparam \inst|fullness[0] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|fullness~1 (
+// Equation(s):
+// \inst|fullness~1_combout  = ( \read~input_o  & ( (!\inst|fullness [1] & (\inst|fullness [2] & (!\inst|fullness [0] & !\write~input_o ))) # (\inst|fullness [1] & (((\write~input_o ) # (\inst|fullness [0])))) ) ) # ( !\read~input_o  & ( (!\inst|fullness [1] 
+// & (((\inst|fullness [0] & \write~input_o )))) # (\inst|fullness [1] & (((!\inst|fullness [0]) # (!\write~input_o )) # (\inst|fullness [2]))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|fullness~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|fullness~1 .extended_lut = "off";
+defparam \inst|fullness~1 .lut_mask = 64'h333D4333333D4333;
+defparam \inst|fullness~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|fullness[1] (
+	.clk(\clk~input_o ),
+	.d(\inst|fullness~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|fullness [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|fullness[1] .is_wysiwyg = "true";
+defparam \inst|fullness[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|fullness~0 (
+// Equation(s):
+// \inst|fullness~0_combout  = ( \read~input_o  & ( (\inst|fullness [2] & (((\write~input_o ) # (\inst|fullness [0])) # (\inst|fullness [1]))) ) ) # ( !\read~input_o  & ( ((\inst|fullness [1] & (\inst|fullness [0] & \write~input_o ))) # (\inst|fullness [2]) 
+// ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|fullness~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|fullness~0 .extended_lut = "off";
+defparam \inst|fullness~0 .lut_mask = 64'h5557155555571555;
+defparam \inst|fullness~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|fullness[2] (
+	.clk(\clk~input_o ),
+	.d(\inst|fullness~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|fullness [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|fullness[2] .is_wysiwyg = "true";
+defparam \inst|fullness[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_io_ibuf \p_in[3]~input (
+	.i(p_in[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\p_in[3]~input_o ));
+// synopsys translate_off
+defparam \p_in[3]~input .bus_hold = "false";
+defparam \p_in[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[23]~0 (
+// Equation(s):
+// \inst|memory[23]~0_combout  = ( \read~input_o  & ( (\inst|fullness [2] & (\inst|fullness [1] & \write~input_o )) ) ) # ( !\read~input_o  & ( (\inst|fullness [2] & (\write~input_o  & (!\inst|fullness [1] $ (!\inst|fullness [0])))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[23]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[23]~0 .extended_lut = "off";
+defparam \inst|memory[23]~0 .lut_mask = 64'h0014001100140011;
+defparam \inst|memory[23]~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[23] (
+	.clk(\clk~input_o ),
+	.d(\p_in[3]~input_o ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[23]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [23]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[23] .is_wysiwyg = "true";
+defparam \inst|memory[23] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_io_ibuf \p_in[2]~input (
+	.i(p_in[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\p_in[2]~input_o ));
+// synopsys translate_off
+defparam \p_in[2]~input .bus_hold = "false";
+defparam \p_in[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \inst|memory[22] (
+	.clk(\clk~input_o ),
+	.d(\p_in[2]~input_o ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[23]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [22]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[22] .is_wysiwyg = "true";
+defparam \inst|memory[22] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_io_ibuf \p_in[1]~input (
+	.i(p_in[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\p_in[1]~input_o ));
+// synopsys translate_off
+defparam \p_in[1]~input .bus_hold = "false";
+defparam \p_in[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \inst|memory[21] (
+	.clk(\clk~input_o ),
+	.d(\p_in[1]~input_o ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[23]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [21]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[21] .is_wysiwyg = "true";
+defparam \inst|memory[21] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_io_ibuf \p_in[0]~input (
+	.i(p_in[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\p_in[0]~input_o ));
+// synopsys translate_off
+defparam \p_in[0]~input .bus_hold = "false";
+defparam \p_in[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+dffeas \inst|memory[20] (
+	.clk(\clk~input_o ),
+	.d(\p_in[0]~input_o ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[23]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [20]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[20] .is_wysiwyg = "true";
+defparam \inst|memory[20] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[19]~1 (
+// Equation(s):
+// \inst|memory[19]~1_combout  = ( \read~input_o  & ( (\inst|fullness [2] & (\inst|fullness [0] & \write~input_o )) ) ) # ( !\read~input_o  & ( (\inst|fullness [2] & (!\inst|fullness [0] & \write~input_o )) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(gnd),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[19]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[19]~1 .extended_lut = "off";
+defparam \inst|memory[19]~1 .lut_mask = 64'h0050000500500005;
+defparam \inst|memory[19]~1 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~2 (
+// Equation(s):
+// \inst|memory~2_combout  = ( \read~input_o  & ( ((!\inst|fullness [2] & (\inst|fullness [0])) # (\inst|fullness [2] & ((!\inst|fullness [0]) # (!\write~input_o )))) # (\inst|fullness [1]) ) ) # ( !\read~input_o  & ( (\inst|fullness [2] & (\inst|fullness 
+// [1] & (!\inst|fullness [0] & \write~input_o ))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~2 .extended_lut = "off";
+defparam \inst|memory~2 .lut_mask = 64'h00107F7B00107F7B;
+defparam \inst|memory~2 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~3 (
+// Equation(s):
+// \inst|memory~3_combout  = ( \inst|memory~2_combout  & ( \inst|memory [23] ) ) # ( !\inst|memory~2_combout  & ( (!\inst|memory[19]~1_combout  & (\inst|memory [19])) # (\inst|memory[19]~1_combout  & ((\p_in[3]~input_o ))) ) )
+
+	.dataa(!\inst|memory [23]),
+	.datab(!\inst|memory [19]),
+	.datac(!\p_in[3]~input_o ),
+	.datad(!\inst|memory[19]~1_combout ),
+	.datae(!\inst|memory~2_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~3 .extended_lut = "off";
+defparam \inst|memory~3 .lut_mask = 64'h330F5555330F5555;
+defparam \inst|memory~3 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[19] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [19]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[19] .is_wysiwyg = "true";
+defparam \inst|memory[19] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~4 (
+// Equation(s):
+// \inst|memory~4_combout  = ( \inst|memory~2_combout  & ( \inst|memory [22] ) ) # ( !\inst|memory~2_combout  & ( (!\inst|memory[19]~1_combout  & (\inst|memory [18])) # (\inst|memory[19]~1_combout  & ((\p_in[2]~input_o ))) ) )
+
+	.dataa(!\inst|memory [22]),
+	.datab(!\inst|memory [18]),
+	.datac(!\p_in[2]~input_o ),
+	.datad(!\inst|memory[19]~1_combout ),
+	.datae(!\inst|memory~2_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~4 .extended_lut = "off";
+defparam \inst|memory~4 .lut_mask = 64'h330F5555330F5555;
+defparam \inst|memory~4 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[18] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~4_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [18]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[18] .is_wysiwyg = "true";
+defparam \inst|memory[18] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~5 (
+// Equation(s):
+// \inst|memory~5_combout  = ( \inst|memory~2_combout  & ( \inst|memory [21] ) ) # ( !\inst|memory~2_combout  & ( (!\inst|memory[19]~1_combout  & (\inst|memory [17])) # (\inst|memory[19]~1_combout  & ((\p_in[1]~input_o ))) ) )
+
+	.dataa(!\inst|memory [21]),
+	.datab(!\inst|memory [17]),
+	.datac(!\p_in[1]~input_o ),
+	.datad(!\inst|memory[19]~1_combout ),
+	.datae(!\inst|memory~2_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~5 .extended_lut = "off";
+defparam \inst|memory~5 .lut_mask = 64'h330F5555330F5555;
+defparam \inst|memory~5 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[17] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~5_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [17]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[17] .is_wysiwyg = "true";
+defparam \inst|memory[17] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~6 (
+// Equation(s):
+// \inst|memory~6_combout  = ( \inst|memory~2_combout  & ( \inst|memory [20] ) ) # ( !\inst|memory~2_combout  & ( (!\inst|memory[19]~1_combout  & (\inst|memory [16])) # (\inst|memory[19]~1_combout  & ((\p_in[0]~input_o ))) ) )
+
+	.dataa(!\inst|memory [20]),
+	.datab(!\inst|memory [16]),
+	.datac(!\p_in[0]~input_o ),
+	.datad(!\inst|memory[19]~1_combout ),
+	.datae(!\inst|memory~2_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~6 .extended_lut = "off";
+defparam \inst|memory~6 .lut_mask = 64'h330F5555330F5555;
+defparam \inst|memory~6 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[16] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~6_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [16]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[16] .is_wysiwyg = "true";
+defparam \inst|memory[16] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|fullness~3 (
+// Equation(s):
+// \inst|fullness~3_combout  = (\read~input_o  & (((\inst|fullness [0]) # (\inst|fullness [1])) # (\inst|fullness [2])))
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|fullness~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|fullness~3 .extended_lut = "off";
+defparam \inst|fullness~3 .lut_mask = 64'h007F007F007F007F;
+defparam \inst|fullness~3 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[15]~7 (
+// Equation(s):
+// \inst|memory[15]~7_combout  = ( \read~input_o  & ( (\inst|fullness [2] & (\write~input_o  & (!\inst|fullness [1] $ (\inst|fullness [0])))) ) ) # ( !\read~input_o  & ( (\inst|fullness [1] & (\write~input_o  & (!\inst|fullness [2] $ (!\inst|fullness [0])))) 
+// ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[15]~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[15]~7 .extended_lut = "off";
+defparam \inst|memory[15]~7 .lut_mask = 64'h0012004100120041;
+defparam \inst|memory[15]~7 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~8 (
+// Equation(s):
+// \inst|memory~8_combout  = ( \p_in[3]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o ))) # (\inst|fullness [2] & (!\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o ))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[3]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~8_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~8 .extended_lut = "off";
+defparam \inst|memory~8 .lut_mask = 64'h0000024000000240;
+defparam \inst|memory~8 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~9 (
+// Equation(s):
+// \inst|memory~9_combout  = ( \inst|memory [19] & ( \read~input_o  & ( (!\inst|fullness [1] & ((!\inst|fullness [0] & (!\inst|fullness [2])) # (\inst|fullness [0] & ((\inst|memory [23]))))) # (\inst|fullness [1] & (((\inst|memory [23])))) ) ) ) # ( 
+// !\inst|memory [19] & ( \read~input_o  & ( (\inst|memory [23] & ((\inst|fullness [0]) # (\inst|fullness [1]))) ) ) ) # ( \inst|memory [19] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # (!\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [23]),
+	.datae(!\inst|memory [19]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~9 .extended_lut = "off";
+defparam \inst|memory~9 .lut_mask = 64'h0000FDFD003F80BF;
+defparam \inst|memory~9 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~10 (
+// Equation(s):
+// \inst|memory~10_combout  = ( \inst|memory~8_combout  & ( \inst|memory~9_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [15]))) # (\inst|fullness~3_combout  & (\inst|memory [19]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( 
+// !\inst|memory~8_combout  & ( \inst|memory~9_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [15]))) # (\inst|fullness~3_combout  & (\inst|memory [19]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( \inst|memory~8_combout  & ( 
+// !\inst|memory~9_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [15]))) # (\inst|fullness~3_combout  & (\inst|memory [19]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( !\inst|memory~8_combout  & ( !\inst|memory~9_combout  & ( 
+// (!\inst|memory[15]~7_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [15]))) # (\inst|fullness~3_combout  & (\inst|memory [19])))) ) ) )
+
+	.dataa(!\inst|memory [19]),
+	.datab(!\inst|memory [15]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[15]~7_combout ),
+	.datae(!\inst|memory~8_combout ),
+	.dataf(!\inst|memory~9_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~10_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~10 .extended_lut = "off";
+defparam \inst|memory~10 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~10 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[15] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~10_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[15] .is_wysiwyg = "true";
+defparam \inst|memory[15] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~11 (
+// Equation(s):
+// \inst|memory~11_combout  = ( \p_in[2]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o ))) # (\inst|fullness [2] & (!\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o ))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[2]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~11_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~11 .extended_lut = "off";
+defparam \inst|memory~11 .lut_mask = 64'h0000024000000240;
+defparam \inst|memory~11 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~12 (
+// Equation(s):
+// \inst|memory~12_combout  = ( \inst|memory [18] & ( \read~input_o  & ( (!\inst|fullness [1] & ((!\inst|fullness [0] & (!\inst|fullness [2])) # (\inst|fullness [0] & ((\inst|memory [22]))))) # (\inst|fullness [1] & (((\inst|memory [22])))) ) ) ) # ( 
+// !\inst|memory [18] & ( \read~input_o  & ( (\inst|memory [22] & ((\inst|fullness [0]) # (\inst|fullness [1]))) ) ) ) # ( \inst|memory [18] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # (!\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [22]),
+	.datae(!\inst|memory [18]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~12_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~12 .extended_lut = "off";
+defparam \inst|memory~12 .lut_mask = 64'h0000FDFD003F80BF;
+defparam \inst|memory~12 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~13 (
+// Equation(s):
+// \inst|memory~13_combout  = ( \inst|memory~11_combout  & ( \inst|memory~12_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [14]))) # (\inst|fullness~3_combout  & (\inst|memory [18]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( 
+// !\inst|memory~11_combout  & ( \inst|memory~12_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [14]))) # (\inst|fullness~3_combout  & (\inst|memory [18]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( \inst|memory~11_combout  & ( 
+// !\inst|memory~12_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [14]))) # (\inst|fullness~3_combout  & (\inst|memory [18]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( !\inst|memory~11_combout  & ( !\inst|memory~12_combout  & ( 
+// (!\inst|memory[15]~7_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [14]))) # (\inst|fullness~3_combout  & (\inst|memory [18])))) ) ) )
+
+	.dataa(!\inst|memory [18]),
+	.datab(!\inst|memory [14]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[15]~7_combout ),
+	.datae(!\inst|memory~11_combout ),
+	.dataf(!\inst|memory~12_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~13 .extended_lut = "off";
+defparam \inst|memory~13 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~13 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[14] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~13_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[14] .is_wysiwyg = "true";
+defparam \inst|memory[14] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~14 (
+// Equation(s):
+// \inst|memory~14_combout  = ( \p_in[1]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o ))) # (\inst|fullness [2] & (!\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o ))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[1]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~14 .extended_lut = "off";
+defparam \inst|memory~14 .lut_mask = 64'h0000024000000240;
+defparam \inst|memory~14 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~15 (
+// Equation(s):
+// \inst|memory~15_combout  = ( \inst|memory [17] & ( \read~input_o  & ( (!\inst|fullness [1] & ((!\inst|fullness [0] & (!\inst|fullness [2])) # (\inst|fullness [0] & ((\inst|memory [21]))))) # (\inst|fullness [1] & (((\inst|memory [21])))) ) ) ) # ( 
+// !\inst|memory [17] & ( \read~input_o  & ( (\inst|memory [21] & ((\inst|fullness [0]) # (\inst|fullness [1]))) ) ) ) # ( \inst|memory [17] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # (!\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [21]),
+	.datae(!\inst|memory [17]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~15_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~15 .extended_lut = "off";
+defparam \inst|memory~15 .lut_mask = 64'h0000FDFD003F80BF;
+defparam \inst|memory~15 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~16 (
+// Equation(s):
+// \inst|memory~16_combout  = ( \inst|memory~14_combout  & ( \inst|memory~15_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [13]))) # (\inst|fullness~3_combout  & (\inst|memory [17]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( 
+// !\inst|memory~14_combout  & ( \inst|memory~15_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [13]))) # (\inst|fullness~3_combout  & (\inst|memory [17]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( \inst|memory~14_combout  & ( 
+// !\inst|memory~15_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [13]))) # (\inst|fullness~3_combout  & (\inst|memory [17]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( !\inst|memory~14_combout  & ( !\inst|memory~15_combout  & ( 
+// (!\inst|memory[15]~7_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [13]))) # (\inst|fullness~3_combout  & (\inst|memory [17])))) ) ) )
+
+	.dataa(!\inst|memory [17]),
+	.datab(!\inst|memory [13]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[15]~7_combout ),
+	.datae(!\inst|memory~14_combout ),
+	.dataf(!\inst|memory~15_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~16_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~16 .extended_lut = "off";
+defparam \inst|memory~16 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~16 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[13] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~16_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[13] .is_wysiwyg = "true";
+defparam \inst|memory[13] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~17 (
+// Equation(s):
+// \inst|memory~17_combout  = ( \p_in[0]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o ))) # (\inst|fullness [2] & (!\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o ))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[0]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~17_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~17 .extended_lut = "off";
+defparam \inst|memory~17 .lut_mask = 64'h0000024000000240;
+defparam \inst|memory~17 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~18 (
+// Equation(s):
+// \inst|memory~18_combout  = ( \inst|memory [16] & ( \read~input_o  & ( (!\inst|fullness [1] & ((!\inst|fullness [0] & (!\inst|fullness [2])) # (\inst|fullness [0] & ((\inst|memory [20]))))) # (\inst|fullness [1] & (((\inst|memory [20])))) ) ) ) # ( 
+// !\inst|memory [16] & ( \read~input_o  & ( (\inst|memory [20] & ((\inst|fullness [0]) # (\inst|fullness [1]))) ) ) ) # ( \inst|memory [16] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # (!\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [20]),
+	.datae(!\inst|memory [16]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~18_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~18 .extended_lut = "off";
+defparam \inst|memory~18 .lut_mask = 64'h0000FDFD003F80BF;
+defparam \inst|memory~18 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~19 (
+// Equation(s):
+// \inst|memory~19_combout  = ( \inst|memory~17_combout  & ( \inst|memory~18_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [12]))) # (\inst|fullness~3_combout  & (\inst|memory [16]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( 
+// !\inst|memory~17_combout  & ( \inst|memory~18_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [12]))) # (\inst|fullness~3_combout  & (\inst|memory [16]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( \inst|memory~17_combout  & ( 
+// !\inst|memory~18_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [12]))) # (\inst|fullness~3_combout  & (\inst|memory [16]))) # (\inst|memory[15]~7_combout ) ) ) ) # ( !\inst|memory~17_combout  & ( !\inst|memory~18_combout  & ( 
+// (!\inst|memory[15]~7_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [12]))) # (\inst|fullness~3_combout  & (\inst|memory [16])))) ) ) )
+
+	.dataa(!\inst|memory [16]),
+	.datab(!\inst|memory [12]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[15]~7_combout ),
+	.datae(!\inst|memory~17_combout ),
+	.dataf(!\inst|memory~18_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~19_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~19 .extended_lut = "off";
+defparam \inst|memory~19 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~19 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[12] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~19_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[12] .is_wysiwyg = "true";
+defparam \inst|memory[12] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[11]~20 (
+// Equation(s):
+// \inst|memory[11]~20_combout  = ( \read~input_o  & ( (\inst|fullness [1] & (\inst|fullness [0] & \write~input_o )) ) ) # ( !\read~input_o  & ( (\inst|fullness [1] & (!\inst|fullness [0] & \write~input_o )) ) )
+
+	.dataa(gnd),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[11]~20_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[11]~20 .extended_lut = "off";
+defparam \inst|memory[11]~20 .lut_mask = 64'h0030000300300003;
+defparam \inst|memory[11]~20 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~21 (
+// Equation(s):
+// \inst|memory~21_combout  = ( \p_in[3]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (!\inst|fullness [0] $ (\read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[3]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~21_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~21 .extended_lut = "off";
+defparam \inst|memory~21 .lut_mask = 64'h0000200200002002;
+defparam \inst|memory~21 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~22 (
+// Equation(s):
+// \inst|memory~22_combout  = ( \inst|memory [15] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & ((!\inst|fullness [0]) # (\inst|memory [19]))) # (\inst|fullness [1] & (!\inst|fullness [0] & \inst|memory [19])))) # (\inst|fullness [2] 
+// & (((\inst|memory [19])))) ) ) ) # ( !\inst|memory [15] & ( \read~input_o  & ( (\inst|memory [19] & ((!\inst|fullness [1] $ (!\inst|fullness [0])) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [15] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # 
+// (\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [19]),
+	.datae(!\inst|memory [15]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~22_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~22 .extended_lut = "off";
+defparam \inst|memory~22 .lut_mask = 64'h0000DFDF007D80FD;
+defparam \inst|memory~22 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~23 (
+// Equation(s):
+// \inst|memory~23_combout  = ( \inst|memory~21_combout  & ( \inst|memory~22_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [11]))) # (\inst|fullness~3_combout  & (\inst|memory [15]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( 
+// !\inst|memory~21_combout  & ( \inst|memory~22_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [11]))) # (\inst|fullness~3_combout  & (\inst|memory [15]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( \inst|memory~21_combout  & ( 
+// !\inst|memory~22_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [11]))) # (\inst|fullness~3_combout  & (\inst|memory [15]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( !\inst|memory~21_combout  & ( !\inst|memory~22_combout  & ( 
+// (!\inst|memory[11]~20_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [11]))) # (\inst|fullness~3_combout  & (\inst|memory [15])))) ) ) )
+
+	.dataa(!\inst|memory [15]),
+	.datab(!\inst|memory [11]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[11]~20_combout ),
+	.datae(!\inst|memory~21_combout ),
+	.dataf(!\inst|memory~22_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~23_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~23 .extended_lut = "off";
+defparam \inst|memory~23 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~23 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[11] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~23_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[11] .is_wysiwyg = "true";
+defparam \inst|memory[11] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~24 (
+// Equation(s):
+// \inst|memory~24_combout  = ( \p_in[2]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (!\inst|fullness [0] $ (\read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[2]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~24_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~24 .extended_lut = "off";
+defparam \inst|memory~24 .lut_mask = 64'h0000200200002002;
+defparam \inst|memory~24 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~25 (
+// Equation(s):
+// \inst|memory~25_combout  = ( \inst|memory [14] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & ((!\inst|fullness [0]) # (\inst|memory [18]))) # (\inst|fullness [1] & (!\inst|fullness [0] & \inst|memory [18])))) # (\inst|fullness [2] 
+// & (((\inst|memory [18])))) ) ) ) # ( !\inst|memory [14] & ( \read~input_o  & ( (\inst|memory [18] & ((!\inst|fullness [1] $ (!\inst|fullness [0])) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [14] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # 
+// (\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [18]),
+	.datae(!\inst|memory [14]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~25_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~25 .extended_lut = "off";
+defparam \inst|memory~25 .lut_mask = 64'h0000DFDF007D80FD;
+defparam \inst|memory~25 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~26 (
+// Equation(s):
+// \inst|memory~26_combout  = ( \inst|memory~24_combout  & ( \inst|memory~25_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [10]))) # (\inst|fullness~3_combout  & (\inst|memory [14]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( 
+// !\inst|memory~24_combout  & ( \inst|memory~25_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [10]))) # (\inst|fullness~3_combout  & (\inst|memory [14]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( \inst|memory~24_combout  & ( 
+// !\inst|memory~25_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [10]))) # (\inst|fullness~3_combout  & (\inst|memory [14]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( !\inst|memory~24_combout  & ( !\inst|memory~25_combout  & ( 
+// (!\inst|memory[11]~20_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [10]))) # (\inst|fullness~3_combout  & (\inst|memory [14])))) ) ) )
+
+	.dataa(!\inst|memory [14]),
+	.datab(!\inst|memory [10]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[11]~20_combout ),
+	.datae(!\inst|memory~24_combout ),
+	.dataf(!\inst|memory~25_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~26_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~26 .extended_lut = "off";
+defparam \inst|memory~26 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~26 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[10] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~26_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[10] .is_wysiwyg = "true";
+defparam \inst|memory[10] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~27 (
+// Equation(s):
+// \inst|memory~27_combout  = ( \p_in[1]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (!\inst|fullness [0] $ (\read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[1]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~27_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~27 .extended_lut = "off";
+defparam \inst|memory~27 .lut_mask = 64'h0000200200002002;
+defparam \inst|memory~27 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~28 (
+// Equation(s):
+// \inst|memory~28_combout  = ( \inst|memory [13] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & ((!\inst|fullness [0]) # (\inst|memory [17]))) # (\inst|fullness [1] & (!\inst|fullness [0] & \inst|memory [17])))) # (\inst|fullness [2] 
+// & (((\inst|memory [17])))) ) ) ) # ( !\inst|memory [13] & ( \read~input_o  & ( (\inst|memory [17] & ((!\inst|fullness [1] $ (!\inst|fullness [0])) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [13] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # 
+// (\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [17]),
+	.datae(!\inst|memory [13]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~28_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~28 .extended_lut = "off";
+defparam \inst|memory~28 .lut_mask = 64'h0000DFDF007D80FD;
+defparam \inst|memory~28 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~29 (
+// Equation(s):
+// \inst|memory~29_combout  = ( \inst|memory~27_combout  & ( \inst|memory~28_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [9]))) # (\inst|fullness~3_combout  & (\inst|memory [13]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( 
+// !\inst|memory~27_combout  & ( \inst|memory~28_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [9]))) # (\inst|fullness~3_combout  & (\inst|memory [13]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( \inst|memory~27_combout  & ( 
+// !\inst|memory~28_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [9]))) # (\inst|fullness~3_combout  & (\inst|memory [13]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( !\inst|memory~27_combout  & ( !\inst|memory~28_combout  & ( 
+// (!\inst|memory[11]~20_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [9]))) # (\inst|fullness~3_combout  & (\inst|memory [13])))) ) ) )
+
+	.dataa(!\inst|memory [13]),
+	.datab(!\inst|memory [9]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[11]~20_combout ),
+	.datae(!\inst|memory~27_combout ),
+	.dataf(!\inst|memory~28_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~29_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~29 .extended_lut = "off";
+defparam \inst|memory~29 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~29 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[9] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~29_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[9] .is_wysiwyg = "true";
+defparam \inst|memory[9] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~30 (
+// Equation(s):
+// \inst|memory~30_combout  = ( \p_in[0]~input_o  & ( (!\inst|fullness [2] & (\inst|fullness [1] & (!\inst|fullness [0] $ (\read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[0]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~30_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~30 .extended_lut = "off";
+defparam \inst|memory~30 .lut_mask = 64'h0000200200002002;
+defparam \inst|memory~30 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~31 (
+// Equation(s):
+// \inst|memory~31_combout  = ( \inst|memory [12] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & ((!\inst|fullness [0]) # (\inst|memory [16]))) # (\inst|fullness [1] & (!\inst|fullness [0] & \inst|memory [16])))) # (\inst|fullness [2] 
+// & (((\inst|memory [16])))) ) ) ) # ( !\inst|memory [12] & ( \read~input_o  & ( (\inst|memory [16] & ((!\inst|fullness [1] $ (!\inst|fullness [0])) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [12] & ( !\read~input_o  & ( ((!\inst|fullness [1]) # 
+// (\inst|fullness [0])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [16]),
+	.datae(!\inst|memory [12]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~31_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~31 .extended_lut = "off";
+defparam \inst|memory~31 .lut_mask = 64'h0000DFDF007D80FD;
+defparam \inst|memory~31 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~32 (
+// Equation(s):
+// \inst|memory~32_combout  = ( \inst|memory~30_combout  & ( \inst|memory~31_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [8]))) # (\inst|fullness~3_combout  & (\inst|memory [12]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( 
+// !\inst|memory~30_combout  & ( \inst|memory~31_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [8]))) # (\inst|fullness~3_combout  & (\inst|memory [12]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( \inst|memory~30_combout  & ( 
+// !\inst|memory~31_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [8]))) # (\inst|fullness~3_combout  & (\inst|memory [12]))) # (\inst|memory[11]~20_combout ) ) ) ) # ( !\inst|memory~30_combout  & ( !\inst|memory~31_combout  & ( 
+// (!\inst|memory[11]~20_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [8]))) # (\inst|fullness~3_combout  & (\inst|memory [12])))) ) ) )
+
+	.dataa(!\inst|memory [12]),
+	.datab(!\inst|memory [8]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[11]~20_combout ),
+	.datae(!\inst|memory~30_combout ),
+	.dataf(!\inst|memory~31_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~32_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~32 .extended_lut = "off";
+defparam \inst|memory~32 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~32 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[8] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~32_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[8] .is_wysiwyg = "true";
+defparam \inst|memory[8] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[7]~33 (
+// Equation(s):
+// \inst|memory[7]~33_combout  = ( \read~input_o  & ( (\inst|fullness [1] & (\write~input_o  & (!\inst|fullness [2] $ (\inst|fullness [0])))) ) ) # ( !\read~input_o  & ( (\write~input_o  & ((!\inst|fullness [2] & (!\inst|fullness [1] & \inst|fullness [0])) # 
+// (\inst|fullness [2] & (\inst|fullness [1] & !\inst|fullness [0])))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[7]~33_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[7]~33 .extended_lut = "off";
+defparam \inst|memory[7]~33 .lut_mask = 64'h0018002100180021;
+defparam \inst|memory[7]~33 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~34 (
+// Equation(s):
+// \inst|memory~34_combout  = ( \p_in[3]~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o )) # (\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[3]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~34_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~34 .extended_lut = "off";
+defparam \inst|memory~34 .lut_mask = 64'h0000082000000820;
+defparam \inst|memory~34 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~35 (
+// Equation(s):
+// \inst|memory~35_combout  = ( \inst|memory [11] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [0] & (!\inst|fullness [1])) # (\inst|fullness [0] & ((\inst|memory [15]))))) # (\inst|fullness [2] & (((\inst|memory [15])))) ) ) ) # ( 
+// !\inst|memory [11] & ( \read~input_o  & ( (\inst|memory [15] & ((\inst|fullness [0]) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [11] & ( !\read~input_o  & ( ((!\inst|fullness [0]) # (\inst|fullness [1])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [15]),
+	.datae(!\inst|memory [11]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~35_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~35 .extended_lut = "off";
+defparam \inst|memory~35 .lut_mask = 64'h0000F7F7005F80DF;
+defparam \inst|memory~35 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~36 (
+// Equation(s):
+// \inst|memory~36_combout  = ( \inst|memory~34_combout  & ( \inst|memory~35_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [7]))) # (\inst|fullness~3_combout  & (\inst|memory [11]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( 
+// !\inst|memory~34_combout  & ( \inst|memory~35_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [7]))) # (\inst|fullness~3_combout  & (\inst|memory [11]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( \inst|memory~34_combout  & ( 
+// !\inst|memory~35_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [7]))) # (\inst|fullness~3_combout  & (\inst|memory [11]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( !\inst|memory~34_combout  & ( !\inst|memory~35_combout  & ( 
+// (!\inst|memory[7]~33_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [7]))) # (\inst|fullness~3_combout  & (\inst|memory [11])))) ) ) )
+
+	.dataa(!\inst|memory [11]),
+	.datab(!\inst|memory [7]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[7]~33_combout ),
+	.datae(!\inst|memory~34_combout ),
+	.dataf(!\inst|memory~35_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~36_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~36 .extended_lut = "off";
+defparam \inst|memory~36 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~36 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[7] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~36_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[7] .is_wysiwyg = "true";
+defparam \inst|memory[7] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~37 (
+// Equation(s):
+// \inst|memory~37_combout  = ( \p_in[2]~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o )) # (\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[2]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~37_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~37 .extended_lut = "off";
+defparam \inst|memory~37 .lut_mask = 64'h0000082000000820;
+defparam \inst|memory~37 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~38 (
+// Equation(s):
+// \inst|memory~38_combout  = ( \inst|memory [10] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [0] & (!\inst|fullness [1])) # (\inst|fullness [0] & ((\inst|memory [14]))))) # (\inst|fullness [2] & (((\inst|memory [14])))) ) ) ) # ( 
+// !\inst|memory [10] & ( \read~input_o  & ( (\inst|memory [14] & ((\inst|fullness [0]) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [10] & ( !\read~input_o  & ( ((!\inst|fullness [0]) # (\inst|fullness [1])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [14]),
+	.datae(!\inst|memory [10]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~38_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~38 .extended_lut = "off";
+defparam \inst|memory~38 .lut_mask = 64'h0000F7F7005F80DF;
+defparam \inst|memory~38 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~39 (
+// Equation(s):
+// \inst|memory~39_combout  = ( \inst|memory~37_combout  & ( \inst|memory~38_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [6]))) # (\inst|fullness~3_combout  & (\inst|memory [10]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( 
+// !\inst|memory~37_combout  & ( \inst|memory~38_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [6]))) # (\inst|fullness~3_combout  & (\inst|memory [10]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( \inst|memory~37_combout  & ( 
+// !\inst|memory~38_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [6]))) # (\inst|fullness~3_combout  & (\inst|memory [10]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( !\inst|memory~37_combout  & ( !\inst|memory~38_combout  & ( 
+// (!\inst|memory[7]~33_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [6]))) # (\inst|fullness~3_combout  & (\inst|memory [10])))) ) ) )
+
+	.dataa(!\inst|memory [10]),
+	.datab(!\inst|memory [6]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[7]~33_combout ),
+	.datae(!\inst|memory~37_combout ),
+	.dataf(!\inst|memory~38_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~39_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~39 .extended_lut = "off";
+defparam \inst|memory~39 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~39 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[6] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~39_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[6] .is_wysiwyg = "true";
+defparam \inst|memory[6] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~40 (
+// Equation(s):
+// \inst|memory~40_combout  = ( \p_in[1]~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o )) # (\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[1]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~40_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~40 .extended_lut = "off";
+defparam \inst|memory~40 .lut_mask = 64'h0000082000000820;
+defparam \inst|memory~40 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~41 (
+// Equation(s):
+// \inst|memory~41_combout  = ( \inst|memory [9] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [0] & (!\inst|fullness [1])) # (\inst|fullness [0] & ((\inst|memory [13]))))) # (\inst|fullness [2] & (((\inst|memory [13])))) ) ) ) # ( 
+// !\inst|memory [9] & ( \read~input_o  & ( (\inst|memory [13] & ((\inst|fullness [0]) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [9] & ( !\read~input_o  & ( ((!\inst|fullness [0]) # (\inst|fullness [1])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [13]),
+	.datae(!\inst|memory [9]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~41_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~41 .extended_lut = "off";
+defparam \inst|memory~41 .lut_mask = 64'h0000F7F7005F80DF;
+defparam \inst|memory~41 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~42 (
+// Equation(s):
+// \inst|memory~42_combout  = ( \inst|memory~40_combout  & ( \inst|memory~41_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [5]))) # (\inst|fullness~3_combout  & (\inst|memory [9]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( 
+// !\inst|memory~40_combout  & ( \inst|memory~41_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [5]))) # (\inst|fullness~3_combout  & (\inst|memory [9]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( \inst|memory~40_combout  & ( 
+// !\inst|memory~41_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [5]))) # (\inst|fullness~3_combout  & (\inst|memory [9]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( !\inst|memory~40_combout  & ( !\inst|memory~41_combout  & ( 
+// (!\inst|memory[7]~33_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [5]))) # (\inst|fullness~3_combout  & (\inst|memory [9])))) ) ) )
+
+	.dataa(!\inst|memory [9]),
+	.datab(!\inst|memory [5]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[7]~33_combout ),
+	.datae(!\inst|memory~40_combout ),
+	.dataf(!\inst|memory~41_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~42_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~42 .extended_lut = "off";
+defparam \inst|memory~42 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~42 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[5] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~42_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[5] .is_wysiwyg = "true";
+defparam \inst|memory[5] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~43 (
+// Equation(s):
+// \inst|memory~43_combout  = ( \p_in[0]~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [1] & (\inst|fullness [0] & !\read~input_o )) # (\inst|fullness [1] & (!\inst|fullness [0] & \read~input_o )))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(!\p_in[0]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~43_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~43 .extended_lut = "off";
+defparam \inst|memory~43 .lut_mask = 64'h0000082000000820;
+defparam \inst|memory~43 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~44 (
+// Equation(s):
+// \inst|memory~44_combout  = ( \inst|memory [8] & ( \read~input_o  & ( (!\inst|fullness [2] & ((!\inst|fullness [0] & (!\inst|fullness [1])) # (\inst|fullness [0] & ((\inst|memory [12]))))) # (\inst|fullness [2] & (((\inst|memory [12])))) ) ) ) # ( 
+// !\inst|memory [8] & ( \read~input_o  & ( (\inst|memory [12] & ((\inst|fullness [0]) # (\inst|fullness [2]))) ) ) ) # ( \inst|memory [8] & ( !\read~input_o  & ( ((!\inst|fullness [0]) # (\inst|fullness [1])) # (\inst|fullness [2]) ) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\inst|memory [12]),
+	.datae(!\inst|memory [8]),
+	.dataf(!\read~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~44_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~44 .extended_lut = "off";
+defparam \inst|memory~44 .lut_mask = 64'h0000F7F7005F80DF;
+defparam \inst|memory~44 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~45 (
+// Equation(s):
+// \inst|memory~45_combout  = ( \inst|memory~43_combout  & ( \inst|memory~44_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [4]))) # (\inst|fullness~3_combout  & (\inst|memory [8]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( 
+// !\inst|memory~43_combout  & ( \inst|memory~44_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [4]))) # (\inst|fullness~3_combout  & (\inst|memory [8]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( \inst|memory~43_combout  & ( 
+// !\inst|memory~44_combout  & ( ((!\inst|fullness~3_combout  & ((\inst|memory [4]))) # (\inst|fullness~3_combout  & (\inst|memory [8]))) # (\inst|memory[7]~33_combout ) ) ) ) # ( !\inst|memory~43_combout  & ( !\inst|memory~44_combout  & ( 
+// (!\inst|memory[7]~33_combout  & ((!\inst|fullness~3_combout  & ((\inst|memory [4]))) # (\inst|fullness~3_combout  & (\inst|memory [8])))) ) ) )
+
+	.dataa(!\inst|memory [8]),
+	.datab(!\inst|memory [4]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\inst|memory[7]~33_combout ),
+	.datae(!\inst|memory~43_combout ),
+	.dataf(!\inst|memory~44_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~45_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~45 .extended_lut = "off";
+defparam \inst|memory~45 .lut_mask = 64'h350035FF35FF35FF;
+defparam \inst|memory~45 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[4] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~45_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[4] .is_wysiwyg = "true";
+defparam \inst|memory[4] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|Decoder3~0 (
+// Equation(s):
+// \inst|Decoder3~0_combout  = (!\inst|fullness [2] & (!\inst|fullness [1] & ((!\inst|fullness [0]) # (\read~input_o ))))
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\read~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|Decoder3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|Decoder3~0 .extended_lut = "off";
+defparam \inst|Decoder3~0 .lut_mask = 64'h8088808880888088;
+defparam \inst|Decoder3~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[3]~46 (
+// Equation(s):
+// \inst|memory[3]~46_combout  = ( \read~input_o  & ( (\write~input_o  & ((!\inst|fullness [2] & (!\inst|fullness [1])) # (\inst|fullness [2] & (\inst|fullness [1] & \inst|fullness [0])))) ) ) # ( !\read~input_o  & ( (!\inst|fullness [0] & (\write~input_o  & 
+// (!\inst|fullness [2] $ (\inst|fullness [1])))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[3]~46_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[3]~46 .extended_lut = "off";
+defparam \inst|memory[3]~46 .lut_mask = 64'h0090008900900089;
+defparam \inst|memory[3]~46 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~47 (
+// Equation(s):
+// \inst|memory~47_combout  = ( \inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( \p_in[3]~input_o  ) ) ) # ( !\inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( (!\inst|fullness~3_combout  & ((\inst|memory [7]))) # 
+// (\inst|fullness~3_combout  & (\inst|memory [11])) ) ) ) # ( \inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [7] ) ) ) # ( !\inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [7] ) ) )
+
+	.dataa(!\inst|memory [11]),
+	.datab(!\inst|memory [7]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\p_in[3]~input_o ),
+	.datae(!\inst|Decoder3~0_combout ),
+	.dataf(!\inst|memory[3]~46_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~47_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~47 .extended_lut = "off";
+defparam \inst|memory~47 .lut_mask = 64'h33333333353500FF;
+defparam \inst|memory~47 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory[3]~48 (
+// Equation(s):
+// \inst|memory[3]~48_combout  = ( \read~input_o  & ( (((\write~input_o ) # (\inst|fullness [0])) # (\inst|fullness [1])) # (\inst|fullness [2]) ) ) # ( !\read~input_o  & ( (!\inst|fullness [0] & (\write~input_o  & (!\inst|fullness [2] $ (\inst|fullness 
+// [1])))) ) )
+
+	.dataa(!\inst|fullness [2]),
+	.datab(!\inst|fullness [1]),
+	.datac(!\inst|fullness [0]),
+	.datad(!\write~input_o ),
+	.datae(!\read~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory[3]~48_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory[3]~48 .extended_lut = "off";
+defparam \inst|memory[3]~48 .lut_mask = 64'h00907FFF00907FFF;
+defparam \inst|memory[3]~48 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[3] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~47_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[3]~48_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[3] .is_wysiwyg = "true";
+defparam \inst|memory[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~49 (
+// Equation(s):
+// \inst|memory~49_combout  = ( \inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( \p_in[2]~input_o  ) ) ) # ( !\inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( (!\inst|fullness~3_combout  & ((\inst|memory [6]))) # 
+// (\inst|fullness~3_combout  & (\inst|memory [10])) ) ) ) # ( \inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [6] ) ) ) # ( !\inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [6] ) ) )
+
+	.dataa(!\inst|memory [10]),
+	.datab(!\inst|memory [6]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\p_in[2]~input_o ),
+	.datae(!\inst|Decoder3~0_combout ),
+	.dataf(!\inst|memory[3]~46_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~49_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~49 .extended_lut = "off";
+defparam \inst|memory~49 .lut_mask = 64'h33333333353500FF;
+defparam \inst|memory~49 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[2] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~49_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[3]~48_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[2] .is_wysiwyg = "true";
+defparam \inst|memory[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~50 (
+// Equation(s):
+// \inst|memory~50_combout  = ( \inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( \p_in[1]~input_o  ) ) ) # ( !\inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( (!\inst|fullness~3_combout  & ((\inst|memory [5]))) # 
+// (\inst|fullness~3_combout  & (\inst|memory [9])) ) ) ) # ( \inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [5] ) ) ) # ( !\inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [5] ) ) )
+
+	.dataa(!\inst|memory [9]),
+	.datab(!\inst|memory [5]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\p_in[1]~input_o ),
+	.datae(!\inst|Decoder3~0_combout ),
+	.dataf(!\inst|memory[3]~46_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~50_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~50 .extended_lut = "off";
+defparam \inst|memory~50 .lut_mask = 64'h33333333353500FF;
+defparam \inst|memory~50 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[1] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~50_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[3]~48_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[1] .is_wysiwyg = "true";
+defparam \inst|memory[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \inst|memory~51 (
+// Equation(s):
+// \inst|memory~51_combout  = ( \inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( \p_in[0]~input_o  ) ) ) # ( !\inst|Decoder3~0_combout  & ( \inst|memory[3]~46_combout  & ( (!\inst|fullness~3_combout  & ((\inst|memory [4]))) # 
+// (\inst|fullness~3_combout  & (\inst|memory [8])) ) ) ) # ( \inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [4] ) ) ) # ( !\inst|Decoder3~0_combout  & ( !\inst|memory[3]~46_combout  & ( \inst|memory [4] ) ) )
+
+	.dataa(!\inst|memory [8]),
+	.datab(!\inst|memory [4]),
+	.datac(!\inst|fullness~3_combout ),
+	.datad(!\p_in[0]~input_o ),
+	.datae(!\inst|Decoder3~0_combout ),
+	.dataf(!\inst|memory[3]~46_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst|memory~51_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst|memory~51 .extended_lut = "off";
+defparam \inst|memory~51 .lut_mask = 64'h33333333353500FF;
+defparam \inst|memory~51 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \inst|memory[0] (
+	.clk(\clk~input_o ),
+	.d(\inst|memory~51_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\inst|memory[3]~48_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\inst|memory [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \inst|memory[0] .is_wysiwyg = "true";
+defparam \inst|memory[0] .power_up = "low";
+// synopsys translate_on
+
+assign fullness[2] = \fullness[2]~output_o ;
+
+assign fullness[1] = \fullness[1]~output_o ;
+
+assign fullness[0] = \fullness[0]~output_o ;
+
+assign memory[23] = \memory[23]~output_o ;
+
+assign memory[22] = \memory[22]~output_o ;
+
+assign memory[21] = \memory[21]~output_o ;
+
+assign memory[20] = \memory[20]~output_o ;
+
+assign memory[19] = \memory[19]~output_o ;
+
+assign memory[18] = \memory[18]~output_o ;
+
+assign memory[17] = \memory[17]~output_o ;
+
+assign memory[16] = \memory[16]~output_o ;
+
+assign memory[15] = \memory[15]~output_o ;
+
+assign memory[14] = \memory[14]~output_o ;
+
+assign memory[13] = \memory[13]~output_o ;
+
+assign memory[12] = \memory[12]~output_o ;
+
+assign memory[11] = \memory[11]~output_o ;
+
+assign memory[10] = \memory[10]~output_o ;
+
+assign memory[9] = \memory[9]~output_o ;
+
+assign memory[8] = \memory[8]~output_o ;
+
+assign memory[7] = \memory[7]~output_o ;
+
+assign memory[6] = \memory[6]~output_o ;
+
+assign memory[5] = \memory[5]~output_o ;
+
+assign memory[4] = \memory[4]~output_o ;
+
+assign memory[3] = \memory[3]~output_o ;
+
+assign memory[2] = \memory[2]~output_o ;
+
+assign memory[1] = \memory[1]~output_o ;
+
+assign memory[0] = \memory[0]~output_o ;
+
+endmodule
