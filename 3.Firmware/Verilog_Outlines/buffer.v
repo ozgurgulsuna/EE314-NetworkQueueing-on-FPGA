@@ -42,8 +42,6 @@ module buffer(
 				memory[4*4+3:4*4] = memory[4*5+3:4*5];
 				// memory[4*5+3:4*5] = 4'd0; - no need to reset the buffer (or is there?)
 				fullness = fullness - 1;
-				
-				
 			end
 			
 		end

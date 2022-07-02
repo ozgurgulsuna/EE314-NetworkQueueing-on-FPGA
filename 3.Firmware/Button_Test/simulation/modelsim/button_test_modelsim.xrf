@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Button_Test/switch.v
+source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Button_Test/debouncer.v
+source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Button_Test/clk_div.v
+source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Button_Test/main.v
+source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Button_Test/button_test.bdf
+source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Button_Test/db/button_test.cbx.xml
+design_name = main
+instance = comp, \p_out[0]~output , p_out[0]~output, main, 1
+instance = comp, \p_out[1]~output , p_out[1]~output, main, 1
+instance = comp, \p_out[2]~output , p_out[2]~output, main, 1
+instance = comp, \p_out[3]~output , p_out[3]~output, main, 1
+instance = comp, \clk~input , clk~input, main, 1
+instance = comp, \start~input , start~input, main, 1
+instance = comp, \in_0~input , in_0~input, main, 1
+instance = comp, \in_1~input , in_1~input, main, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, main, 1

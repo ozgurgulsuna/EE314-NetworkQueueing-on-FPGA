@@ -7,8 +7,6 @@ entity switch is
         in_0            : in     vl_logic;
         in_1            : in     vl_logic;
         write           : out    vl_logic_vector(3 downto 0);
-        p_out           : out    vl_logic_vector(3 downto 0);
-        count4          : out    vl_logic_vector(2 downto 0);
-        stop            : out    vl_logic
+        p_out           : out    vl_logic_vector(3 downto 0)
     );
 end switch;

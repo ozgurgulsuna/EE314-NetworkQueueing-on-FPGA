@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Button_Test\simulation\qsim
+vbutton_test
+Z1 !s100 W1kKOAX9K=g^SdEY9gSPF0
+Z2 IzAFZIRKz`jCl0_jddIPbc0
+Z3 VZ]f@?^@ZQ8z4FG2<;:[Tg0
+Z4 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Button_Test\simulation\qsim
+Z5 w1656796810
+Z6 8button_test.vo
+Z7 Fbutton_test.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|button_test.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1656796810.863000
+Z12 !s107 button_test.vo|
+!s101 -O0
+vbutton_test_vlg_check_tst
+!i10b 1
+Z13 !s100 ^^`FGHM[kC>QI[KJEKlMz2
+Z14 IKbY^nzKIKS3RfJAeZ3:ka1
+Z15 VIQ7hY6zH<;XVZGSiVW5LW3
+R4
+Z16 w1656796809
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1656796810.912000
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vbutton_test_vlg_sample_tst
+!i10b 1
+Z22 !s100 3oIYO@Q[bz_6k^]:6k5^`1
+Z23 IHSYBG5eT4d5IN@]J[>:Cz3
+Z24 VToOh9Jh_dMjbgQF<1VM>M2
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vbutton_test_vlg_vec_tst
+!i10b 1
+!s100 6AWe]j[A@@=SbdHA6;KCg1
+IGX`:9IHJOACa6b;J3^_Gb1
+Z25 Vd:YDUA1QTK?nnU]lWF_gM0
+R4
+R16
+R17
+R18
+Z26 L0 243
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vmain
+Z27 !s100 [n1hZ[YdlbhXVMBZg`4QR1
+Z28 IRzhVNVGcQhKHkKaIizJ^51
+Z29 VY<4GRPo:9Y42:]LL<4G;41
+R4
+Z30 w1656794037
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z31 !s108 1656794037.744000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vmain_vlg_check_tst
+Z32 IkVXDb?]KM9m3aC?`2LoKj0
+Z33 V6>:C]DdAMhfcHFG^S6C4d2
+R4
+Z34 w1656794036
+R17
+R18
+L0 63
+R8
+r1
+31
+Z35 !s108 1656794037.785000
+Z36 !s107 Waveform.vwf.vt|
+R21
+R10
+Z37 !s100 kd2RgFGQ09XFNIlQQ=jAi1
+!i10b 1
+!s85 0
+!s101 -O0
+vmain_vlg_sample_tst
+Z38 !s100 9mgiFKXfmGAJf<]dHl;F?1
+Z39 I0SCJi18:G;d2o;UMflP722
+Z40 V4dMNA0EBk:QYoIFX?SkhK3
+R4
+R34
+R17
+R18
+L0 29
+R8
+r1
+31
+R35
+R36
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vmain_vlg_vec_tst
+Z41 Iad:i8Qd^Wn]<:FdNDKm^>3
+Z42 VHZma`Q?n[z_A]1=F?<UDB3
+R4
+R34
+R17
+R18
+Z43 L0 211
+R8
+r1
+31
+R35
+R36
+R21
+R10
+Z44 !s100 >H]]=b4F6zIGl@JaFdmj^2
+!i10b 1
+!s85 0
+!s101 -O0

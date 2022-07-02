@@ -1,13 +1,15 @@
-<<<<<<< HEAD
 |switch
+fract_clk => pout[0].CLK
+fract_clk => pout[1].CLK
+fract_clk => pout[2].CLK
 fract_clk => p_out[0]~reg0.CLK
 fract_clk => p_out[1]~reg0.CLK
 fract_clk => p_out[2]~reg0.CLK
 fract_clk => p_out[3]~reg0.CLK
-fract_clk => stop~reg0.CLK
-fract_clk => count4[0]~reg0.CLK
-fract_clk => count4[1]~reg0.CLK
-fract_clk => count4[2]~reg0.CLK
+fract_clk => stop.CLK
+fract_clk => count4[0].CLK
+fract_clk => count4[1].CLK
+fract_clk => count4[2].CLK
 start => count4.OUTPUTSELECT
 start => count4.OUTPUTSELECT
 start => count4.OUTPUTSELECT
@@ -16,59 +18,35 @@ start => p_out.OUTPUTSELECT
 start => p_out.OUTPUTSELECT
 start => p_out.OUTPUTSELECT
 start => p_out.OUTPUTSELECT
-in_0 => count4.OUTPUTSELECT
-in_0 => count4.OUTPUTSELECT
-in_0 => count4.OUTPUTSELECT
-in_0 => p_out.OUTPUTSELECT
-in_0 => p_out.OUTPUTSELECT
-in_0 => p_out.OUTPUTSELECT
-in_0 => p_out.OUTPUTSELECT
+in_0 => pout.OUTPUTSELECT
+in_0 => pout.OUTPUTSELECT
+in_0 => pout.OUTPUTSELECT
 in_0 => stop.OUTPUTSELECT
-in_0 => p_out.IN0
-in_1 => p_out.IN1
-in_1 => count4.OUTPUTSELECT
-in_1 => count4.OUTPUTSELECT
-in_1 => count4.OUTPUTSELECT
-in_1 => p_out.OUTPUTSELECT
-in_1 => p_out.OUTPUTSELECT
-in_1 => p_out.OUTPUTSELECT
-in_1 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => count4.OUTPUTSELECT
+in_0 => count4.OUTPUTSELECT
+in_0 => count4.OUTPUTSELECT
+in_1 => pout.OUTPUTSELECT
+in_1 => pout.OUTPUTSELECT
+in_1 => pout.OUTPUTSELECT
 in_1 => stop.OUTPUTSELECT
-write[0] << <GND>
-write[1] << <GND>
-write[2] << <GND>
-write[3] << <GND>
-p_out[0] << p_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-p_out[1] << p_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-p_out[2] << p_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-p_out[3] << p_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count4[0] << count4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count4[1] << count4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count4[2] << count4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-stop << stop~reg0.DB_MAX_OUTPUT_PORT_TYPE
-=======
-|debouncer
-pb_1 => pb_1.IN1
-clk => clk.IN3
-pb_out << pb_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|debouncer|d_ff:d0
-DFF_CLOCK => Q~reg0.CLK
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|debouncer|d_ff:d1
-DFF_CLOCK => Q~reg0.CLK
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|debouncer|d_ff:d2
-DFF_CLOCK => Q~reg0.CLK
-D => Q~reg0.DATAIN
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
->>>>>>> master
+in_1 => p_out.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => count4.OUTPUTSELECT
+in_1 => count4.OUTPUTSELECT
+in_1 => count4.OUTPUTSELECT
+write[0] <= <GND>
+write[1] <= <GND>
+write[2] <= <GND>
+write[3] <= <GND>
+p_out[0] <= p_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

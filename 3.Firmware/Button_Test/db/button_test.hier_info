@@ -1,0 +1,241 @@
+|button_test
+bouncy4 <= debouncer:inst3.pb_out
+start => debouncer:inst3.pb_1
+clk => clk_div:inst2.clk
+p_out[0] <= switch:inst.p_out[0]
+p_out[1] <= switch:inst.p_out[1]
+p_out[2] <= switch:inst.p_out[2]
+p_out[3] <= switch:inst.p_out[3]
+in_0 => debouncer:inst4.pb_1
+in_1 => debouncer:inst5.pb_1
+
+
+|button_test|debouncer:inst3
+pb_1 => pb_1.IN1
+clk => clk.IN3
+pb_out <= pb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst3|d_ff:d0
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst3|d_ff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst3|d_ff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|clk_div:inst2
+clk => read_timer[0].CLK
+clk => read_timer[1].CLK
+clk => read_timer[2].CLK
+clk => read_timer[3].CLK
+clk => read_timer[4].CLK
+clk => read_timer[5].CLK
+clk => read_timer[6].CLK
+clk => read_timer[7].CLK
+clk => read_timer[8].CLK
+clk => read_timer[9].CLK
+clk => read_timer[10].CLK
+clk => read_timer[11].CLK
+clk => read_timer[12].CLK
+clk => read_timer[13].CLK
+clk => read_timer[14].CLK
+clk => read_timer[15].CLK
+clk => read_timer[16].CLK
+clk => read_timer[17].CLK
+clk => read_timer[18].CLK
+clk => read_timer[19].CLK
+clk => read_timer[20].CLK
+clk => read_timer[21].CLK
+clk => read_timer[22].CLK
+clk => read_timer[23].CLK
+clk => read_timer[24].CLK
+clk => read_timer[25].CLK
+clk => read_timer[26].CLK
+clk => read_timer[27].CLK
+clk => read_timer[28].CLK
+clk => read_timer[29].CLK
+clk => read_timer[30].CLK
+clk => read_timer[31].CLK
+clk => read_clk~reg0.CLK
+clk => fract_timer[0].CLK
+clk => fract_timer[1].CLK
+clk => fract_timer[2].CLK
+clk => fract_timer[3].CLK
+clk => fract_timer[4].CLK
+clk => fract_timer[5].CLK
+clk => fract_timer[6].CLK
+clk => fract_timer[7].CLK
+clk => fract_timer[8].CLK
+clk => fract_timer[9].CLK
+clk => fract_timer[10].CLK
+clk => fract_timer[11].CLK
+clk => fract_timer[12].CLK
+clk => fract_timer[13].CLK
+clk => fract_timer[14].CLK
+clk => fract_timer[15].CLK
+clk => fract_timer[16].CLK
+clk => fract_timer[17].CLK
+clk => fract_timer[18].CLK
+clk => fract_timer[19].CLK
+clk => fract_timer[20].CLK
+clk => fract_timer[21].CLK
+clk => fract_timer[22].CLK
+clk => fract_timer[23].CLK
+clk => fract_timer[24].CLK
+clk => fract_timer[25].CLK
+clk => fract_timer[26].CLK
+clk => fract_timer[27].CLK
+clk => fract_timer[28].CLK
+clk => fract_timer[29].CLK
+clk => fract_timer[30].CLK
+clk => fract_timer[31].CLK
+clk => fract_clk~reg0.CLK
+clk => slow_timer[0].CLK
+clk => slow_timer[1].CLK
+clk => slow_timer[2].CLK
+clk => slow_timer[3].CLK
+clk => slow_timer[4].CLK
+clk => slow_timer[5].CLK
+clk => slow_timer[6].CLK
+clk => slow_timer[7].CLK
+clk => slow_timer[8].CLK
+clk => slow_timer[9].CLK
+clk => slow_timer[10].CLK
+clk => slow_timer[11].CLK
+clk => slow_timer[12].CLK
+clk => slow_timer[13].CLK
+clk => slow_timer[14].CLK
+clk => slow_timer[15].CLK
+clk => slow_timer[16].CLK
+clk => slow_timer[17].CLK
+clk => slow_timer[18].CLK
+clk => slow_timer[19].CLK
+clk => slow_timer[20].CLK
+clk => slow_timer[21].CLK
+clk => slow_timer[22].CLK
+clk => slow_timer[23].CLK
+clk => slow_timer[24].CLK
+clk => slow_timer[25].CLK
+clk => slow_timer[26].CLK
+clk => slow_timer[27].CLK
+clk => slow_timer[28].CLK
+clk => slow_timer[29].CLK
+clk => slow_timer[30].CLK
+clk => slow_timer[31].CLK
+clk => slow_clk~reg0.CLK
+read_clk <= read_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fract_clk <= fract_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+slow_clk <= slow_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|switch:inst
+fract_clk => pout[0].CLK
+fract_clk => pout[1].CLK
+fract_clk => pout[2].CLK
+fract_clk => p_out[0]~reg0.CLK
+fract_clk => p_out[1]~reg0.CLK
+fract_clk => p_out[2]~reg0.CLK
+fract_clk => p_out[3]~reg0.CLK
+fract_clk => stop.CLK
+fract_clk => count4[0].CLK
+fract_clk => count4[1].CLK
+fract_clk => count4[2].CLK
+start => count4.OUTPUTSELECT
+start => count4.OUTPUTSELECT
+start => count4.OUTPUTSELECT
+start => stop.OUTPUTSELECT
+start => p_out.OUTPUTSELECT
+start => p_out.OUTPUTSELECT
+start => p_out.OUTPUTSELECT
+start => p_out.OUTPUTSELECT
+in_0 => pout.OUTPUTSELECT
+in_0 => pout.OUTPUTSELECT
+in_0 => pout.OUTPUTSELECT
+in_0 => stop.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => p_out.OUTPUTSELECT
+in_0 => count4.OUTPUTSELECT
+in_0 => count4.OUTPUTSELECT
+in_0 => count4.OUTPUTSELECT
+in_1 => pout.OUTPUTSELECT
+in_1 => pout.OUTPUTSELECT
+in_1 => pout.OUTPUTSELECT
+in_1 => stop.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => p_out.OUTPUTSELECT
+in_1 => count4.OUTPUTSELECT
+in_1 => count4.OUTPUTSELECT
+in_1 => count4.OUTPUTSELECT
+write[0] <= <GND>
+write[1] <= <GND>
+write[2] <= <GND>
+write[3] <= <GND>
+p_out[0] <= p_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[1] <= p_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[2] <= p_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_out[3] <= p_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst4
+pb_1 => pb_1.IN1
+clk => clk.IN3
+pb_out <= pb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst4|d_ff:d0
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst4|d_ff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst4|d_ff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst5
+pb_1 => pb_1.IN1
+clk => clk.IN3
+pb_out <= pb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst5|d_ff:d0
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst5|d_ff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|button_test|debouncer:inst5|d_ff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
