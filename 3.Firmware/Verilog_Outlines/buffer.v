@@ -3,15 +3,22 @@ module buffer(
 	input [3:0] p_in,
 	input read, // Read data from buffer if read = 1
 	input write, // Write data to buffer if write = 1
+	output reg [15:0] time_total,			// 1 second is divided by 20 to achieve 1/20 resolution, assuming max latency is 500 seconds. 20*500*6=60000 and it is in range of 16 bits.
 	output reg [23:0] memory,
 	output reg [2:0] fullness
 );
 
 	integer i;
+	//integer j;
+
+	reg [13:0] time_reg[83:0];  // Limit time individally at  10000 DO NOT FORGET !
 	
 	initial begin
 		memory = 24'd0;
 		fullness = 3'd0;
+		for (i=0;i<6;i=i+1) begin
+			time_reg[i][13:0] = 14'd0;
+		end	
 	end
 
 	always @(posedge clk) begin

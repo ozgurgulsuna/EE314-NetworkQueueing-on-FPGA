@@ -2,24 +2,24 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module buffer_sim
+# -- Compiling module clk_div
 # 
 # Top level modules:
-# 	buffer_sim
+# 	clk_div
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module buffer_sim_vlg_sample_tst
-# -- Compiling module buffer_sim_vlg_check_tst
-# -- Compiling module buffer_sim_vlg_vec_tst
+# -- Compiling module clk_div_vlg_sample_tst
+# -- Compiling module clk_div_vlg_check_tst
+# -- Compiling module clk_div_vlg_vec_tst
 # 
 # Top level modules:
-# 	buffer_sim_vlg_vec_tst
-# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.buffer_sim_vlg_vec_tst 
-# Loading work.buffer_sim_vlg_vec_tst
-# Loading work.buffer_sim
+# 	clk_div_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.clk_div_vlg_vec_tst 
+# Loading work.clk_div_vlg_vec_tst
+# Loading work.clk_div
 # Loading altera_ver.dffeas
-# Loading work.buffer_sim_vlg_sample_tst
-# Loading work.buffer_sim_vlg_check_tst
+# Loading work.clk_div_vlg_sample_tst
+# Loading work.clk_div_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : buffer_sim.vwf.vt(629)
-#    Time: 500 ns  Iteration: 0  Instance: /buffer_sim_vlg_vec_tst/tb_out
+# ** Note: $finish    : clk_div_sim.vwf.vt(175)
+#    Time: 1 us  Iteration: 0  Instance: /clk_div_vlg_vec_tst/tb_out

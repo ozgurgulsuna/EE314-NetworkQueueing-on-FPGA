@@ -1,5 +1,5 @@
 Analysis & Synthesis report for verilog_outlines
-Sat Jul 02 00:46:58 2022
+Sat Jul 02 13:29:17 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |clk_div
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
 
@@ -42,14 +42,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jul 02 00:46:58 2022      ;
+; Analysis & Synthesis Status     ; Successful - Sat Jul 02 13:29:17 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; verilog_outlines                           ;
-; Top-level Entity Name           ; buffer_sim                                 ;
+; Top-level Entity Name           ; clk_div                                    ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 27                                         ;
-; Total pins                      ; 34                                         ;
+; Total registers                 ; 66                                         ;
+; Total pins                      ; 3                                          ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -68,7 +68,7 @@ applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; buffer_sim         ; verilog_outlines   ;
+; Top-level entity name                                                           ; clk_div            ; verilog_outlines   ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -149,66 +149,58 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; buffer.v                         ; yes             ; User Verilog HDL File              ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/buffer.v       ;         ;
-; buffer_sim.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/buffer_sim.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; clk_div.v                        ; yes             ; User Verilog HDL File  ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/clk_div.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 43                      ;
-;                                             ;                         ;
-; Combinational ALUT usage for logic          ; 57                      ;
-;     -- 7 input functions                    ; 0                       ;
-;     -- 6 input functions                    ; 28                      ;
-;     -- 5 input functions                    ; 25                      ;
-;     -- 4 input functions                    ; 4                       ;
-;     -- <=3 input functions                  ; 0                       ;
-;                                             ;                         ;
-; Dedicated logic registers                   ; 27                      ;
-;                                             ;                         ;
-; I/O pins                                    ; 34                      ;
-; Total DSP Blocks                            ; 0                       ;
-; Maximum fan-out node                        ; buffer:inst|fullness[0] ;
-; Maximum fan-out                             ; 38                      ;
-; Total fan-out                               ; 432                     ;
-; Average fan-out                             ; 2.84                    ;
-+---------------------------------------------+-------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 45        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 78        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 12        ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 66        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 66        ;
+;                                             ;           ;
+; I/O pins                                    ; 3         ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 66        ;
+; Total fan-out                               ; 403       ;
+; Average fan-out                             ; 2.69      ;
++---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------+--------------+
-; |buffer_sim                ; 57 (0)            ; 27 (0)       ; 0                 ; 0          ; 34   ; 0            ; |buffer_sim             ; work         ;
-;    |buffer:inst|           ; 57 (57)           ; 27 (27)      ; 0                 ; 0          ; 0    ; 0            ; |buffer_sim|buffer:inst ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; |clk_div                   ; 78 (78)           ; 66 (66)      ; 0                 ; 0          ; 3    ; 0            ; |clk_div            ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,30 +209,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |buffer_sim|buffer:inst|fullness[2] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |buffer_sim|buffer:inst|memory[23]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |buffer_sim|buffer:inst|memory[7]   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |buffer_sim|buffer:inst|memory[11]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |buffer_sim|buffer:inst|memory[15]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |buffer_sim|buffer:inst|memory[19]  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |buffer_sim|buffer:inst|memory[3]   ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; No         ; |buffer_sim|buffer:inst|fullness    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |clk_div ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; clockfreq      ; 10000000 ; Signed Integer                              ;
++----------------+----------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -258,30 +244,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jul 02 00:46:57 2022
+    Info: Processing started: Sat Jul 02 13:29:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off verilog_outlines -c verilog_outlines
-Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file buffer.v
     Info (12023): Found entity 1: buffer
-Info (12021): Found 1 design units, including 1 entities, in source file buffer_sim.bdf
-    Info (12023): Found entity 1: buffer_sim
+Warning (12019): Can't analyze file -- file buffer_sim.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: main
-Info (12127): Elaborating entity "buffer_sim" for the top level hierarchy
-Info (12128): Elaborating entity "buffer" for hierarchy "buffer:inst"
-Warning (10230): Verilog HDL assignment warning at buffer.v(28): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at buffer.v(47): truncated value with size 32 to match size of target (3)
+Info (12021): Found 1 design units, including 1 entities, in source file decision.v
+    Info (12023): Found entity 1: decision
+Info (12021): Found 1 design units, including 1 entities, in source file clk_div.v
+    Info (12023): Found entity 1: clk_div
+Info (12021): Found 1 design units, including 1 entities, in source file clk_div_sim.bdf
+    Info (12023): Found entity 1: clk_div_sim
+Warning (10236): Verilog HDL Implicit Net warning at main.v(17): created implicit net for "sw_in"
+Info (12127): Elaborating entity "clk_div" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 61 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4725 megabytes
-    Info: Processing ended: Sat Jul 02 00:46:58 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (21057): Implemented 147 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 144 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Sat Jul 02 13:29:17 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

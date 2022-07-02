@@ -1,0 +1,19 @@
+module clk_div(
+	input clk,
+	output reg read_clk,
+);
+		
+
+	// This always block produces a 'clock' with 3 seconds period
+	always @(posedge clk) begin
+		read_clk = 0;
+		read_timer = read_timer + 1;
+		if (read_timer == 3*clockfreq) begin
+			read_timer = 0;
+			read_clk = 1;
+		end
+	end
+	
+endmodule
+	
+	
