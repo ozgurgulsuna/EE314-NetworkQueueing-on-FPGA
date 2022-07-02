@@ -1,5 +1,5 @@
 EDA Netlist Writer report for verilog_outlines
-Sat Jul 02 13:28:42 2022
+Sat Jul 02 20:23:28 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Jul 02 13:28:42 2022 ;
+; EDA Netlist Writer Status ; Successful - Sat Jul 02 20:23:28 2022 ;
 ; Revision Name             ; verilog_outlines                      ;
-; Top-level Entity Name     ; clk_div                               ;
+; Top-level Entity Name     ; switch                                ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -65,13 +65,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                 ;
-+------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                            ;
-+------------------------------------------------------------------------------------------------------------+
-; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim//verilog_outlines.vo ;
-+------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                 ;
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/simulation/qsim//verilog_outlines.vo ;
++--------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -93,14 +93,14 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Sat Jul 02 13:28:41 2022
-Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
+    Info: Processing started: Sat Jul 02 20:23:27 2022
+Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
 Info (119006): Selected device 5CSEMA5F31C6 for design "verilog_outlines"
-Info (204019): Generated file verilog_outlines.vo in folder "D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file verilog_outlines.vo in folder "C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4615 megabytes
-    Info: Processing ended: Sat Jul 02 13:28:42 2022
+    Info: Peak virtual memory: 4633 megabytes
+    Info: Processing ended: Sat Jul 02 20:23:28 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

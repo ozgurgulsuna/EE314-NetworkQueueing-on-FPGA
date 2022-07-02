@@ -1,0 +1,46 @@
+module switch(
+	input fract_clk,
+	input start,
+	input in_0,
+	input in_1,
+	output reg [3:0] write;
+	output reg [3:0] p_out;
+);
+	
+	reg [1:0] count4;
+	reg temp_start;
+	reg stop;
+	
+	initial begin
+		count4 = 2'b11;
+		temp_start = start;
+		stop = 1;
+	end
+	
+	always @(posedge fract_clk) begin
+		
+		if (stop == 0) begin
+			p_out[count4] 
+		end
+		
+	end
+	
+	always @(posedge fract_clk) begin
+		
+		if (temp_start == 0 && start == 1) begin
+			count4 = 0;
+			stop = 0;
+		end
+		
+		if (count4 != 2'b11) begin
+			count4 = count4 + 2'b01;
+		end
+		else begin
+			stop = 1;
+		end
+		
+		temp_start = start;
+		
+	end
+	
+endmodule
