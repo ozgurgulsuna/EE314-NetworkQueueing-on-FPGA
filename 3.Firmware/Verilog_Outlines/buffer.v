@@ -1,6 +1,5 @@
 module buffer(
 	input fract_clk,
-	input clk,
 	
 	input [3:0] p_in,
 	
@@ -17,7 +16,7 @@ module buffer(
 
 	integer i;
 
-	reg [13:0] time_reg[83:0];  // Limit time individally at  10000 DO NOT FORGET !
+	reg [13:0] time_reg[7:0];  			// Limit time individally at  10000 DO NOT FORGET !
 	
 	initial begin
 		memory = 24'd0;
@@ -25,14 +24,14 @@ module buffer(
 		time_total = 16'd0;
 		input_count = 10'd0;
 		drop_count = 8'd0;
-		for (i=0;i<6;i=i+1) begin
+		for (i=0;i<8;i=i+1) begin
 			time_reg[i][13:0] = 14'd0;
 		end	
 	end
 
-	always @(posedge clk) begin
+	always @(posedge fract_clk) begin
 	
-		if (read == 1) begin                       
+		if (read == 1) begin                         // Read from buffer                    
 			
 			if (fullness != 0) begin
 				memory[4*0+3:4*0] = memory[4*1+3:4*1];
@@ -40,13 +39,22 @@ module buffer(
 				memory[4*2+3:4*2] = memory[4*3+3:4*3];
 				memory[4*3+3:4*3] = memory[4*4+3:4*4];
 				memory[4*4+3:4*4] = memory[4*5+3:4*5];
-				// memory[4*5+3:4*5] = 4'd0; - no need to reset the buffer (or is there?)
+			   memory[4*5+3:4*5] = 4'd0;                            //- no need to reset the buffer (or is there?)
+				
+				time_reg[0][13:0] = time_reg[1][13:0];                // If full then the 6th buffer latency value is zeroed
+				time_reg[1][13:0] = time_reg[2][13:0];               
+				time_reg[2][13:0] = time_reg[3][13:0];               
+				time_reg[3][13:0] = time_reg[4][13:0];               
+				time_reg[4][13:0] = time_reg[5][13:0];               
+				time_reg[5][13:0] = 14'd0; 
+				
+
 				fullness = fullness - 1;
 			end
 			
 		end
 		
-		if (write == 1) begin                          // Input is now here
+		if (write == 1) begin                           // Write to the buffer
 			input_count = input_count+1;
 		
 			if (fullness == 6) begin
@@ -58,11 +66,11 @@ module buffer(
 				memory[4*5+3:4*5] = p_in[3:0];
 				
 				time_reg[0][13:0] = time_reg[1][13:0];                // If full then the 6th buffer latency value is zeroed
-				time_reg[1][13:0] = time_reg[2][13:0];                // If full then the 6th buffer latency value is zeroed
-				time_reg[2][13:0] = time_reg[3][13:0];                // If full then the 6th buffer latency value is zeroed
-				time_reg[3][13:0] = time_reg[4][13:0];                // If full then the 6th buffer latency value is zeroed
-				time_reg[4][13:0] = time_reg[5][13:0];                // If full then the 6th buffer latency value is zeroed
-				time_reg[5][13:0] = 14'd0;                            // If full then the 6th buffer latency value is zeroed
+				time_reg[1][13:0] = time_reg[2][13:0];               
+				time_reg[2][13:0] = time_reg[3][13:0];               
+				time_reg[3][13:0] = time_reg[4][13:0];               
+				time_reg[4][13:0] = time_reg[5][13:0];               
+				time_reg[5][13:0] = 14'd0;                           
 				
 				drop_count = drop_count+1;
 			end
@@ -75,12 +83,18 @@ module buffer(
 			
 		end
 		
-	end
-	
-	always  @(posedge clk) begin
+		// Increment latency  values
+		for (i=0;i<fullness;i=i+1) begin
+			time_reg[i] = time_reg[i]+1;
+		end
+		
+		// Calculate time total
+		time_total = 16'd0;
 		for(i=0;i<6;i=i+1) begin
 			time_total = time_total + time_reg[i][13:0];
 		end
+
 	end
+	
 	
 endmodule

@@ -2,24 +2,24 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module switch
+# -- Compiling module buffer
 # 
 # Top level modules:
-# 	switch
+# 	buffer
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module switch_vlg_sample_tst
-# -- Compiling module switch_vlg_check_tst
-# -- Compiling module switch_vlg_vec_tst
+# -- Compiling module buffer_vlg_sample_tst
+# -- Compiling module buffer_vlg_check_tst
+# -- Compiling module buffer_vlg_vec_tst
 # 
 # Top level modules:
-# 	switch_vlg_vec_tst
-# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.switch_vlg_vec_tst 
-# Loading work.switch_vlg_vec_tst
-# Loading work.switch
+# 	buffer_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.buffer_vlg_vec_tst 
+# Loading work.buffer_vlg_vec_tst
+# Loading work.buffer
 # Loading altera_ver.dffeas
-# Loading work.switch_vlg_sample_tst
-# Loading work.switch_vlg_check_tst
+# Loading work.buffer_vlg_sample_tst
+# Loading work.buffer_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : switch_sim.vwf.vt(212)
-#    Time: 500 ns  Iteration: 0  Instance: /switch_vlg_vec_tst/tb_out
+# ** Note: $finish    : buffer_sim.vwf.vt(1265)
+#    Time: 500 ns  Iteration: 0  Instance: /buffer_vlg_vec_tst/tb_out

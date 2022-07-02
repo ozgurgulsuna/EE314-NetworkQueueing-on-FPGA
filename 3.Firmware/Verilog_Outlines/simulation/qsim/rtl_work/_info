@@ -3,11 +3,11 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Verilog_Outlines\simulation\qsim
-vswitch
-I=bb=O03ljZFkVO1Fo11Q=3
-V5mM^dh[R67nMOOb9cMVzF1
-Z1 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Verilog_Outlines\simulation\qsim
-w1656790151
+vbuffer
+IoQYJL;o>GS^khg<b8APmd3
+V32KEz2k>TSRMV:UN8G^=b1
+Z1 dD:\2021-22\Okul\Dersler\EE314\TermProject\3.Firmware\Verilog_Outlines\simulation\qsim
+w1656801299
 Z2 8verilog_outlines.vo
 Z3 Fverilog_outlines.vo
 L0 31
@@ -17,35 +17,35 @@ r1
 Z5 !s90 -work|work|verilog_outlines.vo|
 Z6 o-work work -O0
 !i10b 1
-!s100 jI][<Z[Lmm2Af2YELGKOC1
+!s100 S76_hVWSVA_PfiRn<_]el2
 !s85 0
-!s108 1656790151.705000
+!s108 1656801299.920000
 Z7 !s107 verilog_outlines.vo|
 !s101 -O0
-vswitch_vlg_check_tst
+vbuffer_vlg_check_tst
 !i10b 1
-!s100 EKWa3V4?=<3DHNZe@IEiT2
-II15Yzc0QNzXU8Wf_>TGNm1
-Va1:PBAZJcI?aI;83d>>ll3
+!s100 O`VMXG7PfXIUc4OD:9SC91
+IB2lDHaF;CJPTd7Ggzc7I91
+VVK_TY_OAJeHU]j@k0S1453
 R1
-Z8 w1656790150
-Z9 8switch_sim.vwf.vt
-Z10 Fswitch_sim.vwf.vt
+Z8 w1656801297
+Z9 8buffer_sim.vwf.vt
+Z10 Fbuffer_sim.vwf.vt
 L0 63
 R4
 r1
 !s85 0
 31
-Z11 !s108 1656790151.748000
-Z12 !s107 switch_sim.vwf.vt|
-Z13 !s90 -work|work|switch_sim.vwf.vt|
+Z11 !s108 1656801300.118000
+Z12 !s107 buffer_sim.vwf.vt|
+Z13 !s90 -work|work|buffer_sim.vwf.vt|
 !s101 -O0
 R6
-vswitch_vlg_sample_tst
+vbuffer_vlg_sample_tst
 !i10b 1
-!s100 6OhPU_CBjZLaFfOezH:D31
-I7;nenmmdmRZWjc>LeXH>Y0
-V?F[6m:<dSDMTW;Sz<GaDo0
+!s100 T>>E3YehCHZfJeZo15N<00
+IJK5Bz7g_@fzELnZ]EG^8l3
+V9ZYIk<QW14=:9LSVmOP2G1
 R1
 R8
 R9
@@ -60,16 +60,16 @@ R12
 R13
 !s101 -O0
 R6
-vswitch_vlg_vec_tst
+vbuffer_vlg_vec_tst
 !i10b 1
-!s100 CJW<C:`<RFJ:OkWi7gjES0
-Ii7L;zEocWIf>bD0hhhZiQ0
-VK?m02G9IjX5gXYg]AfBZ]3
+!s100 PlG4OjmCYb?i^WdTKT60Q0
+Io@L4zH_VUR;o1l3GoDj3[0
+V<b0Bajh_B6n_^Rg4ia4?a0
 R1
 R8
 R9
 R10
-L0 216
+L0 1269
 R4
 r1
 !s85 0
@@ -79,3 +79,79 @@ R12
 R13
 !s101 -O0
 R6
+vswitch
+I=bb=O03ljZFkVO1Fo11Q=3
+V5mM^dh[R67nMOOb9cMVzF1
+Z14 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Verilog_Outlines\simulation\qsim
+w1656790151
+R2
+R3
+L0 31
+R4
+r1
+31
+R5
+R6
+R7
+!i10b 1
+!s100 jI][<Z[Lmm2Af2YELGKOC1
+!s85 0
+!s108 1656790151.705000
+!s101 -O0
+vswitch_vlg_check_tst
+II15Yzc0QNzXU8Wf_>TGNm1
+Va1:PBAZJcI?aI;83d>>ll3
+R14
+Z15 w1656790150
+Z16 8switch_sim.vwf.vt
+Z17 Fswitch_sim.vwf.vt
+L0 63
+R4
+r1
+31
+Z18 !s108 1656790151.748000
+Z19 !s107 switch_sim.vwf.vt|
+Z20 !s90 -work|work|switch_sim.vwf.vt|
+R6
+!i10b 1
+!s100 EKWa3V4?=<3DHNZe@IEiT2
+!s85 0
+!s101 -O0
+vswitch_vlg_sample_tst
+I7;nenmmdmRZWjc>LeXH>Y0
+V?F[6m:<dSDMTW;Sz<GaDo0
+R14
+R15
+R16
+R17
+L0 29
+R4
+r1
+31
+R18
+R19
+R20
+R6
+!i10b 1
+!s100 6OhPU_CBjZLaFfOezH:D31
+!s85 0
+!s101 -O0
+vswitch_vlg_vec_tst
+Ii7L;zEocWIf>bD0hhhZiQ0
+VK?m02G9IjX5gXYg]AfBZ]3
+R14
+R15
+R16
+R17
+L0 216
+R4
+r1
+31
+R18
+R19
+R20
+R6
+!i10b 1
+!s100 CJW<C:`<RFJ:OkWi7gjES0
+!s85 0
+!s101 -O0
