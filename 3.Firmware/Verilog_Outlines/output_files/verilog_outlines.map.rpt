@@ -1,5 +1,9 @@
 Analysis & Synthesis report for verilog_outlines
+<<<<<<< HEAD
 Sat Jul 02 20:19:08 2022
+=======
+Sat Jul 02 18:34:38 2022
+>>>>>>> master
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,10 +18,15 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
+<<<<<<< HEAD
   9. Inverted Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
+=======
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+>>>>>>> master
 
 
 
@@ -43,6 +52,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status     ; Successful - Sat Jul 02 20:19:08 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; verilog_outlines                           ;
@@ -51,6 +61,16 @@ applicable agreement for further details.
 ; Logic utilization (in ALMs)     ; N/A                                        ;
 ; Total registers                 ; 8                                          ;
 ; Total pins                      ; 16                                         ;
+=======
+; Analysis & Synthesis Status     ; Successful - Sat Jul 02 18:34:38 2022      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; verilog_outlines                           ;
+; Top-level Entity Name           ; debouncer                                  ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 3                                          ;
+; Total pins                      ; 3                                          ;
+>>>>>>> master
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -69,7 +89,11 @@ applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+<<<<<<< HEAD
 ; Top-level entity name                                                           ; switch             ; verilog_outlines   ;
+=======
+; Top-level entity name                                                           ; debouncer          ; verilog_outlines   ;
+>>>>>>> master
 ; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -167,6 +191,7 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
+<<<<<<< HEAD
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------------------------------------+---------+
@@ -199,6 +224,40 @@ applicable agreement for further details.
 ; Total fan-out                               ; 122            ;
 ; Average fan-out                             ; 2.10           ;
 +---------------------------------------------+----------------+
+=======
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/debouncer.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 2         ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1         ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 1         ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 3         ;
+;                                             ;           ;
+; I/O pins                                    ; 3         ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 3         ;
+; Total fan-out                               ; 12        ;
+; Average fan-out                             ; 1.20      ;
++---------------------------------------------+-----------+
+>>>>>>> master
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,7 +265,14 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+<<<<<<< HEAD
 ; |switch                    ; 18 (18)           ; 8 (8)        ; 0                 ; 0          ; 16   ; 0            ; |switch             ; work         ;
+=======
+; |debouncer                 ; 1 (1)             ; 3 (0)        ; 0                 ; 0          ; 3    ; 0            ; |debouncer          ; work         ;
+;    |d_ff:d0|               ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |debouncer|d_ff:d0  ; work         ;
+;    |d_ff:d1|               ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |debouncer|d_ff:d1  ; work         ;
+;    |d_ff:d2|               ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |debouncer|d_ff:d2  ; work         ;
+>>>>>>> master
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -216,7 +282,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< HEAD
 ; Total registers                              ; 8     ;
+=======
+; Total registers                              ; 3     ;
+>>>>>>> master
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -226,6 +296,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
+<<<<<<< HEAD
 +--------------------------------------------------+
 ; Inverted Register Statistics                     ;
 +----------------------------------------+---------+
@@ -245,6 +316,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
+=======
+>>>>>>> master
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -260,7 +333,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+<<<<<<< HEAD
     Info: Processing started: Sat Jul 02 20:19:07 2022
+=======
+    Info: Processing started: Sat Jul 02 18:34:37 2022
+>>>>>>> master
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off verilog_outlines -c verilog_outlines
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file buffer.v
@@ -274,6 +351,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file clk_div
     Info (12023): Found entity 1: clk_div
 Info (12021): Found 1 design units, including 1 entities, in source file clk_div_sim.bdf
     Info (12023): Found entity 1: clk_div_sim
+<<<<<<< HEAD
 Info (12021): Found 1 design units, including 1 entities, in source file switch.v
     Info (12023): Found entity 1: switch
 Info (12021): Found 1 design units, including 1 entities, in source file switch_sim.bdf
@@ -303,5 +381,27 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnin
     Info: Processing ended: Sat Jul 02 20:19:08 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
+=======
+Info (12021): Found 2 design units, including 2 entities, in source file debouncer.v
+    Info (12023): Found entity 1: debouncer
+    Info (12023): Found entity 2: d_ff
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer_sim.bdf
+    Info (12023): Found entity 1: debouncer_sim
+Warning (10236): Verilog HDL Implicit Net warning at main.v(17): created implicit net for "sw_in"
+Info (12127): Elaborating entity "debouncer" for the top level hierarchy
+Info (12128): Elaborating entity "d_ff" for hierarchy "d_ff:d0"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 4 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Sat Jul 02 18:34:38 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+>>>>>>> master
 
 

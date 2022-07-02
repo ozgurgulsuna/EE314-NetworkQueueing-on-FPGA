@@ -155,12 +155,21 @@ R10
 !i10b 1
 !s85 0
 !s101 -O0
+<<<<<<< HEAD
 vswitch_sim
 Z51 !s100 V7nN:L[`BcX]kKz<JV_R33
 Z52 Ida2V7m]>U2l3A6H^V<d]d1
 Z53 V>f56@GnG1^i=hQ3QOz9L03
 R4
 Z54 w1656782025
+=======
+vdebouncer
+Z51 !s100 R9DgM0QLP>C1UoSInb`IU0
+Z52 I[6>Ki1>;6mDeon_YF_J^:2
+Z53 VVLS=l^7HegBG:mNJ?dobD2
+R31
+Z54 w1656776711
+>>>>>>> master
 R6
 R7
 L0 31
@@ -171,6 +180,7 @@ R9
 R10
 !i10b 1
 !s85 0
+<<<<<<< HEAD
 Z55 !s108 1656782025.698000
 R12
 !s101 -O0
@@ -184,10 +194,26 @@ Z59 w1656782024
 Z60 8switch_sim.vwf.vt
 Z61 Fswitch_sim.vwf.vt
 L0 63
+=======
+Z55 !s108 1656776712.693000
+R12
+!s101 -O0
+vdebouncer_vlg_check_tst
+!i10b 1
+Z56 !s100 Qof>H[2e_]X6aCFRRWjhH3
+Z57 I2PObMeO6V1[JfQ_f2U1^Z0
+Z58 V?IIMfj<neaSW5?ooG?S@^3
+R31
+Z59 w1656776710
+Z60 8debouncer_sim.vwf.vt
+Z61 Fdebouncer_sim.vwf.vt
+L0 59
+>>>>>>> master
 R8
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z62 !s108 1656782025.744000
 Z63 !s107 switch_sim.vwf.vt|
 Z64 !s90 -work|work|switch_sim.vwf.vt|
@@ -199,6 +225,19 @@ Z65 !s100 D8b:G^oX16D9^b[@ePTik3
 Z66 Ij=k=iKc46`0ZVNFHO[?^F1
 Z67 V[jFjKW[1om;PYKCaBco`<0
 R4
+=======
+Z62 !s108 1656776712.788000
+Z63 !s107 debouncer_sim.vwf.vt|
+Z64 !s90 -work|work|debouncer_sim.vwf.vt|
+!s101 -O0
+R10
+vdebouncer_vlg_sample_tst
+!i10b 1
+Z65 !s100 z:2Q?V2Z=85lS>Y_0U_L;3
+Z66 I=eIz_3R?mTg`NjP>:e9W[3
+Z67 VFoXhmk8WN;02VTZ;1deD@2
+R31
+>>>>>>> master
 R59
 R60
 R61
@@ -212,6 +251,7 @@ R63
 R64
 !s101 -O0
 R10
+<<<<<<< HEAD
 vswitch_sim_vlg_vec_tst
 !i10b 1
 Z68 !s100 m8@EQYLiSWH]Z3aRjU8WA2
@@ -222,6 +262,18 @@ R59
 R60
 R61
 Z71 L0 335
+=======
+vdebouncer_vlg_vec_tst
+!i10b 1
+!s100 `R7d`kTWnM[M>]]^eM7NG2
+I<1KY75hXL3lcjCn4B`l:`3
+Z68 V58fZ@PGzU=dIKAmaGZlD<0
+R31
+R59
+R60
+R61
+Z69 L0 155
+>>>>>>> master
 R8
 r1
 !s85 0

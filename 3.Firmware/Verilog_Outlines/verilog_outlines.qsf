@@ -38,7 +38,11 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
+<<<<<<< HEAD
 set_global_assignment -name TOP_LEVEL_ENTITY switch
+=======
+set_global_assignment -name TOP_LEVEL_ENTITY debouncer
+>>>>>>> master
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:22:38  JULY 01, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -58,6 +62,7 @@ set_global_assignment -name VERILOG_FILE decision.v
 set_global_assignment -name VERILOG_FILE clk_div.v
 set_global_assignment -name BDF_FILE clk_div_sim.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE clk_div_sim.vwf
+<<<<<<< HEAD
 set_global_assignment -name VERILOG_FILE switch.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE switch_sim.vwf
 set_global_assignment -name BDF_FILE switch_sim.bdf
@@ -65,3 +70,12 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+=======
+set_global_assignment -name VERILOG_FILE debouncer.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE debouncer_sim.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE debouncer_sim.vwf
+>>>>>>> master

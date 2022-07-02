@@ -25,7 +25,11 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
+<<<<<<< HEAD
 	DATA_DURATION = 500.0;
+=======
+	DATA_DURATION = 20000.0;
+>>>>>>> master
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -42,6 +46,7 @@ SIGNAL("fract_clk")
 	PARENT = "";
 }
 
+<<<<<<< HEAD
 SIGNAL("in_0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -63,12 +68,16 @@ SIGNAL("in_1")
 }
 
 SIGNAL("start")
+=======
+SIGNAL("pb_1")
+>>>>>>> master
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
+<<<<<<< HEAD
 	PARENT = "";
 }
 
@@ -93,6 +102,12 @@ SIGNAL("p_out[3]")
 }
 
 SIGNAL("p_out[2]")
+=======
+	PARENT = "";
+}
+
+SIGNAL("pb_out")
+>>>>>>> master
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -180,6 +195,7 @@ TRANSITION_LIST("fract_clk")
 		NODE
 		{
 			REPEAT = 1;
+<<<<<<< HEAD
 			LEVEL 1 FOR 2.0;
 			LEVEL 0 FOR 8.0;
 			LEVEL 1 FOR 2.0;
@@ -280,11 +296,57 @@ TRANSITION_LIST("fract_clk")
 			LEVEL 0 FOR 8.0;
 			LEVEL 1 FOR 2.0;
 			LEVEL 0 FOR 8.0;
+=======
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+			LEVEL 0 FOR 500.0;
+			LEVEL 1 FOR 500.0;
+>>>>>>> master
 		}
 	}
 }
 
+<<<<<<< HEAD
 TRANSITION_LIST("in_0")
+=======
+TRANSITION_LIST("pb_1")
+>>>>>>> master
 {
 	NODE
 	{
@@ -292,6 +354,7 @@ TRANSITION_LIST("in_0")
 		NODE
 		{
 			REPEAT = 1;
+<<<<<<< HEAD
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 10.0;
 			LEVEL 0 FOR 70.0;
@@ -462,11 +525,124 @@ TRANSITION_LIST("count4[0]")
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 50.0;
 			LEVEL 0 FOR 150.0;
+=======
+			LEVEL 0 FOR 1580.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 60.0;
+			LEVEL 1 FOR 5765.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 15.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 25.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 15.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 25.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 15.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 15.0;
+			LEVEL 0 FOR 4250.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 15.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 25.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 35.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 1765.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 15.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 5440.0;
+>>>>>>> master
 		}
 	}
 }
 
+<<<<<<< HEAD
 TRANSITION_LIST("stop")
+=======
+TRANSITION_LIST("pb_out")
+>>>>>>> master
 {
 	NODE
 	{
@@ -474,11 +650,19 @@ TRANSITION_LIST("stop")
 		NODE
 		{
 			REPEAT = 1;
+<<<<<<< HEAD
 			LEVEL 1 FOR 60.0;
 			LEVEL 0 FOR 150.0;
 			LEVEL 1 FOR 30.0;
 			LEVEL 0 FOR 110.0;
 			LEVEL 1 FOR 150.0;
+=======
+			LEVEL 0 FOR 3500.0;
+			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 9000.0;
+			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 5500.0;
+>>>>>>> master
 		}
 	}
 }
@@ -494,7 +678,11 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
+<<<<<<< HEAD
 	CHANNEL = "start";
+=======
+	CHANNEL = "pb_1";
+>>>>>>> master
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -503,7 +691,11 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
+<<<<<<< HEAD
 	CHANNEL = "in_0";
+=======
+	CHANNEL = "pb_out";
+>>>>>>> master
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |switch
 fract_clk => p_out[0]~reg0.CLK
 fract_clk => p_out[1]~reg0.CLK
@@ -45,5 +46,29 @@ count4[0] << count4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count4[1] << count4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count4[2] << count4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 stop << stop~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|debouncer
+pb_1 => pb_1.IN1
+clk => clk.IN3
+pb_out << pb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncer|d_ff:d0
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncer|d_ff:d1
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncer|d_ff:d2
+DFF_CLOCK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> master
 
 

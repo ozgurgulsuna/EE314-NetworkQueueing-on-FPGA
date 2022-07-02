@@ -2,6 +2,7 @@ vendor_name = ModelSim
 source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/buffer.v
 source_file = 1, buffer_sim.bdf
 source_file = 1, buffer_sim.vwf
+<<<<<<< HEAD
 source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/main.v
 source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/decision.v
 source_file = 1, C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/clk_div.v
@@ -54,3 +55,22 @@ instance = comp, \p_out~6 , p_out~6, switch, 1
 instance = comp, \p_out~7 , p_out~7, switch, 1
 instance = comp, \p_out~8 , p_out~8, switch, 1
 instance = comp, \p_out[3]~reg0 , p_out[3]~reg0, switch, 1
+=======
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/main.v
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/decision.v
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/clk_div.v
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/clk_div_sim.bdf
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/clk_div_sim.vwf
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/debouncer.v
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/debouncer_sim.bdf
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/debouncer_sim.vwf
+source_file = 1, D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/db/verilog_outlines.cbx.xml
+design_name = debouncer
+instance = comp, \pb_out~output , pb_out~output, debouncer, 1
+instance = comp, \clk~input , clk~input, debouncer, 1
+instance = comp, \pb_1~input , pb_1~input, debouncer, 1
+instance = comp, \d0|Q , d0|Q, debouncer, 1
+instance = comp, \d1|Q , d1|Q, debouncer, 1
+instance = comp, \d2|Q , d2|Q, debouncer, 1
+instance = comp, \pb_out~0 , pb_out~0, debouncer, 1
+>>>>>>> master
