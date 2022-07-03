@@ -1,5 +1,5 @@
 Flow report for verilog_outlines
-Sun Jul 03 01:34:59 2022
+Sun Jul 03 02:59:08 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,19 +40,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Sun Jul 03 01:34:59 2022      ;
+; Flow Status                     ; Successful - Sun Jul 03 02:59:08 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; verilog_outlines                           ;
-; Top-level Entity Name           ; buffer                                     ;
+; Top-level Entity Name           ; decision                                   ;
 ; Family                          ; Cyclone V                                  ;
 ; Device                          ; 5CSEMA5F31C6                               ;
 ; Timing Models                   ; Preliminary                                ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 145                                        ;
-; Total pins                      ; 68                                         ;
+; Total registers                 ; 4                                          ;
+; Total pins                      ; 82                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
-; Total DSP Blocks                ; 0                                          ;
+; Total DSP Blocks                ; 8                                          ;
 ; Total HSSI RX PCSs              ; 0                                          ;
 ; Total HSSI PMA RX Deserializers ; 0                                          ;
 ; Total HSSI TX PCSs              ; 0                                          ;
@@ -67,32 +67,32 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/03/2022 01:25:51 ;
+; Start date & time ; 07/03/2022 02:59:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; verilog_outlines    ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                                               ;
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------+-------------+----------------+
-; Assignment Name                     ; Value                                                                                                                  ; Default Value    ; Entity Name ; Section Id     ;
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 9210260059473.165680075112128                                                                                          ; --               ; --          ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                                                     ; --               ; --          ; eda_simulation ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ ; --               ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                                                            ; --               ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                                                              ; <None>           ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                                     ; --               ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                                      ; --               ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                                                                                                               ; --               ; buffer      ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                                                  ; --               ; buffer      ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                                                 ; --               ; buffer      ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                                    ; --               ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                                  ; --               ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                                           ; --               ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; buffer                                                                                                                 ; verilog_outlines ; --          ; --             ;
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                               ;
++-------------------------------------+----------------------------------------------------------------------------------------+------------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                                  ; Default Value    ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------------------------------------------------------+------------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 9210260059473.165680634606180                                                          ; --               ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                     ; --               ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ ; --               ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                            ; --               ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                              ; <None>           ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                     ; --               ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                      ; --               ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                               ; --               ; decision    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                  ; --               ; decision    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                 ; --               ; decision    ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                    ; --               ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                  ; --               ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                           ; --               ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; decision                                                                               ; verilog_outlines ; --          ; --             ;
++-------------------------------------+----------------------------------------------------------------------------------------+------------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -100,20 +100,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4617 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4615 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4615 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4617 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4617 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4617 MB             ; 00:00:01                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4663 MB             ; 00:00:02                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,18 +111,6 @@ applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -142,18 +118,6 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off verilog_outlines -c verilog_outlines
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog verilog_outlines -c verilog_outlines --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/buffer_sim.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/buffer_sim.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog verilog_outlines -c verilog_outlines --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/buffer_sim.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/buffer_sim.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog verilog_outlines -c verilog_outlines --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/buffer_sim.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/buffer_sim.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog verilog_outlines -c verilog_outlines --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/buffer_sim.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/buffer_sim.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog verilog_outlines -c verilog_outlines --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/buffer_sim.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/buffer_sim.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog verilog_outlines -c verilog_outlines --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/buffer_sim.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/buffer_sim.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Verilog_Outlines/simulation/qsim/ verilog_outlines -c verilog_outlines
 
 
 

@@ -18,6 +18,7 @@ module switch(
 	
 	
 	always @(posedge fract_clk) begin
+		write[3:0] = 0;
 		
 		if (start == 1) begin
 			count4 = 3'd0;
@@ -43,6 +44,7 @@ module switch(
 						pout[3]=0;
 						stop = 1;
 						p_out[3:0] = pout[3:0];
+						write[p_out[3:2]]=1;
 					end
 					count4 = count4 + 3'd1;
 				end
@@ -65,7 +67,7 @@ module switch(
 						pout[3]=1;
 						stop = 1;
 						p_out[3:0] = pout[3:0];
-
+						write[p_out[3:2]]=1;
 					end
 					count4 = count4 + 3'd1;
 				end

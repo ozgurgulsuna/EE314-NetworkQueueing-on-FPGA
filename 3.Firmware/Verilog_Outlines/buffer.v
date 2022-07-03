@@ -7,7 +7,7 @@ module buffer(
 	input write, 								// Write data to buffer if write = 1
 	
 	output reg [23:0] memory,
-	output reg [2:0] fullness,
+	output reg [2:0] fullness,				// Maximum of 6 (full)
 	
 	output reg [15:0] time_total,			// 1 second is divided by 20 to achieve 1/20 resolution, assuming max latency is 500 seconds. 20*500*6=60000 and it is in range of 16 bits.
 	output reg [9:0] input_count,		  // MAX permissable input for single buffer 1024, BE CAREFUL CAUTION WARNING !

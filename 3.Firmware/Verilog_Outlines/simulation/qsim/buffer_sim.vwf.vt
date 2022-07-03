@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/03/2022 01:34:57"
+// Generated on "07/03/2022 01:56:28"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    buffer
 // 
@@ -142,306 +142,367 @@ end
 initial
 begin
 	memory_expected[23] = 1'bX;
+	memory_expected[23] = #499000 1'b0;
 end 
 // expected memory[ 22 ]
 initial
 begin
 	memory_expected[22] = 1'bX;
+	memory_expected[22] = #499000 1'b0;
 end 
 // expected memory[ 21 ]
 initial
 begin
 	memory_expected[21] = 1'bX;
+	memory_expected[21] = #499000 1'b0;
 end 
 // expected memory[ 20 ]
 initial
 begin
 	memory_expected[20] = 1'bX;
+	memory_expected[20] = #499000 1'b0;
 end 
 // expected memory[ 19 ]
 initial
 begin
 	memory_expected[19] = 1'bX;
+	memory_expected[19] = #499000 1'b0;
 end 
 // expected memory[ 18 ]
 initial
 begin
 	memory_expected[18] = 1'bX;
+	memory_expected[18] = #499000 1'b0;
 end 
 // expected memory[ 17 ]
 initial
 begin
 	memory_expected[17] = 1'bX;
+	memory_expected[17] = #499000 1'b0;
 end 
 // expected memory[ 16 ]
 initial
 begin
 	memory_expected[16] = 1'bX;
+	memory_expected[16] = #499000 1'b0;
 end 
 // expected memory[ 15 ]
 initial
 begin
 	memory_expected[15] = 1'bX;
+	memory_expected[15] = #499000 1'b0;
 end 
 // expected memory[ 14 ]
 initial
 begin
 	memory_expected[14] = 1'bX;
+	memory_expected[14] = #499000 1'b0;
 end 
 // expected memory[ 13 ]
 initial
 begin
 	memory_expected[13] = 1'bX;
+	memory_expected[13] = #499000 1'b0;
 end 
 // expected memory[ 12 ]
 initial
 begin
 	memory_expected[12] = 1'bX;
+	memory_expected[12] = #499000 1'b0;
 end 
 // expected memory[ 11 ]
 initial
 begin
 	memory_expected[11] = 1'bX;
+	memory_expected[11] = #499000 1'b0;
 end 
 // expected memory[ 10 ]
 initial
 begin
 	memory_expected[10] = 1'bX;
+	memory_expected[10] = #499000 1'b0;
 end 
 // expected memory[ 9 ]
 initial
 begin
 	memory_expected[9] = 1'bX;
+	memory_expected[9] = #499000 1'b0;
 end 
 // expected memory[ 8 ]
 initial
 begin
 	memory_expected[8] = 1'bX;
+	memory_expected[8] = #499000 1'b0;
 end 
 // expected memory[ 7 ]
 initial
 begin
 	memory_expected[7] = 1'bX;
+	memory_expected[7] = #499000 1'b0;
 end 
 // expected memory[ 6 ]
 initial
 begin
 	memory_expected[6] = 1'bX;
+	memory_expected[6] = #499000 1'b0;
 end 
 // expected memory[ 5 ]
 initial
 begin
 	memory_expected[5] = 1'bX;
+	memory_expected[5] = #499000 1'b0;
 end 
 // expected memory[ 4 ]
 initial
 begin
 	memory_expected[4] = 1'bX;
+	memory_expected[4] = #499000 1'b0;
 end 
 // expected memory[ 3 ]
 initial
 begin
 	memory_expected[3] = 1'bX;
+	memory_expected[3] = #499000 1'b0;
 end 
 // expected memory[ 2 ]
 initial
 begin
 	memory_expected[2] = 1'bX;
+	memory_expected[2] = #499000 1'b0;
 end 
 // expected memory[ 1 ]
 initial
 begin
 	memory_expected[1] = 1'bX;
+	memory_expected[1] = #499000 1'b0;
 end 
 // expected memory[ 0 ]
 initial
 begin
 	memory_expected[0] = 1'bX;
+	memory_expected[0] = #499000 1'b0;
 end 
 // expected fullness[ 2 ]
 initial
 begin
 	fullness_expected[2] = 1'bX;
+	fullness_expected[2] = #499000 1'b0;
 end 
 // expected fullness[ 1 ]
 initial
 begin
 	fullness_expected[1] = 1'bX;
+	fullness_expected[1] = #499000 1'b0;
 end 
 // expected fullness[ 0 ]
 initial
 begin
 	fullness_expected[0] = 1'bX;
+	fullness_expected[0] = #499000 1'b0;
 end 
 // expected drop_count[ 7 ]
 initial
 begin
 	drop_count_expected[7] = 1'bX;
+	drop_count_expected[7] = #499000 1'b0;
 end 
 // expected drop_count[ 6 ]
 initial
 begin
 	drop_count_expected[6] = 1'bX;
+	drop_count_expected[6] = #499000 1'b0;
 end 
 // expected drop_count[ 5 ]
 initial
 begin
 	drop_count_expected[5] = 1'bX;
+	drop_count_expected[5] = #499000 1'b0;
 end 
 // expected drop_count[ 4 ]
 initial
 begin
 	drop_count_expected[4] = 1'bX;
+	drop_count_expected[4] = #499000 1'b0;
 end 
 // expected drop_count[ 3 ]
 initial
 begin
 	drop_count_expected[3] = 1'bX;
+	drop_count_expected[3] = #499000 1'b0;
 end 
 // expected drop_count[ 2 ]
 initial
 begin
 	drop_count_expected[2] = 1'bX;
+	drop_count_expected[2] = #499000 1'b0;
 end 
 // expected drop_count[ 1 ]
 initial
 begin
 	drop_count_expected[1] = 1'bX;
+	drop_count_expected[1] = #499000 1'b0;
 end 
 // expected drop_count[ 0 ]
 initial
 begin
 	drop_count_expected[0] = 1'bX;
+	drop_count_expected[0] = #499000 1'b0;
 end 
 // expected input_count[ 9 ]
 initial
 begin
 	input_count_expected[9] = 1'bX;
+	input_count_expected[9] = #499000 1'b0;
 end 
 // expected input_count[ 8 ]
 initial
 begin
 	input_count_expected[8] = 1'bX;
+	input_count_expected[8] = #499000 1'b0;
 end 
 // expected input_count[ 7 ]
 initial
 begin
 	input_count_expected[7] = 1'bX;
+	input_count_expected[7] = #499000 1'b0;
 end 
 // expected input_count[ 6 ]
 initial
 begin
 	input_count_expected[6] = 1'bX;
+	input_count_expected[6] = #499000 1'b0;
 end 
 // expected input_count[ 5 ]
 initial
 begin
 	input_count_expected[5] = 1'bX;
+	input_count_expected[5] = #499000 1'b0;
 end 
 // expected input_count[ 4 ]
 initial
 begin
 	input_count_expected[4] = 1'bX;
+	input_count_expected[4] = #499000 1'b0;
 end 
 // expected input_count[ 3 ]
 initial
 begin
 	input_count_expected[3] = 1'bX;
+	input_count_expected[3] = #499000 1'b0;
 end 
 // expected input_count[ 2 ]
 initial
 begin
 	input_count_expected[2] = 1'bX;
+	input_count_expected[2] = #499000 1'b0;
 end 
 // expected input_count[ 1 ]
 initial
 begin
 	input_count_expected[1] = 1'bX;
+	input_count_expected[1] = #499000 1'b0;
 end 
 // expected input_count[ 0 ]
 initial
 begin
 	input_count_expected[0] = 1'bX;
+	input_count_expected[0] = #499000 1'b0;
 end 
 // expected time_total[ 15 ]
 initial
 begin
 	time_total_expected[15] = 1'bX;
+	time_total_expected[15] = #499000 1'b0;
 end 
 // expected time_total[ 14 ]
 initial
 begin
 	time_total_expected[14] = 1'bX;
+	time_total_expected[14] = #499000 1'b0;
 end 
 // expected time_total[ 13 ]
 initial
 begin
 	time_total_expected[13] = 1'bX;
+	time_total_expected[13] = #499000 1'b0;
 end 
 // expected time_total[ 12 ]
 initial
 begin
 	time_total_expected[12] = 1'bX;
+	time_total_expected[12] = #499000 1'b0;
 end 
 // expected time_total[ 11 ]
 initial
 begin
 	time_total_expected[11] = 1'bX;
+	time_total_expected[11] = #499000 1'b0;
 end 
 // expected time_total[ 10 ]
 initial
 begin
 	time_total_expected[10] = 1'bX;
+	time_total_expected[10] = #499000 1'b0;
 end 
 // expected time_total[ 9 ]
 initial
 begin
 	time_total_expected[9] = 1'bX;
+	time_total_expected[9] = #499000 1'b0;
 end 
 // expected time_total[ 8 ]
 initial
 begin
 	time_total_expected[8] = 1'bX;
+	time_total_expected[8] = #499000 1'b0;
 end 
 // expected time_total[ 7 ]
 initial
 begin
 	time_total_expected[7] = 1'bX;
+	time_total_expected[7] = #499000 1'b0;
 end 
 // expected time_total[ 6 ]
 initial
 begin
 	time_total_expected[6] = 1'bX;
+	time_total_expected[6] = #499000 1'b0;
 end 
 // expected time_total[ 5 ]
 initial
 begin
 	time_total_expected[5] = 1'bX;
+	time_total_expected[5] = #499000 1'b0;
 end 
 // expected time_total[ 4 ]
 initial
 begin
 	time_total_expected[4] = 1'bX;
+	time_total_expected[4] = #499000 1'b0;
 end 
 // expected time_total[ 3 ]
 initial
 begin
 	time_total_expected[3] = 1'bX;
+	time_total_expected[3] = #499000 1'b0;
 end 
 // expected time_total[ 2 ]
 initial
 begin
 	time_total_expected[2] = 1'bX;
+	time_total_expected[2] = #499000 1'b0;
 end 
 // expected time_total[ 1 ]
 initial
 begin
 	time_total_expected[1] = 1'bX;
+	time_total_expected[1] = #499000 1'b0;
 end 
 // expected time_total[ 0 ]
 initial
 begin
 	time_total_expected[0] = 1'bX;
+	time_total_expected[0] = #499000 1'b0;
 end 
 // generate trigger
 always @(drop_count_expected or drop_count or fullness_expected or fullness or input_count_expected or input_count or memory_expected or memory or time_total_expected or time_total)
@@ -1257,7 +1318,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#500000;
+#750000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -1297,11 +1358,15 @@ buffer i1 (
 );
 
 // fract_clk
-always
+initial
 begin
+	repeat(37)
+	begin
+		fract_clk = 1'b0;
+		fract_clk = #10000 1'b1;
+		# 10000;
+	end
 	fract_clk = 1'b0;
-	fract_clk = #10000 1'b1;
-	#10000;
 end 
 // p_in[ 3 ]
 initial
@@ -1316,6 +1381,7 @@ begin
 	p_in[3] = #40000 1'b1;
 	p_in[3] = #80000 1'b0;
 	p_in[3] = #40000 1'b1;
+	p_in[3] = #19000 1'b0;
 end 
 // p_in[ 2 ]
 initial
@@ -1353,20 +1419,37 @@ end
 // read
 initial
 begin
-	read = 1'b1;
-	# 10000;
-	repeat(12)
-	begin
-		read = 1'b0;
-		read = #20000 1'b1;
-		# 20000;
-	end
 	read = 1'b0;
+	read = #350000 1'b1;
+	read = #20000 1'b0;
 end 
 
 // write
 initial
 begin
+	write = 1'b1;
+	# 10000;
+	repeat(8)
+	begin
+		write = 1'b0;
+		write = #20000 1'b1;
+		# 20000;
+	end
+	write = 1'b0;
+	write = #60000 1'b1;
+	# 20000;
+	repeat(2)
+	begin
+		write = 1'b0;
+		write = #20000 1'b1;
+		# 20000;
+	end
+	repeat(6)
+	begin
+		write = 1'b0;
+		write = #20000 1'b1;
+		# 20000;
+	end
 	write = 1'b0;
 end 
 
