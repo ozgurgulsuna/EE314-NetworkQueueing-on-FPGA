@@ -1,0 +1,558 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/03/2022 03:45:39"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    decision_test
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module decision_test_vlg_sample_tst(
+	fract_clk,
+	pin,
+	read_clk,
+	write,
+	sampler_tx
+);
+input  fract_clk;
+input [3:0] pin;
+input  read_clk;
+input [3:0] write;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(fract_clk or pin or read_clk or write)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module decision_test_vlg_check_tst (
+	full1,
+	full2,
+	full3,
+	full4,
+	sampler_rx
+);
+input [2:0] full1;
+input [2:0] full2;
+input [2:0] full3;
+input [2:0] full4;
+input sampler_rx;
+
+reg [2:0] full1_expected;
+reg [2:0] full2_expected;
+reg [2:0] full3_expected;
+reg [2:0] full4_expected;
+
+reg [2:0] full1_prev;
+reg [2:0] full2_prev;
+reg [2:0] full3_prev;
+reg [2:0] full4_prev;
+
+reg [2:0] full1_expected_prev;
+reg [2:0] full2_expected_prev;
+reg [2:0] full3_expected_prev;
+reg [2:0] full4_expected_prev;
+
+reg [2:0] last_full1_exp;
+reg [2:0] last_full2_exp;
+reg [2:0] last_full3_exp;
+reg [2:0] last_full4_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	full1_prev = full1;
+	full2_prev = full2;
+	full3_prev = full3;
+	full4_prev = full4;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	full1_expected_prev = full1_expected;
+	full2_expected_prev = full2_expected;
+	full3_expected_prev = full3_expected;
+	full4_expected_prev = full4_expected;
+end
+
+
+// expected full1[ 2 ]
+initial
+begin
+	full1_expected[2] = 1'bX;
+end 
+// expected full1[ 1 ]
+initial
+begin
+	full1_expected[1] = 1'bX;
+end 
+// expected full1[ 0 ]
+initial
+begin
+	full1_expected[0] = 1'bX;
+end 
+// expected full2[ 2 ]
+initial
+begin
+	full2_expected[2] = 1'bX;
+end 
+// expected full2[ 1 ]
+initial
+begin
+	full2_expected[1] = 1'bX;
+end 
+// expected full2[ 0 ]
+initial
+begin
+	full2_expected[0] = 1'bX;
+end 
+// expected full3[ 2 ]
+initial
+begin
+	full3_expected[2] = 1'bX;
+end 
+// expected full3[ 1 ]
+initial
+begin
+	full3_expected[1] = 1'bX;
+end 
+// expected full3[ 0 ]
+initial
+begin
+	full3_expected[0] = 1'bX;
+end 
+// expected full4[ 2 ]
+initial
+begin
+	full4_expected[2] = 1'bX;
+end 
+// expected full4[ 1 ]
+initial
+begin
+	full4_expected[1] = 1'bX;
+end 
+// expected full4[ 0 ]
+initial
+begin
+	full4_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(full1_expected or full1 or full2_expected or full2 or full3_expected or full3 or full4_expected or full4)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected full1 = %b | expected full2 = %b | expected full3 = %b | expected full4 = %b | ",full1_expected_prev,full2_expected_prev,full3_expected_prev,full4_expected_prev);
+	$display("| real full1 = %b | real full2 = %b | real full3 = %b | real full4 = %b | ",full1_prev,full2_prev,full3_prev,full4_prev);
+`endif
+	if (
+		( full1_expected_prev[0] !== 1'bx ) && ( full1_prev[0] !== full1_expected_prev[0] )
+		&& ((full1_expected_prev[0] !== last_full1_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full1_expected_prev);
+		$display ("     Real value = %b", full1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_full1_exp[0] = full1_expected_prev[0];
+	end
+	if (
+		( full1_expected_prev[1] !== 1'bx ) && ( full1_prev[1] !== full1_expected_prev[1] )
+		&& ((full1_expected_prev[1] !== last_full1_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full1_expected_prev);
+		$display ("     Real value = %b", full1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_full1_exp[1] = full1_expected_prev[1];
+	end
+	if (
+		( full1_expected_prev[2] !== 1'bx ) && ( full1_prev[2] !== full1_expected_prev[2] )
+		&& ((full1_expected_prev[2] !== last_full1_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full1_expected_prev);
+		$display ("     Real value = %b", full1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_full1_exp[2] = full1_expected_prev[2];
+	end
+	if (
+		( full2_expected_prev[0] !== 1'bx ) && ( full2_prev[0] !== full2_expected_prev[0] )
+		&& ((full2_expected_prev[0] !== last_full2_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full2_expected_prev);
+		$display ("     Real value = %b", full2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_full2_exp[0] = full2_expected_prev[0];
+	end
+	if (
+		( full2_expected_prev[1] !== 1'bx ) && ( full2_prev[1] !== full2_expected_prev[1] )
+		&& ((full2_expected_prev[1] !== last_full2_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full2_expected_prev);
+		$display ("     Real value = %b", full2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_full2_exp[1] = full2_expected_prev[1];
+	end
+	if (
+		( full2_expected_prev[2] !== 1'bx ) && ( full2_prev[2] !== full2_expected_prev[2] )
+		&& ((full2_expected_prev[2] !== last_full2_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full2_expected_prev);
+		$display ("     Real value = %b", full2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_full2_exp[2] = full2_expected_prev[2];
+	end
+	if (
+		( full3_expected_prev[0] !== 1'bx ) && ( full3_prev[0] !== full3_expected_prev[0] )
+		&& ((full3_expected_prev[0] !== last_full3_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full3_expected_prev);
+		$display ("     Real value = %b", full3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_full3_exp[0] = full3_expected_prev[0];
+	end
+	if (
+		( full3_expected_prev[1] !== 1'bx ) && ( full3_prev[1] !== full3_expected_prev[1] )
+		&& ((full3_expected_prev[1] !== last_full3_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full3_expected_prev);
+		$display ("     Real value = %b", full3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_full3_exp[1] = full3_expected_prev[1];
+	end
+	if (
+		( full3_expected_prev[2] !== 1'bx ) && ( full3_prev[2] !== full3_expected_prev[2] )
+		&& ((full3_expected_prev[2] !== last_full3_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full3_expected_prev);
+		$display ("     Real value = %b", full3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_full3_exp[2] = full3_expected_prev[2];
+	end
+	if (
+		( full4_expected_prev[0] !== 1'bx ) && ( full4_prev[0] !== full4_expected_prev[0] )
+		&& ((full4_expected_prev[0] !== last_full4_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full4[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full4_expected_prev);
+		$display ("     Real value = %b", full4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_full4_exp[0] = full4_expected_prev[0];
+	end
+	if (
+		( full4_expected_prev[1] !== 1'bx ) && ( full4_prev[1] !== full4_expected_prev[1] )
+		&& ((full4_expected_prev[1] !== last_full4_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full4[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full4_expected_prev);
+		$display ("     Real value = %b", full4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_full4_exp[1] = full4_expected_prev[1];
+	end
+	if (
+		( full4_expected_prev[2] !== 1'bx ) && ( full4_prev[2] !== full4_expected_prev[2] )
+		&& ((full4_expected_prev[2] !== last_full4_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port full4[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", full4_expected_prev);
+		$display ("     Real value = %b", full4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_full4_exp[2] = full4_expected_prev[2];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module decision_test_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg fract_clk;
+reg [3:0] pin;
+reg read_clk;
+reg [3:0] write;
+// wires                                               
+wire [2:0] full1;
+wire [2:0] full2;
+wire [2:0] full3;
+wire [2:0] full4;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+decision_test i1 (
+// port map - connection between master ports and signals/registers   
+	.fract_clk(fract_clk),
+	.full1(full1),
+	.full2(full2),
+	.full3(full3),
+	.full4(full4),
+	.pin(pin),
+	.read_clk(read_clk),
+	.write(write)
+);
+
+// read_clk
+initial
+begin
+	read_clk = 1'b0;
+	read_clk = #100000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+	read_clk = #90000 1'b1;
+	read_clk = #10000 1'b0;
+end 
+
+// fract_clk
+initial
+begin
+	fract_clk = 1'b1;
+	# 2000;
+	repeat(99)
+	begin
+		fract_clk = 1'b0;
+		fract_clk = #8000 1'b1;
+		# 2000;
+	end
+	fract_clk = 1'b0;
+end 
+// pin[ 3 ]
+initial
+begin
+	pin[3] = 1'b1;
+	pin[3] = #400000 1'b0;
+	pin[3] = #80000 1'b1;
+	pin[3] = #160000 1'b0;
+	pin[3] = #320000 1'b1;
+end 
+// pin[ 2 ]
+initial
+begin
+	pin[2] = 1'b1;
+	pin[2] = #320000 1'b0;
+	pin[2] = #80000 1'b1;
+	pin[2] = #160000 1'b0;
+	pin[2] = #240000 1'b1;
+	pin[2] = #160000 1'b0;
+end 
+// pin[ 1 ]
+initial
+begin
+	pin[1] = 1'b1;
+	pin[1] = #80000 1'b0;
+	pin[1] = #80000 1'b1;
+	pin[1] = #240000 1'b0;
+	pin[1] = #80000 1'b1;
+	pin[1] = #400000 1'b0;
+end 
+// pin[ 0 ]
+initial
+begin
+	pin[0] = 1'b1;
+	pin[0] = #160000 1'b0;
+	pin[0] = #80000 1'b1;
+	pin[0] = #80000 1'b0;
+	pin[0] = #80000 1'b1;
+	pin[0] = #80000 1'b0;
+	pin[0] = #160000 1'b1;
+	pin[0] = #160000 1'b0;
+end 
+// write[ 3 ]
+initial
+begin
+	write[3] = 1'b0;
+	write[3] = #50000 1'b1;
+	# 10000;
+	repeat(9)
+	begin
+		write[3] = 1'b0;
+		write[3] = #90000 1'b1;
+		# 10000;
+	end
+	write[3] = 1'b0;
+end 
+// write[ 2 ]
+initial
+begin
+	write[2] = 1'b0;
+	write[2] = #70000 1'b1;
+	# 10000;
+	repeat(9)
+	begin
+		write[2] = 1'b0;
+		write[2] = #90000 1'b1;
+		# 10000;
+	end
+	write[2] = 1'b0;
+end 
+// write[ 1 ]
+initial
+begin
+	write[1] = 1'b0;
+	write[1] = #30000 1'b1;
+	# 10000;
+	repeat(9)
+	begin
+		write[1] = 1'b0;
+		write[1] = #90000 1'b1;
+		# 10000;
+	end
+	write[1] = 1'b0;
+end 
+// write[ 0 ]
+initial
+begin
+	write[0] = 1'b0;
+	write[0] = #10000 1'b1;
+	# 10000;
+	repeat(9)
+	begin
+		write[0] = 1'b0;
+		write[0] = #90000 1'b1;
+		# 10000;
+	end
+	write[0] = 1'b0;
+end 
+
+decision_test_vlg_sample_tst tb_sample (
+	.fract_clk(fract_clk),
+	.pin(pin),
+	.read_clk(read_clk),
+	.write(write),
+	.sampler_tx(sampler)
+);
+
+decision_test_vlg_check_tst tb_out(
+	.full1(full1),
+	.full2(full2),
+	.full3(full3),
+	.full4(full4),
+	.sampler_rx(sampler)
+);
+endmodule
+

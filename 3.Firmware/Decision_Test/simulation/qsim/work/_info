@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Decision_Test\simulation\qsim
+vdecision_test
+Z1 !s100 7Af>QPohS=nGn]n<bLbD92
+Z2 IQh[BahQS]fH51f:;JCN1Z3
+Z3 VeJb?2[6hDGSz51aVNmC;J0
+Z4 dC:\Users\Pineapple\Desktop\damn_okul\EE314\Term_Project\EE314-TermProject\3.Firmware\Decision_Test\simulation\qsim
+Z5 w1656809140
+Z6 8decision_test.vo
+Z7 Fdecision_test.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|decision_test.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1656809140.635000
+Z12 !s107 decision_test.vo|
+!s101 -O0
+vdecision_test_vlg_check_tst
+!i10b 1
+Z13 !s100 <AecFMLIT<MW<4_5XznNL0
+Z14 IMc[RfP?PU<2^LezjCJabk1
+Z15 VaKzKVBQPCQChfb<<kh^<E1
+R4
+Z16 w1656809139
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1656809140.898000
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vdecision_test_vlg_sample_tst
+!i10b 1
+Z22 !s100 _UF04=nomoBob]T6h[QmY1
+Z23 I>8<g7Nd=n?Aclz^j2ne[31
+Z24 VVJLQgXoeKR85dW8GnZ7Q80
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vdecision_test_vlg_vec_tst
+!i10b 1
+!s100 a1TI7IeKCJd`feWAaQ5DE0
+I9KQGO8i[X6hY0QI0:9SEG2
+Z25 VPV^5^L[XIDJ@4mnT[:ENU0
+R4
+R16
+R17
+R18
+Z26 L0 379
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
