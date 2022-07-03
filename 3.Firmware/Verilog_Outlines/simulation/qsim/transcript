@@ -2,126 +2,24 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module buffer
+# -- Compiling module clk_div
 # 
 # Top level modules:
-# 	buffer
+# 	clk_div
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module buffer_vlg_sample_tst
-# -- Compiling module buffer_vlg_check_tst
-# -- Compiling module buffer_vlg_vec_tst
+# -- Compiling module clk_div_vlg_sample_tst
+# -- Compiling module clk_div_vlg_check_tst
+# -- Compiling module clk_div_vlg_vec_tst
 # 
 # Top level modules:
-# 	buffer_vlg_vec_tst
-# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.buffer_vlg_vec_tst 
-# Loading work.buffer_vlg_vec_tst
-# Loading work.buffer
+# 	clk_div_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.clk_div_vlg_vec_tst 
+# Loading work.clk_div_vlg_vec_tst
+# Loading work.clk_div
 # Loading altera_ver.dffeas
-# Loading work.buffer_vlg_sample_tst
-# Loading work.buffer_vlg_check_tst
+# Loading work.clk_div_vlg_sample_tst
+# Loading work.clk_div_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# ERROR! Vector Mismatch for output port drop_count[0] :: @time = 500000.000 ps
-#      Expected value = 00000000
-#      Real value = 00000101
-# ERROR! Vector Mismatch for output port drop_count[2] :: @time = 500000.000 ps
-#      Expected value = 00000000
-#      Real value = 00000101
-# ERROR! Vector Mismatch for output port fullness[1] :: @time = 500000.000 ps
-#      Expected value = 000
-#      Real value = 110
-# ERROR! Vector Mismatch for output port fullness[2] :: @time = 500000.000 ps
-#      Expected value = 000
-#      Real value = 110
-# ERROR! Vector Mismatch for output port input_count[2] :: @time = 500000.000 ps
-#      Expected value = 0000000000
-#      Real value = 0000001100
-# ERROR! Vector Mismatch for output port input_count[3] :: @time = 500000.000 ps
-#      Expected value = 0000000000
-#      Real value = 0000001100
-# ERROR! Vector Mismatch for output port memory[0] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[2] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[6] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[7] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[8] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[9] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[10] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[12] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[13] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[15] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[16] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port memory[23] :: @time = 500000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 100000011011011111000101
-# ERROR! Vector Mismatch for output port time_total[1] :: @time = 500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000101010
-# ERROR! Vector Mismatch for output port time_total[3] :: @time = 500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000101010
-# ERROR! Vector Mismatch for output port time_total[5] :: @time = 500000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000101010
-# ERROR! Vector Mismatch for output port time_total[4] :: @time = 520000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000110000
-# ERROR! Vector Mismatch for output port drop_count[1] :: @time = 540000.000 ps
-#      Expected value = 00000000
-#      Real value = 00000110
-# ERROR! Vector Mismatch for output port input_count[0] :: @time = 540000.000 ps
-#      Expected value = 0000000000
-#      Real value = 0000001101
-# ERROR! Vector Mismatch for output port memory[3] :: @time = 540000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 000010000001101101111100
-# ERROR! Vector Mismatch for output port memory[4] :: @time = 540000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 000010000001101101111100
-# ERROR! Vector Mismatch for output port memory[5] :: @time = 540000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 000010000001101101111100
-# ERROR! Vector Mismatch for output port memory[11] :: @time = 540000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 000010000001101101111100
-# ERROR! Vector Mismatch for output port memory[19] :: @time = 540000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 000010000001101101111100
-# ERROR! Vector Mismatch for output port time_total[2] :: @time = 560000.000 ps
-#      Expected value = 0000000000000000
-#      Real value = 0000000000101110
-# ERROR! Vector Mismatch for output port input_count[1] :: @time = 580000.000 ps
-#      Expected value = 0000000000
-#      Real value = 0000001110
-# ERROR! Vector Mismatch for output port memory[1] :: @time = 580000.000 ps
-#      Expected value = 000000000000000000000000
-#      Real value = 000000001000000110110111
-# ERROR! Vector Mismatch for output port drop_count[3] :: @time = 620000.000 ps
-#      Expected value = 00000000
-#      Real value = 00001000
-# ERROR! Vector Mismatch for output port input_count[4] :: @time = 660000.000 ps
-#      Expected value = 0000000000
-#      Real value = 0000010000
-#          34 mismatched vectors : Simulation failed !
-# ** Note: $finish    : buffer_sim.vwf.vt(1326)
-#    Time: 750 ns  Iteration: 0  Instance: /buffer_vlg_vec_tst/tb_out
+# Simulation passed !
+# ** Note: $finish    : clk_div_sim.vwf.vt(207)
+#    Time: 1 us  Iteration: 0  Instance: /clk_div_vlg_vec_tst/tb_out

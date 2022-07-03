@@ -62,6 +62,16 @@ SIGNAL("read_clk")
 	PARENT = "";
 }
 
+SIGNAL("vga_clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -94,6 +104,15 @@ TRANSITION_LIST("read_clk")
 	}
 }
 
+TRANSITION_LIST("vga_clk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clk";
@@ -118,6 +137,15 @@ DISPLAY_LINE
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "vga_clk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
 	TREE_LEVEL = 0;
 }
 
