@@ -1,5 +1,5 @@
 Analysis & Synthesis report for decision_test
-Sun Jul 03 03:32:45 2022
+Sun Jul 03 12:54:39 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -46,14 +46,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jul 03 03:32:45 2022      ;
+; Analysis & Synthesis Status     ; Successful - Sun Jul 03 12:54:39 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; decision_test                              ;
 ; Top-level Entity Name           ; decision_test                              ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 416                                        ;
-; Total pins                      ; 22                                         ;
+; Total registers                 ; 512                                        ;
+; Total pins                      ; 118                                        ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 8                                          ;
@@ -153,33 +153,26 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ; < 0.1%      ;
-;     Processors 9-16        ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; buffer.v                         ; yes             ; User Verilog HDL File              ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/buffer.v          ;         ;
-; decision.v                       ; yes             ; User Verilog HDL File              ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/decision.v        ;         ;
-; decision_test.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/decision_test.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; buffer.v                         ; yes             ; User Verilog HDL File              ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/buffer.v          ;         ;
+; decision.v                       ; yes             ; User Verilog HDL File              ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/decision.v        ;         ;
+; decision_test.bdf                ; yes             ; User Block Diagram/Schematic File  ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/decision_test.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -187,23 +180,23 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 892             ;
+; Estimate of Logic utilization (ALMs needed) ; 1116            ;
 ;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 1664            ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 119             ;
-;     -- 5 input functions                    ; 48              ;
-;     -- 4 input functions                    ; 816             ;
-;     -- <=3 input functions                  ; 681             ;
+; Combinational ALUT usage for logic          ; 1808            ;
+;     -- 7 input functions                    ; 48              ;
+;     -- 6 input functions                    ; 375             ;
+;     -- 5 input functions                    ; 132             ;
+;     -- 4 input functions                    ; 692             ;
+;     -- <=3 input functions                  ; 561             ;
 ;                                             ;                 ;
-; Dedicated logic registers                   ; 416             ;
+; Dedicated logic registers                   ; 512             ;
 ;                                             ;                 ;
-; I/O pins                                    ; 22              ;
+; I/O pins                                    ; 118             ;
 ; Total DSP Blocks                            ; 8               ;
 ; Maximum fan-out node                        ; fract_clk~input ;
-; Maximum fan-out                             ; 416             ;
-; Total fan-out                               ; 8047            ;
-; Average fan-out                             ; 3.77            ;
+; Maximum fan-out                             ; 512             ;
+; Total fan-out                               ; 9895            ;
+; Average fan-out                             ; 3.86            ;
 +---------------------------------------------+-----------------+
 
 
@@ -212,11 +205,11 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------+--------------+
-; |decision_test             ; 1664 (0)          ; 416 (0)      ; 0                 ; 8          ; 22   ; 0            ; |decision_test                ; work         ;
-;    |buffer:inst2|          ; 367 (367)         ; 103 (103)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst2   ; work         ;
-;    |buffer:inst3|          ; 367 (367)         ; 103 (103)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst3   ; work         ;
-;    |buffer:inst4|          ; 367 (367)         ; 103 (103)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst4   ; work         ;
-;    |buffer:inst|           ; 367 (367)         ; 103 (103)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst    ; work         ;
+; |decision_test             ; 1808 (0)          ; 512 (0)      ; 0                 ; 8          ; 118  ; 0            ; |decision_test                ; work         ;
+;    |buffer:inst2|          ; 403 (403)         ; 127 (127)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst2   ; work         ;
+;    |buffer:inst3|          ; 403 (403)         ; 127 (127)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst3   ; work         ;
+;    |buffer:inst4|          ; 403 (403)         ; 127 (127)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst4   ; work         ;
+;    |buffer:inst|           ; 403 (403)         ; 127 (127)    ; 0                 ; 0          ; 0    ; 0            ; |decision_test|buffer:inst    ; work         ;
 ;    |decision:inst1|        ; 196 (196)         ; 4 (4)        ; 0                 ; 8          ; 0    ; 0            ; |decision_test|decision:inst1 ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -278,71 +271,95 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 416   ;
+; Total registers                              ; 512   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 336   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |decision_test|decision:inst1|i      ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst3|fullness ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst2|fullness ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst|fullness  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst4|fullness ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 3:1                ; 59 bits   ; 118 LEs       ; 59 LEs               ; 59 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 3:1                ; 59 bits   ; 118 LEs       ; 59 LEs               ; 59 LEs                 ; No         ; |decision_test|buffer:inst2|fullness ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 3:1                ; 59 bits   ; 118 LEs       ; 59 LEs               ; 59 LEs                 ; No         ; |decision_test|buffer:inst|fullness  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 3:1                ; 59 bits   ; 118 LEs       ; 59 LEs               ; 59 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst|time_reg  ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst3|memory[4]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst3|memory[10] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst3|memory[14] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst3|memory[16] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst3|memory[20] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst2|memory[5]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst2|memory[8]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst2|memory[15] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst2|memory[18] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst2|memory[21] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst|memory[6]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst|memory[10]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst|memory[12]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst|memory[16]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst|memory[23]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst4|memory[7]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst4|memory[9]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst4|memory[15] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |decision_test|buffer:inst4|memory[16] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst4|memory[22] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst3|memory[3]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst2|memory[2]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst|memory[0]   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |decision_test|buffer:inst4|memory[0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |decision_test|decision:inst1|i        ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 3:1                ; 56 bits   ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst3|fullness   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst2|fullness   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst|fullness    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |decision_test|buffer:inst4|fullness   ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 3:1                ; 75 bits   ; 150 LEs       ; 75 LEs               ; 75 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 3:1                ; 75 bits   ; 150 LEs       ; 75 LEs               ; 75 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 3:1                ; 75 bits   ; 150 LEs       ; 75 LEs               ; 75 LEs                 ; No         ; |decision_test|buffer:inst|fullness    ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |decision_test|buffer:inst4|memory     ;
+; 3:1                ; 75 bits   ; 150 LEs       ; 75 LEs               ; 75 LEs                 ; No         ; |decision_test|buffer:inst4|memory     ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst3|time_reg   ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst2|time_reg   ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst|time_reg    ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 14 LEs               ; 56 LEs                 ; No         ; |decision_test|buffer:inst4|time_reg   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +-------------------------------+
@@ -350,7 +367,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -360,9 +377,9 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jul 03 03:32:41 2022
+    Info: Processing started: Sun Jul 03 12:54:32 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off decision_test -c decision_test
-Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file buffer.v
     Info (12023): Found entity 1: buffer
 Info (12021): Found 1 design units, including 1 entities, in source file decision.v
@@ -381,20 +398,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "pin[3]"
-    Warning (15610): No output dependent on input pin "pin[2]"
-    Warning (15610): No output dependent on input pin "pin[1]"
-    Warning (15610): No output dependent on input pin "pin[0]"
-Info (21057): Implemented 2042 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2274 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 2012 logic cells
+    Info (21059): Implemented 108 output pins
+    Info (21061): Implemented 2148 logic cells
     Info (21062): Implemented 8 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4753 megabytes
-    Info: Processing ended: Sun Jul 03 03:32:45 2022
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4691 megabytes
+    Info: Processing ended: Sun Jul 03 12:54:39 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -1,5 +1,5 @@
 Flow report for decision_test
-Sun Jul 03 03:45:40 2022
+Sun Jul 03 12:55:15 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Sun Jul 03 03:45:40 2022      ;
+; Flow Status                     ; Successful - Sun Jul 03 12:55:15 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; decision_test                              ;
 ; Top-level Entity Name           ; decision_test                              ;
@@ -48,8 +48,8 @@ applicable agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                               ;
 ; Timing Models                   ; Preliminary                                ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 416                                        ;
-; Total pins                      ; 22                                         ;
+; Total registers                 ; 512                                        ;
+; Total pins                      ; 118                                        ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 8                                          ;
@@ -67,27 +67,29 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/03/2022 03:32:41 ;
+; Start date & time ; 07/03/2022 12:54:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; decision_test       ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 193675817136984.165680836108220 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                         ;
++-------------------------------------+-------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                               ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 9210260059473.165684207209352                                                       ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                  ; --            ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/simulation/qsim/ ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                         ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                           ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                  ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                            ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                               ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                              ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                        ; --            ; --          ; --             ;
++-------------------------------------+-------------------------------------------------------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,16 +97,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4753 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4631 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4622 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4638 MB             ; 00:00:01                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:08                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4680 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,15 +109,9 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-1GBJRD7  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-QUIQON3  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -129,14 +119,8 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off decision_test -c decision_test
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog decision_test -c decision_test --vector_source=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/Waveform.vwf --testbench_file=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/ decision_test -c decision_test
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog decision_test -c decision_test --vector_source=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/Waveform.vwf --testbench_file=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/ decision_test -c decision_test
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog decision_test -c decision_test --vector_source=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/Waveform.vwf --testbench_file=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/ decision_test -c decision_test
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog decision_test -c decision_test --vector_source=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/Waveform.vwf --testbench_file=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/Waveform.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/Decision_Test/simulation/qsim/ decision_test -c decision_test
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog decision_test -c decision_test --vector_source=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/Waveform.vwf --testbench_file=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/2021-22/Okul/Dersler/EE314/TermProject/3.Firmware/Decision_Test/simulation/qsim/ decision_test -c decision_test
 
 
 

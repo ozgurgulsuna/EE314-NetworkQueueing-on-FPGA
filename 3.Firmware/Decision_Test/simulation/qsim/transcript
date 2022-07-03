@@ -19,34 +19,34 @@
 # Loading altera_ver.dffeas
 # Loading work.decision_test_vlg_sample_tst
 # Loading work.decision_test_vlg_check_tst
-# ** Warning: (vsim-3016) decision_test.vo(4000): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(5692): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3016) decision_test.vo(4000): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(5692): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3016) decision_test.vo(4000): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(5692): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3016) decision_test.vo(4000): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(5692): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3015) decision_test.vo(4000): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(5692): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3015) decision_test.vo(4000): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(5692): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3015) decision_test.vo(4000): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(5692): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3015) decision_test.vo(4000): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(5692): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3015) decision_test.vo(4000): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(5692): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
-# ** Warning: (vsim-3015) decision_test.vo(4000): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(5692): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult1~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -58,25 +58,25 @@
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: (vsim-3015) decision_test.vo(14610): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16421): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
-# ** Warning: (vsim-3016) decision_test.vo(14610): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(16421): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
-# ** Warning: (vsim-3016) decision_test.vo(14610): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(16421): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
-# ** Warning: (vsim-3016) decision_test.vo(14610): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(16421): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
-# ** Warning: (vsim-3015) decision_test.vo(14610): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16421): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
-# ** Warning: (vsim-3015) decision_test.vo(14610): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16421): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
-# ** Warning: (vsim-3015) decision_test.vo(14610): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16421): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add0~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -87,46 +87,46 @@
 # 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3016) decision_test.vo(14699): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(16510): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3015) decision_test.vo(14699): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16510): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3015) decision_test.vo(14699): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16510): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3015) decision_test.vo(14699): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16510): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3015) decision_test.vo(14699): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16510): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3015) decision_test.vo(14699): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16510): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
-# ** Warning: (vsim-3015) decision_test.vo(14699): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(16510): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult7~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -137,25 +137,25 @@
 # 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
-# ** Warning: (vsim-3015) decision_test.vo(25309): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27235): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
-# ** Warning: (vsim-3016) decision_test.vo(25309): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(27235): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
-# ** Warning: (vsim-3016) decision_test.vo(25309): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(27235): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
-# ** Warning: (vsim-3016) decision_test.vo(25309): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(27235): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
-# ** Warning: (vsim-3015) decision_test.vo(25309): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27235): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
-# ** Warning: (vsim-3015) decision_test.vo(25309): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27235): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
-# ** Warning: (vsim-3015) decision_test.vo(25309): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27235): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add2~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -166,37 +166,37 @@
 # 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
-# ** Warning: (vsim-3016) decision_test.vo(25388): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(27314): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3016) decision_test.vo(25388): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(27314): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3016) decision_test.vo(25388): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(27314): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3016) decision_test.vo(25388): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(27314): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3016) decision_test.vo(25388): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(27314): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3015) decision_test.vo(25388): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27314): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3015) decision_test.vo(25388): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27314): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3015) decision_test.vo(25388): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27314): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3015) decision_test.vo(25388): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27314): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3015) decision_test.vo(25388): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27314): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
-# ** Warning: (vsim-3015) decision_test.vo(25388): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(27314): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult4~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -207,22 +207,22 @@
 # 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
-# ** Warning: (vsim-3015) decision_test.vo(35998): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38043): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add1~8 
-# ** Warning: (vsim-3016) decision_test.vo(35998): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(38043): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add1~8 
-# ** Warning: (vsim-3016) decision_test.vo(35998): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(38043): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add1~8 
-# ** Warning: (vsim-3015) decision_test.vo(35998): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38043): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add1~8 
-# ** Warning: (vsim-3015) decision_test.vo(35998): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38043): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add1~8 
-# ** Warning: (vsim-3015) decision_test.vo(35998): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38043): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add1~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -233,40 +233,40 @@
 # 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
-# ** Warning: (vsim-3016) decision_test.vo(36723): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(38768): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3016) decision_test.vo(36723): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(38768): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3016) decision_test.vo(36723): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(38768): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3016) decision_test.vo(36723): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(38768): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3016) decision_test.vo(36723): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(38768): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3016) decision_test.vo(36723): Port type is incompatible with connection (port 'ay').
+# ** Warning: (vsim-3016) decision_test.vo(38768): Port type is incompatible with connection (port 'ay').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3015) decision_test.vo(36723): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38768): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3015) decision_test.vo(36723): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38768): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3015) decision_test.vo(36723): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38768): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3015) decision_test.vo(36723): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38768): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3015) decision_test.vo(36723): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38768): [PCDPC] - Port size (11 or 11) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
-# ** Warning: (vsim-3015) decision_test.vo(36723): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(38768): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Mult10~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -277,22 +277,22 @@
 # 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
 # 
-# ** Warning: (vsim-3015) decision_test.vo(47334): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(49494): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add3~8 
-# ** Warning: (vsim-3016) decision_test.vo(47334): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(49494): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add3~8 
-# ** Warning: (vsim-3016) decision_test.vo(47334): Port type is incompatible with connection (port 'bx').
+# ** Warning: (vsim-3016) decision_test.vo(49494): Port type is incompatible with connection (port 'bx').
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add3~8 
-# ** Warning: (vsim-3015) decision_test.vo(47334): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(49494): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add3~8 
-# ** Warning: (vsim-3015) decision_test.vo(47334): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(49494): [PCDPC] - Port size (15 or 15) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add3~8 
-# ** Warning: (vsim-3015) decision_test.vo(47334): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# ** Warning: (vsim-3015) decision_test.vo(49494): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
 # 
 #         Region: /decision_test_vlg_vec_tst/i1/\inst1|Add3~8 
 # ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
@@ -306,6 +306,78 @@
 # ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
-# Simulation passed !
-# ** Note: $finish    : Waveform.vwf.vt(375)
+# ERROR! Vector Mismatch for output port MEM_1[0] :: @time = 22000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000000001111
+# ERROR! Vector Mismatch for output port MEM_1[1] :: @time = 22000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000000001111
+# ERROR! Vector Mismatch for output port MEM_1[2] :: @time = 22000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000000001111
+# ERROR! Vector Mismatch for output port MEM_1[3] :: @time = 22000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000000001111
+# ERROR! Vector Mismatch for output port MEM_1[4] :: @time = 122000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000011011111
+# ERROR! Vector Mismatch for output port MEM_1[6] :: @time = 122000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000011011111
+# ERROR! Vector Mismatch for output port MEM_1[7] :: @time = 122000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000000011011111
+# ERROR! Vector Mismatch for output port MEM_1[9] :: @time = 222000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000111011011111
+# ERROR! Vector Mismatch for output port MEM_1[10] :: @time = 222000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000111011011111
+# ERROR! Vector Mismatch for output port MEM_1[11] :: @time = 222000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000000000111011011111
+# ERROR! Vector Mismatch for output port MEM_1[12] :: @time = 322000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000001111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[13] :: @time = 322000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000001111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[14] :: @time = 322000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000001111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[15] :: @time = 322000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000000001111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[16] :: @time = 422000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000001011111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[18] :: @time = 422000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 000001011111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[21] :: @time = 522000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 111001011111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[22] :: @time = 522000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 111001011111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[23] :: @time = 522000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 111001011111111011011111
+# ERROR! Vector Mismatch for output port MEM_1[5] :: @time = 622000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 101011100101111111101101
+# ERROR! Vector Mismatch for output port MEM_1[8] :: @time = 622000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 101011100101111111101101
+# ERROR! Vector Mismatch for output port MEM_1[17] :: @time = 622000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 101011100101111111101101
+# ERROR! Vector Mismatch for output port MEM_1[19] :: @time = 622000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 101011100101111111101101
+# ERROR! Vector Mismatch for output port MEM_1[20] :: @time = 722000.000 ps
+#      Expected value = 000000000000000000000000
+#      Real value = 001110101110010111111110
+#          24 mismatched vectors : Simulation failed !
+# ** Note: $finish    : Waveform.vwf.vt(1265)
 #    Time: 1 us  Iteration: 0  Instance: /decision_test_vlg_vec_tst/tb_out
