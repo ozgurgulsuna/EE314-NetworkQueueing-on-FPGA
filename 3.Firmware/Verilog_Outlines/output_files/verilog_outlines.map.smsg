@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at to_vga.v(236): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at to_vga.v(229): always construct contains both blocking and non-blocking assignments

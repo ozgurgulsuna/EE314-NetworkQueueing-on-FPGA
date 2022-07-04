@@ -1,5 +1,5 @@
 module to_vga(
-	input clk,
+	input vga_clk,
 	input [2:0] fullness1,
 	input [2:0] fullness2,
 	input [2:0] fullness3,
@@ -18,7 +18,7 @@ module to_vga(
 	input [9:0] input_count4,
 	
 	input [3:0] read, 
-//	input [3:0] p_in,
+	input [3:0] p_in,
 	
 	output reg hsynch,
 	output reg vsynch,
@@ -26,8 +26,7 @@ module to_vga(
 	output reg [7:0] vga_green,
 	output reg [7:0] vga_blue,
 	output vga_sync_n,
-	output vga_blank_n,
-	output reg vga_clk
+	output vga_blank_n
 );
 	
 	integer i;
@@ -35,15 +34,15 @@ module to_vga(
 	integer k;
 	reg [1:0] temp2bit;
 	
-	reg [11:0] drop_counts_bcd [4:0]; // 3 digit bcd number for each buffer + total values
+	reg [11:0] drop_counts_bcd [4:0];    // 3 digit bcd number for each buffer + total values
 	reg [11:0] input_counts_bcd [4:0];
 	reg [11:0] transmitted_counts_bcd [4:0];
 	reg [3:0] data_read;
 	
 	reg [2:0] fullnesses[3:0];           // 3 elements for each buffer conatining buffer fullnesses
-	reg [23:0] memories[3:0];          // 24 elements for each buffer conatining buffer memories
-	reg [7:0] drop_counts[3:0];        // 8 elements for each buffer conatining buffer drop counts
-	reg [9:0] input_counts[3:0];       // 10 elements for each buffer containing buffer input counts
+	reg [23:0] memories[3:0];            // 24 elements for each buffer conatining buffer memories
+	reg [7:0] drop_counts[3:0];          // 8 elements for each buffer conatining buffer drop counts
+	reg [9:0] input_counts[3:0];         // 10 elements for each buffer containing buffer input counts
 	
 	reg [9:0] sum_transmitted;
 	reg [9:0] sum_dropped;
@@ -55,6 +54,8 @@ module to_vga(
 	integer v_count;
 	
 	// registers for storing asset pixels
+	// CAUTION!!! - This register is defined for 1 bit mem files
+	// reg [BIT_SIZE-1:0] background_r [307199:0];
 	reg background_r [307199:0];
 	reg background_g [307199:0];
 	reg background_b [307199:0];
@@ -82,13 +83,6 @@ module to_vga(
 	reg green_digits_r [4099:0];
 	reg green_digits_g [4099:0];
 	reg green_digits_b [4099:0];
-	
-	reg [3:0] p_in;
-
-//	// Hunderts, tens, ones
-//	reg [3:0] H; 
-//	reg [3:0] T;
-//	reg [3:0] O;
 	
 	// parametters for asset positions and dimensions
 	parameter video_start_x = 'd144;
@@ -137,7 +131,6 @@ module to_vga(
 		k = 0;
 		temp2bit = 0;
 		
-		vga_clk=0;
 		hsynch = 0;
 		vsynch = 0;
 		vga_red = 0;
@@ -176,9 +169,9 @@ module to_vga(
 		vga_blue = 0;
 		
 		// import image pixels from .mem files
-		$readmemb("WIN95_r.mem",background_r);
-		$readmemb("WIN95_g.mem",background_g);
-		$readmemb("WIN95_b.mem",background_b);
+//		$readmemb("WIN95_r.mem",background_r);
+//		$readmemb("WIN95_g.mem",background_g);
+//		$readmemb("WIN95_b.mem",background_b);
 		
 		
 		$readmemb("green-digits_r.mem",green_digits_r);
@@ -240,47 +233,45 @@ module to_vga(
 		sum_input = 0;
 		
 		// Grouping inputs
-//		fullnesses[0] = fullness1;
-//		fullnesses[1] = fullness2;
-//		fullnesses[2] = fullness3;
-//		fullnesses[3] = fullness4;
-
-		fullnesses[0] = 3;
-		fullnesses[1] = 4;
-		fullnesses[2] = 1;
-		fullnesses[3] = 5;
-		
-//		memories[0] = memory1;
-//		memories[1] = memory2;
-//		memories[2] = memory3;
-//		memories[3] = memory4;
-		
-		memories[0] = 24'd27;
-		memories[1] = 24'd27;
-		memories[2] = 24'd228;
-		memories[3] = 24'd228;
-		
-//		drop_counts[0] = drop_count1;
-//		drop_counts[1] = drop_count2;
-//		drop_counts[2] = drop_count3;
-//		drop_counts[3] = drop_count4;
+		fullnesses[0] = fullness1;
+		fullnesses[1] = fullness2;
+		fullnesses[2] = fullness3;
+		fullnesses[3] = fullness4;
+//
+//		fullnesses[0] = 3;
+//		fullnesses[1] = 4;
+//		fullnesses[2] = 1;
+//		fullnesses[3] = 5;
 //		
-//		input_counts[0] = input_count1;
-//		input_counts[1] = input_count2;
-//		input_counts[2] = input_count3;
-//		input_counts[3] = input_count4;
+		memories[0] = memory1;
+		memories[1] = memory2;
+		memories[2] = memory3;
+		memories[3] = memory4;
+//		
+//		memories[0] = 24'd27;
+//		memories[1] = 24'd27;
+//		memories[2] = 24'd228;
+//		memories[3] = 24'd228;
 		
-		drop_counts[0] = 17;
-		drop_counts[1] = 0;
-		drop_counts[2] = 0;
-		drop_counts[3] = 0;
+		drop_counts[0] = drop_count1;
+		drop_counts[1] = drop_count2;
+		drop_counts[2] = drop_count3;
+		drop_counts[3] = drop_count4;
 		
-		input_counts[0] = 127;
-		input_counts[1] = 0;
-		input_counts[2] = 0;
-		input_counts[3] = 0;
+		input_counts[0] = input_count1;
+		input_counts[1] = input_count2;
+		input_counts[2] = input_count3;
+		input_counts[3] = input_count4;
 		
-		p_in = 4'b0100 ;
+//		drop_counts[0] = 17;
+//		drop_counts[1] = 0;
+//		drop_counts[2] = 0;
+//		drop_counts[3] = 0;
+//		
+//		input_counts[0] = 127;
+//		input_counts[1] = 0;
+//		input_counts[2] = 0;
+//		input_counts[3] = 0;
 		
 
 		// Binary to bcd converter calculations
@@ -404,21 +395,7 @@ module to_vga(
 		end
 
 
-	
-		// Paint drop counts
-		for (i=0;i<3;i=i+1) begin
-			for (j=0; j<5; j=j+1 ) begin
-				if (h_count<(gui_width*j+video_start_x + (input_dropped_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width) && 
-					v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-					vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-					vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-					vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				end
-			end
-		end
-
-
-			/*	
+		
 		// Paint buffers
 		for (i=0;i<4;i=i+1) begin
 			for (j=0;j<6;j=j+1) begin
@@ -459,13 +436,8 @@ module to_vga(
 				
 			end
 		end
-		*/
+		
 	end
-	
-	always @(posedge clk) begin
-			
-		vga_clk = !vga_clk;
-			
-	end
+
 	
 endmodule
