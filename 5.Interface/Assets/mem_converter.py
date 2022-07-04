@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-file_name="gray_digits"
+file_name="WIN95"
 res=1
 def to_bin(data,res):
     message=""

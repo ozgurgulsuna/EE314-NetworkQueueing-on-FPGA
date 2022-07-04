@@ -56,33 +56,33 @@ module to_vga(
 	// registers for storing asset pixels
 	// CAUTION!!! - This register is defined for 1 bit mem files
 	// reg [BIT_SIZE-1:0] background_r [307199:0];
-	reg background_r [307199:0];
-	reg background_g [307199:0];
-	reg background_b [307199:0];
+	reg [2:0] background_r [307199:0];
+	reg [2:0] background_g [307199:0];
+	reg [2:0] background_b [307199:0];
 	
-	reg gray_digits_r [1951:0];
-	reg gray_digits_g [1951:0];
-	reg gray_digits_b [1951:0];
+	reg [2:0] gray_digits_r [1951:0];
+	reg [2:0] gray_digits_g [1951:0];
+	reg [2:0] gray_digits_b [1951:0];
 	
 	// first buffer pixels
-	reg red_digits_r [4099:0];
-	reg red_digits_g [4099:0];
-	reg red_digits_b [4099:0];
+	reg [2:0] red_digits_r [4099:0];
+	reg [2:0] red_digits_g [4099:0];
+	reg [2:0] red_digits_b [4099:0];
 	
 	// second buffer pixels
-	reg blue_digits_r [4099:0];
-	reg blue_digits_g [4099:0];
-	reg blue_digits_b [4099:0];
+	reg [2:0] blue_digits_r [4099:0];
+	reg [2:0] blue_digits_g [4099:0];
+	reg [2:0] blue_digits_b [4099:0];
 	
 	// third buffer pixels
-	reg yellow_digits_r [4099:0];
-	reg yellow_digits_g [4099:0];
-	reg yellow_digits_b [4099:0];
+	reg [2:0] yellow_digits_r [4099:0];
+	reg [2:0] yellow_digits_g [4099:0];
+	reg [2:0] yellow_digits_b [4099:0];
 	
 	// fourth buffer pixels
-	reg green_digits_r [4099:0];
-	reg green_digits_g [4099:0];
-	reg green_digits_b [4099:0];
+	reg [2:0] green_digits_r [4099:0];
+	reg [2:0] green_digits_g [4099:0];
+	reg [2:0] green_digits_b [4099:0];
 	
 	// parametters for asset positions and dimensions
 	parameter video_start_x = 'd144;
@@ -169,34 +169,34 @@ module to_vga(
 		vga_blue = 0;
 		
 		// import image pixels from .mem files
-//		$readmemb("WIN95_r_1bit.mem",background_r);
-//		$readmemb("WIN95_g_1bit.mem",background_g);
-//		$readmemb("WIN95_b_1bit.mem",background_b);
+		$readmemb("WIN95_r_3bit.mem",background_r);
+		$readmemb("WIN95_g_3bit.mem",background_g);
+		$readmemb("WIN95_b_3bit.mem",background_b);
 		
 		
-		$readmemb("green_digits_r_1bit.mem",green_digits_r);
-		$readmemb("green_digits_g_1bit.mem",green_digits_g);
-		$readmemb("green_digits_b_1bit.mem",green_digits_b);
+		$readmemb("green_digits_r_3bit.mem",green_digits_r);
+		$readmemb("green_digits_g_3bit.mem",green_digits_g);
+		$readmemb("green_digits_b_3bit.mem",green_digits_b);
 		
 		
-		$readmemb("blue_digits_r_1bit.mem",blue_digits_r);
-		$readmemb("blue_digits_g_1bit.mem",blue_digits_g);
-		$readmemb("blue_digits_b_1bit.mem",blue_digits_b);
+		$readmemb("blue_digits_r_3bit.mem",blue_digits_r);
+		$readmemb("blue_digits_g_3bit.mem",blue_digits_g);
+		$readmemb("blue_digits_b_3bit.mem",blue_digits_b);
 		
 		
-		$readmemb("gray_digits_r_1bit.mem",gray_digits_r);
-		$readmemb("gray_digits_g_1bit.mem",gray_digits_g);
-		$readmemb("gray_digits_b_1bit.mem",gray_digits_b);
+		$readmemb("gray_digits_r_3bit.mem",gray_digits_r);
+		$readmemb("gray_digits_g_3bit.mem",gray_digits_g);
+		$readmemb("gray_digits_b_3bit.mem",gray_digits_b);
 		
 		
-		$readmemb("red_digits_r_1bit.mem",red_digits_r);
-		$readmemb("red_digits_g_1bit.mem",red_digits_g);
-		$readmemb("red_digits_b_1bit.mem",red_digits_b);
+		$readmemb("red_digits_r_3bit.mem",red_digits_r);
+		$readmemb("red_digits_g_3bit.mem",red_digits_g);
+		$readmemb("red_digits_b_3bit.mem",red_digits_b);
 		
 		
-		$readmemb("yellow_digits_r_1bit.mem",yellow_digits_r);
-		$readmemb("yellow_digits_g_1bit.mem",yellow_digits_g);
-		$readmemb("yellow_digits_b_1bit.mem",yellow_digits_b);
+		$readmemb("yellow_digits_r_3bit.mem",yellow_digits_r);
+		$readmemb("yellow_digits_g_3bit.mem",yellow_digits_g);
+		$readmemb("yellow_digits_b_3bit.mem",yellow_digits_b);
 		
 	end
 	
@@ -322,27 +322,27 @@ module to_vga(
 
 		
 		
-/*
+
 		// Paint background
 		if (h_count<784 && h_count>=144 && v_count<515 && v_count>=36 ) begin
-			vga_red[7:0]<=128*(background_r[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+64 ;
-			vga_green[7:0]<=128*(background_g[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+64 ;
-			vga_blue[7:0]<=128*(background_b[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+64 ;
+			vga_red[7:0]<=32*(background_r[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+32/2 ;
+			vga_green[7:0]<=32*(background_g[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+32/2 ;
+			vga_blue[7:0]<=32*(background_b[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+32/2 ;
 		end
 		else begin
 				vga_red[7:0]=0;
 				vga_green[7:0]=0;
 				vga_blue[7:0]=0;
 		end
-*/		
+		
 		// Paint output                               data_read     shows output data
 		for (i=0;i<4;i=i+1) begin
 			if (h_count<(video_start_x + (out_switch_x + 16) + (3-i+1)*free_digit_width) && h_count>= (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width) && 
 				 v_count<(video_start_y + (out_switch_y + 3) + free_digit_height) && v_count>=(video_start_y + (out_switch_y + 3))) begin
 				
-				vga_red[7:0]<=128*(gray_digits_r[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
+				vga_red[7:0]<=32*(gray_digits_r[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+32/2;
+				vga_green[7:0]<=32*(gray_digits_g[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+32/2;
+				vga_blue[7:0]<=32*(gray_digits_b[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+32/2;
 			end
 		end
 		
@@ -351,9 +351,9 @@ module to_vga(
 			if (h_count<(video_start_x + (input_switch_x + 16) + (3-i+1)*free_digit_width) && h_count>= (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width) && 
 				 v_count<(video_start_y + (input_switch_y + 3) + free_digit_height) && v_count>=(video_start_y + (input_switch_y + 3))) begin
 				
-				vga_red[7:0]<=128*(gray_digits_r[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
+				vga_red[7:0]<=32*(gray_digits_r[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+32/2;
+				vga_green[7:0]<=32*(gray_digits_g[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+32/2;
+				vga_blue[7:0]<=32*(gray_digits_b[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+32/2;
 			end
 		end
 
@@ -363,9 +363,9 @@ module to_vga(
 			for (j=0; j<5; j=j+1 ) begin
 				if (h_count<(gui_width*j+video_start_x + (input_transmit_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width) && 
 					v_count<(video_start_y + (input_transmit_y) + free_digit_height) && v_count>=(video_start_y + (input_transmit_y ))) begin
-					vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-					vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-					vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
+					vga_red[7:0]<=32*(gray_digits_r[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+32/2;
+					vga_green[7:0]<=32*(gray_digits_g[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+32/2;
+					vga_blue[7:0]<=32*(gray_digits_b[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+32/2;
 				end
 			end
 		end
@@ -375,9 +375,9 @@ module to_vga(
 			for (j=0; j<5; j=j+1 ) begin
 				if (h_count<(gui_width*j+video_start_x + (input_receive_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width) && 
 					v_count<(video_start_y + (input_receive_y) + free_digit_height) && v_count>=(video_start_y + (input_receive_y ))) begin
-					vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-					vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-					vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
+					vga_red[7:0]<=32*(gray_digits_r[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+32/2;
+					vga_green[7:0]<=32*(gray_digits_g[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+32/2;
+					vga_blue[7:0]<=32*(gray_digits_b[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+32/2;
 				end
 			end
 		end
@@ -387,9 +387,9 @@ module to_vga(
 			for (j=0; j<5; j=j+1 ) begin
 				if (h_count<(gui_width*j+video_start_x + (input_dropped_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width) && 
 					v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-					vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-					vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-					vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+					vga_red[7:0]<=32*(gray_digits_r[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+32/2;
+					vga_green[7:0]<=32*(gray_digits_g[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+32/2;
+					vga_blue[7:0]<=32*(gray_digits_b[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+32/2;
 				end
 			end
 		end
@@ -408,27 +408,27 @@ module to_vga(
 					    v_count<(video_start_y + buffer_pos_y - j*buffer_step_y + buffer_height) && v_count>=(video_start_y + buffer_pos_y - j*buffer_step_y)) begin
 						
 						if (i == 0) begin
-							vga_red[7:0]<=128*(red_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_green[7:0]<=128*(red_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_blue[7:0]<=128*(red_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
+							vga_red[7:0]<=32*(red_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_green[7:0]<=32*(red_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_blue[7:0]<=32*(red_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
 						end
 						
 						if (i == 1) begin
-							vga_red[7:0]<=128*(blue_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_green[7:0]<=128*(blue_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_blue[7:0]<=128*(blue_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
+							vga_red[7:0]<=32*(blue_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_green[7:0]<=32*(blue_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_blue[7:0]<=32*(blue_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
 						end
 						
 						if (i == 2) begin
-							vga_red[7:0]<=128*(yellow_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_green[7:0]<=128*(yellow_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_blue[7:0]<=128*(yellow_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
+							vga_red[7:0]<=32*(yellow_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_green[7:0]<=32*(yellow_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_blue[7:0]<=32*(yellow_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
 						end
 						
 						if (i == 3) begin
-							vga_red[7:0]<=128*(green_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_green[7:0]<=128*(green_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
-							vga_blue[7:0]<=128*(green_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+64;
+							vga_red[7:0]<=32*(green_digits_r[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_green[7:0]<=32*(green_digits_g[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
+							vga_blue[7:0]<=32*(green_digits_b[(3-temp2bit)*(digit_step_y*buffer_width)+(h_count - (video_start_x + buffer_pos_x + i*buffer_step_x)) + buffer_width*(v_count-(video_start_y + buffer_pos_y - j*buffer_step_y))])+32/2;
 						end
 						
 					end
