@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Mon Jul 04 07:31:36 2022
+Analysis & Synthesis Status : Successful - Mon Jul 04 09:52:31 2022
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : verilog_outlines
 Top-level Entity Name : to_vga
@@ -8,7 +8,7 @@ Total registers : 72
 Total pins : 218
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 7
+Total DSP Blocks : 10
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
