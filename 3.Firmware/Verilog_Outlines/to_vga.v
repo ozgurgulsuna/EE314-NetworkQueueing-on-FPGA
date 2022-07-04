@@ -18,7 +18,7 @@ module to_vga(
 	input [9:0] input_count4,
 	
 	input [3:0] read, 
-	input [3:0] p_in,
+//	input [3:0] p_in,
 	
 	output reg hsynch,
 	output reg vsynch,
@@ -48,6 +48,7 @@ module to_vga(
 	reg [9:0] sum_transmitted;
 	reg [9:0] sum_dropped;
 	reg [9:0] sum_input;
+	
 	
 	// horizontal and vertical counters for vga screen
 	integer h_count;
@@ -82,12 +83,19 @@ module to_vga(
 	reg green_digits_g [4099:0];
 	reg green_digits_b [4099:0];
 	
+	reg [3:0] p_in;
+
+//	// Hunderts, tens, ones
+//	reg [3:0] H; 
+//	reg [3:0] T;
+//	reg [3:0] O;
+	
 	// parametters for asset positions and dimensions
 	parameter video_start_x = 'd144;
 	parameter video_start_y = 'd35;
 	
 	parameter buffer_step_x = 'd70;
-	parameter buffer_step_y = 'd28;
+	parameter buffer_step_y = 'd27;
 	parameter buffer_width = 'd50;
 	parameter buffer_height = 'd18;
 	// the position of the upper left buffer
@@ -152,6 +160,7 @@ module to_vga(
 		input_counts[1] = input_count2;
 		input_counts[2] = input_count3;
 		input_counts[3] = input_count4;
+		
 		
 		sum_transmitted = 0;
 		sum_dropped = 0;
@@ -251,51 +260,60 @@ module to_vga(
 		memories[2] = 24'd228;
 		memories[3] = 24'd228;
 		
-		drop_counts[0] = drop_count1;
-		drop_counts[1] = drop_count2;
-		drop_counts[2] = drop_count3;
-		drop_counts[3] = drop_count4;
+//		drop_counts[0] = drop_count1;
+//		drop_counts[1] = drop_count2;
+//		drop_counts[2] = drop_count3;
+//		drop_counts[3] = drop_count4;
+//		
+//		input_counts[0] = input_count1;
+//		input_counts[1] = input_count2;
+//		input_counts[2] = input_count3;
+//		input_counts[3] = input_count4;
 		
-		input_counts[0] = input_count1;
-		input_counts[1] = input_count2;
-		input_counts[2] = input_count3;
-		input_counts[3] = input_count4;
+		drop_counts[0] = 17;
+		drop_counts[1] = 0;
+		drop_counts[2] = 0;
+		drop_counts[3] = 0;
 		
+		input_counts[0] = 127;
+		input_counts[1] = 0;
+		input_counts[2] = 0;
+		input_counts[3] = 0;
 		
+		p_in = 4'b0100 ;
 		
-		
-		
+
 		// Binary to bcd converter calculations
 		for (i=0;i<4;i=i+1) begin
-		drop_counts_bcd [i][3:0] =   (drop_counts[i])%10;                // First digit
-		drop_counts_bcd [i][7:4] =  ((drop_counts[i])/10)%10;           // Second digit
-		drop_counts_bcd [i][11:8] = ((drop_counts[i])/100);         // Last digit - 3 digit numbers at most!!
-		
-		input_counts_bcd [i][3:0] =   (input_counts[i])%10;
-		input_counts_bcd [i][7:4] =  ((input_counts[i])/10)%10;
-		input_counts_bcd [i][11:8] = ((input_counts[i])/100);
-		
-		transmitted_counts_bcd [i][3:0] =   (input_counts[i]-drop_counts[i])%10;
-		transmitted_counts_bcd [i][7:4] =  ((input_counts[i]-drop_counts[i])/10)%10;
-		transmitted_counts_bcd [i][11:8] = ((input_counts[i]-drop_counts[i])/100);
-		
-		sum_transmitted = sum_transmitted + (input_counts[i]-drop_counts[i]);
-		sum_dropped = sum_dropped + drop_counts[i];
-		sum_input = sum_input + input_counts[i];
+			drop_counts_bcd [i][3:0]  =   (drop_counts[i])%10;                // First digit
+			drop_counts_bcd [i][7:4]  =  ((drop_counts[i])/10)%10;           // Second digit
+			drop_counts_bcd [i][11:8] = ((drop_counts[i])/100)%10;         // Last digit - 3 digit numbers at most!!
+			
+			input_counts_bcd [i][3:0]  =   (input_counts[i])%10;
+			input_counts_bcd [i][7:4] =  ((input_counts[i])/10)%10;
+			input_counts_bcd [i][11:8]= ((input_counts[i])/100)%10;
+			
+			transmitted_counts_bcd [i][3:0]  =   (input_counts[i]-drop_counts[i])%10;
+			transmitted_counts_bcd [i][7:4] =  ((input_counts[i]-drop_counts[i])/10)%10;
+			transmitted_counts_bcd [i][11:8]= ((input_counts[i]-drop_counts[i])/100)%10;
+			
+			sum_transmitted = sum_transmitted + (input_counts[i]-drop_counts[i]);
+			sum_dropped = sum_dropped + drop_counts[i];
+			sum_input = sum_input + input_counts[i];
 		end
 		
-		// Binary to bcd converter for total values
-		drop_counts_bcd [4][3:0] =   (sum_dropped)%10;
+		// Binary to bcd converter for total values 
+		drop_counts_bcd [4][3:0]  =   (sum_dropped)%10;
 		drop_counts_bcd [4][7:4] =  ((sum_dropped)/10)%10;
-		drop_counts_bcd [4][11:8] = ((sum_dropped)/100);
+		drop_counts_bcd [4][11:8]= ((sum_dropped)/100)%10;
 		
-		input_counts_bcd [4][3:0] =   (sum_input)%10;
+		input_counts_bcd [4][3:0]  =   (sum_input)%10;
 		input_counts_bcd [4][7:4] =  (sum_input/10)%10;
-		input_counts_bcd [4][11:8] = (sum_input/100);
+		input_counts_bcd [4][11:8]= (sum_input/100)%10;
 		
-		transmitted_counts_bcd [4][3:0] =   (sum_transmitted)%10;
+		transmitted_counts_bcd [4][3:0]  =   (sum_transmitted)%10;
 		transmitted_counts_bcd [4][7:4] =  ((sum_transmitted)/10)%10;
-		transmitted_counts_bcd [4][11:8] = ((sum_transmitted)/100);
+		transmitted_counts_bcd [4][11:8]= ((sum_transmitted)/100)%10;
 		
 		
 		// Data written to the output switch
@@ -306,8 +324,14 @@ module to_vga(
 				end
 			end
 		end
+		
+		vga_red[7:0]=0;
+		vga_green[7:0]=0;
+		vga_blue[7:0]=0;
 
-
+		
+		
+/*
 		// Paint background
 		if (h_count<784 && h_count>=144 && v_count<515 && v_count>=36 ) begin
 			vga_red[7:0]<=128*(background_r[(h_count - video_start_x) + background_width*(v_count-video_start_y)])+64 ;
@@ -319,147 +343,82 @@ module to_vga(
 				vga_green[7:0]=0;
 				vga_blue[7:0]=0;
 		end
-		
+*/		
 		// Paint output                               data_read     shows output data
 		for (i=0;i<4;i=i+1) begin
-			if (h_count<(video_start_x + (out_switch_x + 16) + (i+1)*free_digit_width) && h_count>= (video_start_x + (out_switch_x + 16) + (i)*free_digit_width) && 
+			if (h_count<(video_start_x + (out_switch_x + 16) + (3-i+1)*free_digit_width) && h_count>= (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width) && 
 				 v_count<(video_start_y + (out_switch_y + 3) + free_digit_height) && v_count>=(video_start_y + (out_switch_y + 3))) begin
 				
-				vga_red[7:0]<=128*(gray_digits_r[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
+				vga_red[7:0]<=128*(gray_digits_r[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
+				vga_green[7:0]<=128*(gray_digits_g[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
+				vga_blue[7:0]<=128*(gray_digits_b[(data_read[i]+1)*(free_digit_gap_x) + free_digit_width*data_read[i] + (h_count - (video_start_x + (out_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (out_switch_y + 3)))])+64;
 			end
 		end
 		
 		// Paint input
 		for (i=0;i<4;i=i+1) begin
-			if (h_count<(video_start_x + (input_switch_x + 16) + (i+1)*free_digit_width) && h_count>= (video_start_x + (input_switch_x + 16) + (i)*free_digit_width) && 
+			if (h_count<(video_start_x + (input_switch_x + 16) + (3-i+1)*free_digit_width) && h_count>= (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width) && 
 				 v_count<(video_start_y + (input_switch_y + 3) + free_digit_height) && v_count>=(video_start_y + (input_switch_y + 3))) begin
 				
-				vga_red[7:0]<=128*(gray_digits_r[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
+				vga_red[7:0]<=128*(gray_digits_r[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
+				vga_green[7:0]<=128*(gray_digits_g[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
+				vga_blue[7:0]<=128*(gray_digits_b[(p_in[i]+1)*(free_digit_gap_x) + free_digit_width*p_in[i] + (h_count - (video_start_x + (input_switch_x + 16) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_switch_y + 3)))])+64;
 			end
 		end
-	
-		// Transmit input
-			for (i=0;i<3;i=i+1) begin
-				if (h_count<(gui_width*0+video_start_x + (input_transmit_x) + (i+1)*free_digit_width) && h_count>= (gui_width*0+video_start_x + (input_transmit_x) + (i)*free_digit_width) && 
+
+		
+		// Paint transmit counts
+		for (i=0;i<3;i=i+1) begin
+			for (j=0; j<5; j=j+1 ) begin
+				if (h_count<(gui_width*j+video_start_x + (input_transmit_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width) && 
 					v_count<(video_start_y + (input_transmit_y) + free_digit_height) && v_count>=(video_start_y + (input_transmit_y ))) begin
-			
-					vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-					vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-					vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				end
-				if (h_count<(gui_width*1+video_start_x + (input_transmit_x) + (i+1)*free_digit_width) && h_count>= (gui_width*1+video_start_x + (input_transmit_x) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_transmit_y) + free_digit_height) && v_count>=(video_start_y + (input_transmit_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				end
-				if (h_count<(gui_width*2+video_start_x + (input_transmit_x) + (i+1)*free_digit_width) && h_count>= (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_transmit_y) + free_digit_height) && v_count>=(video_start_y + (input_transmit_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				end
-				if (h_count<(gui_width*3+video_start_x + (input_transmit_x) + (i+1)*free_digit_width) && h_count>= (gui_width*3+video_start_x + (input_transmit_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_transmit_y) + free_digit_height) && v_count>=(video_start_y + (input_transmit_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				end
-				if (h_count<(gui_width*4+video_start_x + (input_transmit_x) + (i+1)*free_digit_width) && h_count>= (gui_width*4+video_start_x + (input_transmit_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_transmit_y) + free_digit_height) && v_count>=(video_start_y + (input_transmit_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_transmit_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
+					vga_red[7:0]<=128*(gray_digits_r[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
+					vga_green[7:0]<=128*(gray_digits_g[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
+					vga_blue[7:0]<=128*(gray_digits_b[(transmitted_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*transmitted_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_transmit_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_transmit_y )))])+64;
 				end
 			end
-			
-			
-				// Receive input
-					for (i=0;i<3;i=i+1) begin
-				if (h_count<(gui_width*0+video_start_x + (input_receive_x) + (i+1)*free_digit_width) && h_count>= (gui_width*0+video_start_x + (input_receive_x) + (i)*free_digit_width) && 
+		end
+
+		// Paint input counts
+		for (i=0;i<3;i=i+1) begin
+			for (j=0; j<5; j=j+1 ) begin
+				if (h_count<(gui_width*j+video_start_x + (input_receive_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width) && 
 					v_count<(video_start_y + (input_receive_y) + free_digit_height) && v_count>=(video_start_y + (input_receive_y ))) begin
-			
-					vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-					vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-					vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				end
-				if (h_count<(gui_width*1+video_start_x + (input_receive_x) + (i+1)*free_digit_width) && h_count>= (gui_width*1+video_start_x + (input_receive_x) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_receive_y) + free_digit_height) && v_count>=(video_start_y + (input_receive_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				end
-				if (h_count<(gui_width*2+video_start_x + (input_receive_x) + (i+1)*free_digit_width) && h_count>= (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_receive_y) + free_digit_height) && v_count>=(video_start_y + (input_receive_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				end
-				if (h_count<(gui_width*3+video_start_x + (input_receive_x) + (i+1)*free_digit_width) && h_count>= (gui_width*3+video_start_x + (input_receive_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_receive_y) + free_digit_height) && v_count>=(video_start_y + (input_receive_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				end
-				if (h_count<(gui_width*4+video_start_x + (input_receive_x) + (i+1)*free_digit_width) && h_count>= (gui_width*4+video_start_x + (input_receive_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_receive_y) + free_digit_height) && v_count>=(video_start_y + (input_receive_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_receive_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
+					vga_red[7:0]<=128*(gray_digits_r[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
+					vga_green[7:0]<=128*(gray_digits_g[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
+					vga_blue[7:0]<=128*(gray_digits_b[(input_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*input_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_receive_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_receive_y )))])+64;
 				end
 			end
+		end
 		
-		
-				// Drop input
-				for (i=0;i<3;i=i+1) begin
-				if (h_count<(gui_width*0+video_start_x + (input_dropped_x) + (i+1)*free_digit_width) && h_count>= (gui_width*0+video_start_x + (input_dropped_x) + (i)*free_digit_width) && 
-				v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-				vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [0][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [0][3+i*4-:3] + (h_count - (gui_width*0+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				end
-				if (h_count<(gui_width*1+video_start_x + (input_dropped_x) + (i+1)*free_digit_width) && h_count>= (gui_width*1+video_start_x + (input_dropped_x) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [1][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [1][3+i*4-:3] + (h_count - (gui_width*1+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				end
-				if (h_count<(gui_width*2+video_start_x + (input_dropped_x) + (i+1)*free_digit_width) && h_count>= (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [2][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [2][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				end
-				if (h_count<(gui_width*3+video_start_x + (input_dropped_x) + (i+1)*free_digit_width) && h_count>= (gui_width*3+video_start_x + (input_dropped_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [3][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [3][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				end
-				if (h_count<(gui_width*4+video_start_x + (input_dropped_x) + (i+1)*free_digit_width) && h_count>= (gui_width*4+video_start_x + (input_dropped_x ) + (i)*free_digit_width) && 
-				 v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
-				
-				vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
-				vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [4][3+i*4-:3]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [4][3+i*4-:3] + (h_count - (gui_width*2+video_start_x + (input_dropped_x ) + (i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+		// Paint drop counts
+		for (i=0;i<3;i=i+1) begin
+			for (j=0; j<5; j=j+1 ) begin
+				if (h_count<(gui_width*j+video_start_x + (input_dropped_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width) && 
+					v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
+					vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+					vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+					vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
 				end
 			end
-		
+		end
+
+
+	
+		// Paint drop counts
+		for (i=0;i<3;i=i+1) begin
+			for (j=0; j<5; j=j+1 ) begin
+				if (h_count<(gui_width*j+video_start_x + (input_dropped_x) + (3-i+1)*free_digit_width) && h_count>= (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width) && 
+					v_count<(video_start_y + (input_dropped_y) + free_digit_height) && v_count>=(video_start_y + (input_dropped_y ))) begin
+					vga_red[7:0]<=128*(gray_digits_r[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+					vga_green[7:0]<=128*(gray_digits_g[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+					vga_blue[7:0]<=128*(gray_digits_b[(drop_counts_bcd [j][3+i*4-:4]+1)*(free_digit_gap_x) + free_digit_width*drop_counts_bcd [j][3+i*4-:4] + (h_count - (gui_width*j+video_start_x + (input_dropped_x ) + (3-i)*free_digit_width)) + free_digit_bitmap_width*(v_count-(video_start_y + (input_dropped_y )))])+64;
+				end
+			end
+		end
+
+
+			/*	
 		// Paint buffers
 		for (i=0;i<4;i=i+1) begin
 			for (j=0;j<6;j=j+1) begin
@@ -500,6 +459,7 @@ module to_vga(
 				
 			end
 		end
+		*/
 	end
 	
 	always @(posedge clk) begin
