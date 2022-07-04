@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY to_vga
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:22:38  JULY 01, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -69,9 +69,6 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE switch_sim.vwf
 set_global_assignment -name BDF_FILE switch_sim.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE decision_sim.vwf
 set_global_assignment -name VERILOG_FILE to_vga.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_B11 -to hsynch
 set_location_assignment PIN_B13 -to vga_blue[0]
 set_location_assignment PIN_G13 -to vga_blue[1]
@@ -102,4 +99,14 @@ set_location_assignment PIN_D11 -to vsynch
 set_location_assignment PIN_AA16 -to clk
 set_location_assignment PIN_C10 -to vga_sync_n
 set_location_assignment PIN_F10 -to vga_blank_n
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_W15 -to in_0
+set_location_assignment PIN_AA15 -to in_1
+set_location_assignment PIN_Y16 -to start
+set_location_assignment PIN_W16 -to p_in[1]
+set_location_assignment PIN_V17 -to p_in[2]
+set_location_assignment PIN_V18 -to p_in[3]
+set_location_assignment PIN_V16 -to p_in[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

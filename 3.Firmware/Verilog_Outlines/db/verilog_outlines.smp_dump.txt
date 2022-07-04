@@ -1,5 +1,5 @@
 
-State Machine - |decision|i
+State Machine - |main|decision:decision1|i
 Name i.11 i.10 i.01 i.00 
 i.00 0 0 0 0 
 i.01 0 0 1 1 
