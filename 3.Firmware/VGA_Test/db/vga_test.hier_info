@@ -1,0 +1,33 @@
+|vga_test
+clk => vga_clk~reg0.CLK
+hsynch <= hsynch~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsynch <= vsynch~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[0] <= vga_red[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[1] <= vga_red[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[2] <= vga_red[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[3] <= vga_red[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[4] <= vga_red[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[5] <= vga_red[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[6] <= vga_red[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_red[7] <= vga_red[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[0] <= vga_green[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[1] <= vga_green[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[2] <= vga_green[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[3] <= vga_green[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[4] <= vga_green[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[5] <= vga_green[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[6] <= vga_green[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_green[7] <= vga_green[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[0] <= vga_blue[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[1] <= vga_blue[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[2] <= vga_blue[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[3] <= vga_blue[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[4] <= vga_blue[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[5] <= vga_blue[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[6] <= vga_blue[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_blue[7] <= vga_blue[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_clk <= vga_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vga_sync_n <= <VCC>
+vga_blank_n <= <VCC>
+
+

@@ -1,0 +1,436 @@
+Analysis & Synthesis report for vga_test
+Mon Jul 04 02:46:38 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |vga_test
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jul 04 02:46:37 2022      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; vga_test                                   ;
+; Top-level Entity Name           ; vga_test                                   ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 73                                         ;
+; Total pins                      ; 30                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; vga_test           ; vga_test           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ; < 0.1%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; vga_test.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/vga_test.v          ;         ;
+; back-digits_b.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/back-digits_b.mem   ;         ;
+; back-digits_r.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/back-digits_r.mem   ;         ;
+; blue-digits_b.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/blue-digits_b.mem   ;         ;
+; blue-digits_g.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/blue-digits_g.mem   ;         ;
+; red-digits_g.mem                 ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/red-digits_g.mem    ;         ;
+; win95_r.mem                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/win95_r.mem         ;         ;
+; back-digits_g.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/back-digits_g.mem   ;         ;
+; yellow-digits_b.mem              ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/yellow-digits_b.mem ;         ;
+; yellow-digits_g.mem              ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/yellow-digits_g.mem ;         ;
+; win95_g.mem                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/win95_g.mem         ;         ;
+; gray-digits_g.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/gray-digits_g.mem   ;         ;
+; red-digits_b.mem                 ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/red-digits_b.mem    ;         ;
+; gray-digits_r.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/gray-digits_r.mem   ;         ;
+; red-digits_r.mem                 ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/red-digits_r.mem    ;         ;
+; win95_b.mem                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/win95_b.mem         ;         ;
+; yellow-digits_r.mem              ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/yellow-digits_r.mem ;         ;
+; gray-digits_b.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/gray-digits_b.mem   ;         ;
+; blue-digits_r.mem                ; yes             ; Auto-Found Unspecified File  ; C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/blue-digits_r.mem   ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 5865  ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 7450  ;
+;     -- 7 input functions                    ; 921   ;
+;     -- 6 input functions                    ; 3357  ;
+;     -- 5 input functions                    ; 1315  ;
+;     -- 4 input functions                    ; 1103  ;
+;     -- <=3 input functions                  ; 754   ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 73    ;
+;                                             ;       ;
+; I/O pins                                    ; 30    ;
+; Total DSP Blocks                            ; 0     ;
+; Maximum fan-out node                        ; i[1]  ;
+; Maximum fan-out                             ; 3039  ;
+; Total fan-out                               ; 39772 ;
+; Average fan-out                             ; 5.24  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; |vga_test                  ; 7450 (7450)       ; 73 (73)      ; 0                 ; 0          ; 30   ; 0            ; |vga_test           ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; vga_blue[2]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; vga_blue[1]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; vga_blue[0]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; vga_blue[3]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; vga_blue[4]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; vga_blue[5]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; vga_green[0]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; vga_green[1]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; vga_green[2]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; vga_green[3]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; vga_green[4]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; vga_green[5]~reg0                      ; Stuck at GND due to stuck port data_in ;
+; vga_red[0]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; vga_red[1]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; vga_red[2]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; vga_red[3]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; vga_red[4]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; vga_red[5]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 18 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 73    ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; hsynch~reg0                            ; 1       ;
+; vsynch~reg0                            ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vga_test|j[31]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |vga_test ;
++------------------+----------------------------------+--------------------+
+; Parameter Name   ; Value                            ; Type               ;
++------------------+----------------------------------+--------------------+
+; video_start_i    ; 00000000000000000000000010010000 ; Unsigned Binary    ;
+; video_start_j    ; 00000000000000000000000000100011 ; Unsigned Binary    ;
+; background_width ; 00000000000000000000001010000000 ; Unsigned Binary    ;
++------------------+----------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:11     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Jul 04 02:41:35 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_test -c vga_test
+Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file vga_test.v
+    Info (12023): Found entity 1: vga_test
+Info (12127): Elaborating entity "vga_test" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(21): object "back_digits_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(22): object "back_digits_g" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(23): object "back_digits_b" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(26): object "blue_digits_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(27): object "blue_digits_g" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(28): object "blue_digits_b" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(31): object "gray_digits_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(32): object "gray_digits_g" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(33): object "gray_digits_b" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(36): object "red_digits_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(37): object "red_digits_g" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(38): object "red_digits_b" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(41): object "yellow_digits_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(42): object "yellow_digits_g" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_test.v(43): object "yellow_digits_b" assigned a value but never read
+Warning (10850): Verilog HDL warning at vga_test.v(68): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(69): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(70): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(73): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(74): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(75): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(78): number of words (1952) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(79): number of words (1952) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(80): number of words (1952) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(83): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(84): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(85): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(88): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(89): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10850): Verilog HDL warning at vga_test.v(90): number of words (4100) in memory file does not match the number of elements in the address range [0:307199]
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable back_digits_r should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable back_digits_g should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable back_digits_b should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable blue_digits_r should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable blue_digits_g should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable blue_digits_b should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable gray_digits_r should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable gray_digits_g should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable gray_digits_b should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable red_digits_r should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable red_digits_g should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable red_digits_b should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable yellow_digits_r should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable yellow_digits_g should be constant
+Warning (10855): Verilog HDL warning at vga_test.v(53): initial value for variable yellow_digits_b should be constant
+Warning (10230): Verilog HDL assignment warning at vga_test.v(123): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at vga_test.v(124): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at vga_test.v(125): truncated value with size 32 to match size of target (8)
+Warning (10030): Net "background_r.waddr_a" at vga_test.v(16) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_g.waddr_a" at vga_test.v(17) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_b.waddr_a" at vga_test.v(18) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_r.data_a" at vga_test.v(16) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_r.we_a" at vga_test.v(16) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_g.data_a" at vga_test.v(17) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_g.we_a" at vga_test.v(17) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_b.data_a" at vga_test.v(18) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "background_b.we_a" at vga_test.v(18) has no driver or initial value, using a default initial value '0'
+Info (276014): Found 3 instances of uninferred RAM logic
+    Info (276007): RAM logic "background_r" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "background_g" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "background_b" is uninferred due to asynchronous read logic
+Critical Warning (127005): Memory depth (524288) in the design file differs from memory depth (307200) in the Memory Initialization File "C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/db/vga_test.ram0_vga_test_71fa7413.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (524288) in the design file differs from memory depth (307200) in the Memory Initialization File "C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/db/vga_test.ram1_vga_test_71fa7413.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (524288) in the design file differs from memory depth (307200) in the Memory Initialization File "C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/db/vga_test.ram2_vga_test_71fa7413.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "vga_red[0]" is stuck at GND
+    Warning (13410): Pin "vga_red[1]" is stuck at GND
+    Warning (13410): Pin "vga_red[2]" is stuck at GND
+    Warning (13410): Pin "vga_red[3]" is stuck at GND
+    Warning (13410): Pin "vga_red[4]" is stuck at GND
+    Warning (13410): Pin "vga_red[5]" is stuck at GND
+    Warning (13410): Pin "vga_green[0]" is stuck at GND
+    Warning (13410): Pin "vga_green[1]" is stuck at GND
+    Warning (13410): Pin "vga_green[2]" is stuck at GND
+    Warning (13410): Pin "vga_green[3]" is stuck at GND
+    Warning (13410): Pin "vga_green[4]" is stuck at GND
+    Warning (13410): Pin "vga_green[5]" is stuck at GND
+    Warning (13410): Pin "vga_blue[0]" is stuck at GND
+    Warning (13410): Pin "vga_blue[1]" is stuck at GND
+    Warning (13410): Pin "vga_blue[2]" is stuck at GND
+    Warning (13410): Pin "vga_blue[3]" is stuck at GND
+    Warning (13410): Pin "vga_blue[4]" is stuck at GND
+    Warning (13410): Pin "vga_blue[5]" is stuck at GND
+    Warning (13410): Pin "vga_sync_n" is stuck at VCC
+    Warning (13410): Pin "vga_blank_n" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/output_files/vga_test.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 7483 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 7453 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info: Peak virtual memory: 6143 megabytes
+    Info: Processing ended: Mon Jul 04 02:46:38 2022
+    Info: Elapsed time: 00:05:03
+    Info: Total CPU time (on all processors): 00:05:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Pineapple/Desktop/damn_okul/EE314/Term_Project/EE314-TermProject/3.Firmware/VGA_Test/output_files/vga_test.map.smsg.
+
+
