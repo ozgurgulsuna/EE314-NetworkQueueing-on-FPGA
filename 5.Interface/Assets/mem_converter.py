@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-file_name="green-digits"
+file_name="gray_digits"
 res=1
 def to_bin(data,res):
     message=""
@@ -27,7 +27,7 @@ b = open(file_name+"_b.mem","r")
 g = open(file_name+"_g.mem","r")
 r = open(file_name+"_r.mem","r")
 def to_num(data,res):
-    return int(data,2)*2**(8-res) #+2**(8-res)-1
+    return int(data,2)*2**(8-res) +2**(8-res)/2
 for i in range(img.shape[0]):
     for j in range(img.shape[1]):
         img[i][j][0]=to_num(b.readline(),res)
