@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Jul 04 21:58:37 2022
+Fitter Status : Successful - Mon Jul 04 22:37:21 2022
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : verilog_outlines
 Top-level Entity Name : main
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Preliminary
-Logic utilization (in ALMs) : 8,464 / 32,070 ( 26 % )
-Total registers : 794
+Logic utilization (in ALMs) : 8,492 / 32,070 ( 26 % )
+Total registers : 789
 Total pins : 37 / 457 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

@@ -311,7 +311,7 @@ module to_vga(
 		for (i=0;i<4;i=i+1) begin
 			if (read[i]==1 && fullnesses[i] != 0) begin
 				for (j=0;j<4;j=j+1) begin
-					data_read[j] = memories[i][fullnesses[i]*4+j];
+					data_read[j] = memories[i][(fullnesses[i]-1)*4+j];
 				end
 			end
 		end

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for verilog_outlines
-Mon Jul 04 21:56:59 2022
+Mon Jul 04 22:35:51 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -127,7 +127,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jul 04 21:56:58 2022      ;
+; Analysis & Synthesis Status     ; Successful - Mon Jul 04 22:35:51 2022      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; verilog_outlines                           ;
 ; Top-level Entity Name           ; main                                       ;
@@ -242,13 +242,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.58        ;
+; Average used               ; 1.46        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  50.0%      ;
-;     Processor 3            ;   8.3%      ;
+;     Processor 2            ;  39.3%      ;
+;     Processor 3            ;   7.1%      ;
 ;     Processors 4-8         ; < 0.1%      ;
 ;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
@@ -320,8 +320,8 @@ applicable agreement for further details.
 ;     -- 7 input functions                    ; 756                        ;
 ;     -- 6 input functions                    ; 2394                       ;
 ;     -- 5 input functions                    ; 1001                       ;
-;     -- 4 input functions                    ; 1595                       ;
-;     -- <=3 input functions                  ; 7585                       ;
+;     -- 4 input functions                    ; 1599                       ;
+;     -- <=3 input functions                  ; 7581                       ;
 ;                                             ;                            ;
 ; Dedicated logic registers                   ; 748                        ;
 ;                                             ;                            ;
@@ -329,7 +329,7 @@ applicable agreement for further details.
 ; Total DSP Blocks                            ; 44                         ;
 ; Maximum fan-out node                        ; clk_div:clk_div1|fract_clk ;
 ; Maximum fan-out                             ; 605                        ;
-; Total fan-out                               ; 53805                      ;
+; Total fan-out                               ; 53813                      ;
 ; Average fan-out                             ; 3.79                       ;
 +---------------------------------------------+----------------------------+
 
@@ -2633,7 +2633,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Jul 04 21:56:33 2022
+    Info: Processing started: Mon Jul 04 22:35:20 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off verilog_outlines -c verilog_outlines
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer_sim.bdf
@@ -2924,10 +2924,10 @@ Info (21057): Implemented 13831 device resources after synthesis - the final res
     Info (21061): Implemented 13750 logic cells
     Info (21062): Implemented 44 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 4983 megabytes
-    Info: Processing ended: Mon Jul 04 21:56:59 2022
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 5006 megabytes
+    Info: Processing ended: Mon Jul 04 22:35:51 2022
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+

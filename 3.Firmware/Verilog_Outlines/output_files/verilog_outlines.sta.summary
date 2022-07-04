@@ -3,99 +3,99 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk_div:clk_div1|vga_clk'
-Slack : -40.079
-TNS   : -669.168
+Slack : -38.280
+TNS   : -729.168
 
 Type  : Slow 1100mV 85C Model Setup 'clk_div:clk_div1|fract_clk'
-Slack : -17.107
-TNS   : -3844.109
+Slack : -17.007
+TNS   : -3616.908
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -4.279
-TNS   : -274.760
-
-Type  : Slow 1100mV 85C Model Hold 'clk_div:clk_div1|fract_clk'
-Slack : -1.357
-TNS   : -5.012
+Slack : -4.620
+TNS   : -286.929
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : -1.349
-TNS   : -1.349
+Slack : -1.283
+TNS   : -1.283
+
+Type  : Slow 1100mV 85C Model Hold 'clk_div:clk_div1|fract_clk'
+Slack : -0.127
+TNS   : -0.455
 
 Type  : Slow 1100mV 85C Model Hold 'clk_div:clk_div1|vga_clk'
-Slack : 0.543
+Slack : 0.671
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_div:clk_div1|fract_clk'
 Slack : -2.225
-TNS   : -536.048
+TNS   : -569.878
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.617
-TNS   : -35.616
+Slack : -0.660
+TNS   : -35.239
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_div:clk_div1|vga_clk'
-Slack : -0.413
-TNS   : -54.017
+Slack : -0.399
+TNS   : -55.042
 
 Type  : Slow 1100mV 0C Model Setup 'clk_div:clk_div1|vga_clk'
-Slack : -40.786
-TNS   : -669.537
+Slack : -39.071
+TNS   : -721.600
 
 Type  : Slow 1100mV 0C Model Setup 'clk_div:clk_div1|fract_clk'
-Slack : -17.516
-TNS   : -3834.700
+Slack : -17.507
+TNS   : -3613.487
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -4.318
-TNS   : -278.014
-
-Type  : Slow 1100mV 0C Model Hold 'clk_div:clk_div1|fract_clk'
-Slack : -1.184
-TNS   : -4.302
+Slack : -4.840
+TNS   : -291.579
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : -1.102
-TNS   : -1.102
+Slack : -1.045
+TNS   : -1.045
+
+Type  : Slow 1100mV 0C Model Hold 'clk_div:clk_div1|fract_clk'
+Slack : -0.142
+TNS   : -0.420
 
 Type  : Slow 1100mV 0C Model Hold 'clk_div:clk_div1|vga_clk'
-Slack : 0.532
+Slack : 0.645
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_div:clk_div1|fract_clk'
 Slack : -2.225
-TNS   : -532.267
+TNS   : -564.557
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.644
-TNS   : -39.048
+Slack : -0.700
+TNS   : -39.375
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_div:clk_div1|vga_clk'
-Slack : -0.414
-TNS   : -53.550
+Slack : -0.410
+TNS   : -55.529
 
 Type  : Fast 1100mV 85C Model Setup 'clk_div:clk_div1|vga_clk'
-Slack : -22.339
-TNS   : -394.312
+Slack : -21.117
+TNS   : -437.321
 
 Type  : Fast 1100mV 85C Model Setup 'clk_div:clk_div1|fract_clk'
-Slack : -8.988
-TNS   : -2184.962
+Slack : -8.847
+TNS   : -2042.483
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -1.956
-TNS   : -122.729
-
-Type  : Fast 1100mV 85C Model Hold 'clk_div:clk_div1|fract_clk'
-Slack : -0.851
-TNS   : -3.149
+Slack : -2.230
+TNS   : -133.829
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -0.613
-TNS   : -0.613
+Slack : -0.355
+TNS   : -0.355
+
+Type  : Fast 1100mV 85C Model Hold 'clk_div:clk_div1|fract_clk'
+Slack : -0.206
+TNS   : -0.811
 
 Type  : Fast 1100mV 85C Model Hold 'clk_div:clk_div1|vga_clk'
-Slack : 0.247
+Slack : 0.314
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_div:clk_div1|fract_clk'
@@ -103,35 +103,35 @@ Slack : -1.702
 TNS   : -149.776
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.584
-TNS   : -7.169
+Slack : -0.658
+TNS   : -7.020
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_div:clk_div1|vga_clk'
-Slack : -0.170
-TNS   : -2.557
+Slack : -0.157
+TNS   : -2.502
 
 Type  : Fast 1100mV 0C Model Setup 'clk_div:clk_div1|vga_clk'
-Slack : -21.099
-TNS   : -364.209
+Slack : -19.944
+TNS   : -398.510
 
 Type  : Fast 1100mV 0C Model Setup 'clk_div:clk_div1|fract_clk'
-Slack : -8.505
-TNS   : -1975.237
+Slack : -8.395
+TNS   : -1849.331
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -1.788
-TNS   : -112.316
+Slack : -2.206
+TNS   : -123.513
 
 Type  : Fast 1100mV 0C Model Hold 'clk_div:clk_div1|fract_clk'
-Slack : -0.810
-TNS   : -2.956
+Slack : -0.339
+TNS   : -1.291
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.564
-TNS   : -0.564
+Slack : -0.305
+TNS   : -0.305
 
 Type  : Fast 1100mV 0C Model Hold 'clk_div:clk_div1|vga_clk'
-Slack : 0.219
+Slack : 0.282
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_div:clk_div1|fract_clk'
@@ -139,11 +139,11 @@ Slack : -1.702
 TNS   : -149.776
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.579
-TNS   : -7.146
+Slack : -0.657
+TNS   : -7.029
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_div:clk_div1|vga_clk'
 Slack : -0.118
-TNS   : -1.246
+TNS   : -1.440
 
 ------------------------------------------------------------
