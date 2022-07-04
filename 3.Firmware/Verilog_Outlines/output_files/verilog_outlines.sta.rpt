@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for verilog_outlines
-Mon Jul 04 18:30:39 2022
+Mon Jul 04 21:59:04 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -113,12 +113,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 3.92        ;
+; Average used               ; 4.75        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;  41.7%      ;
+;     Processors 2-4         ;  58.3%      ;
+;     Processors 5-8         ;  50.0%      ;
 ;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -139,9 +140,9 @@ applicable agreement for further details.
 +------------+-----------------+----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                 ; Note ;
 +------------+-----------------+----------------------------+------+
-; 52.21 MHz  ; 52.21 MHz       ; clk_div:clk_div1|vga_clk   ;      ;
-; 55.03 MHz  ; 55.03 MHz       ; clk_div:clk_div1|fract_clk ;      ;
-; 194.89 MHz ; 194.89 MHz      ; clk                        ;      ;
+; 48.84 MHz  ; 48.84 MHz       ; clk_div:clk_div1|vga_clk   ;      ;
+; 55.23 MHz  ; 55.23 MHz       ; clk_div:clk_div1|fract_clk ;      ;
+; 189.43 MHz ; 189.43 MHz      ; clk                        ;      ;
 +------------+-----------------+----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -157,9 +158,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------+---------+---------------+
 ; Clock                      ; Slack   ; End Point TNS ;
 +----------------------------+---------+---------------+
-; clk_div:clk_div1|vga_clk   ; -40.076 ; -720.549      ;
-; clk_div:clk_div1|fract_clk ; -17.172 ; -3851.495     ;
-; clk                        ; -4.131  ; -269.696      ;
+; clk_div:clk_div1|vga_clk   ; -40.079 ; -669.168      ;
+; clk_div:clk_div1|fract_clk ; -17.107 ; -3844.109     ;
+; clk                        ; -4.279  ; -274.760      ;
 +----------------------------+---------+---------------+
 
 
@@ -168,9 +169,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clk                        ; -1.338 ; -1.338        ;
-; clk_div:clk_div1|fract_clk ; -0.660 ; -2.421        ;
-; clk_div:clk_div1|vga_clk   ; 0.469  ; 0.000         ;
+; clk_div:clk_div1|fract_clk ; -1.357 ; -5.012        ;
+; clk                        ; -1.349 ; -1.349        ;
+; clk_div:clk_div1|vga_clk   ; 0.543  ; 0.000         ;
 +----------------------------+--------+---------------+
 
 
@@ -191,9 +192,9 @@ No paths to report.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clk_div:clk_div1|fract_clk ; -2.225 ; -547.785      ;
-; clk                        ; -0.821 ; -36.147       ;
-; clk_div:clk_div1|vga_clk   ; -0.440 ; -54.705       ;
+; clk_div:clk_div1|fract_clk ; -2.225 ; -536.048      ;
+; clk                        ; -0.617 ; -35.616       ;
+; clk_div:clk_div1|vga_clk   ; -0.413 ; -54.017       ;
 +----------------------------+--------+---------------+
 
 
@@ -202,9 +203,9 @@ No paths to report.
 +-----------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+--------+--------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; -0.564 ; -0.138 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; -0.302 ; 0.279  ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 2.098  ; 2.573  ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; -0.635 ; -0.186 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; -0.753 ; -0.258 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 2.880  ; 3.613  ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -213,9 +214,9 @@ No paths to report.
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; 3.126 ; 2.752 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; 2.899 ; 2.390 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 2.774 ; 2.371 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; 3.204 ; 2.810 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; 3.326 ; 2.914 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 2.785 ; 2.327 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -224,24 +225,24 @@ No paths to report.
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 12.868 ; 13.281 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 12.773 ; 13.271 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 12.633 ; 13.048 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 12.868 ; 13.281 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 11.843 ; 12.445 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 11.389 ; 9.731  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 10.297 ; 11.907 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 10.297 ; 11.907 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 9.178  ; 10.226 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 7.173  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 11.222 ; 13.036 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 11.222 ; 13.036 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 9.374  ; 10.471 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 9.943  ; 11.258 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.943  ; 11.258 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 9.570  ; 10.688 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 10.373 ; 8.923  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 8.306  ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 14.391 ; 15.552 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 14.391 ; 15.552 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 13.089 ; 13.525 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 13.156 ; 13.593 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 13.370 ; 14.586 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 10.312 ; 8.846  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 8.798  ; 10.047 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 8.798  ; 10.047 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 8.531  ; 9.473  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 6.396  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 11.040 ; 13.074 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 11.040 ; 13.074 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 8.908  ; 9.956  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 9.587  ; 10.999 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.587  ; 10.999 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 8.644  ; 9.632  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 10.879 ; 9.323  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 7.315  ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -250,24 +251,24 @@ No paths to report.
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 9.196  ; 9.530  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 9.303  ; 9.680  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 9.196  ; 9.530  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 9.419  ; 9.749  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 9.376  ; 9.834  ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 10.270 ; 8.836  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 8.312  ; 9.201  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 9.334  ; 10.734 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 8.312  ; 9.201  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 6.661  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 8.503  ; 9.472  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 10.170 ; 11.751 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 8.503  ; 9.472  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 8.669  ; 9.640  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.034  ; 10.209 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 8.669  ; 9.640  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 9.312  ; 8.068  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 7.655  ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 9.634  ; 9.996  ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 10.693 ; 11.505 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 9.634  ; 9.996  ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 9.676  ; 10.009 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 10.757 ; 11.718 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 9.255  ; 8.001  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 7.737  ; 8.572  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 7.981  ; 9.087  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 7.737  ; 8.572  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 5.888  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 8.082  ; 8.988  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 9.987  ; 11.781 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 8.082  ; 8.988  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 7.851  ; 8.733  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 8.640  ; 9.862  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 7.851  ; 8.733  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 9.757  ; 8.441  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 6.598  ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -282,9 +283,9 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                 ; Note ;
 +------------+-----------------+----------------------------+------+
-; 51.83 MHz  ; 51.83 MHz       ; clk_div:clk_div1|vga_clk   ;      ;
-; 53.73 MHz  ; 53.73 MHz       ; clk_div:clk_div1|fract_clk ;      ;
-; 179.79 MHz ; 179.79 MHz      ; clk                        ;      ;
+; 48.32 MHz  ; 48.32 MHz       ; clk_div:clk_div1|vga_clk   ;      ;
+; 54.01 MHz  ; 54.01 MHz       ; clk_div:clk_div1|fract_clk ;      ;
+; 188.04 MHz ; 188.04 MHz      ; clk                        ;      ;
 +------------+-----------------+----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -294,9 +295,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+---------+---------------+
 ; Clock                      ; Slack   ; End Point TNS ;
 +----------------------------+---------+---------------+
-; clk_div:clk_div1|vga_clk   ; -40.873 ; -720.243      ;
-; clk_div:clk_div1|fract_clk ; -17.613 ; -3866.253     ;
-; clk                        ; -4.562  ; -273.569      ;
+; clk_div:clk_div1|vga_clk   ; -40.786 ; -669.537      ;
+; clk_div:clk_div1|fract_clk ; -17.516 ; -3834.700     ;
+; clk                        ; -4.318  ; -278.014      ;
 +----------------------------+---------+---------------+
 
 
@@ -305,9 +306,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clk                        ; -1.151 ; -1.151        ;
-; clk_div:clk_div1|fract_clk ; -0.606 ; -2.113        ;
-; clk_div:clk_div1|vga_clk   ; 0.486  ; 0.000         ;
+; clk_div:clk_div1|fract_clk ; -1.184 ; -4.302        ;
+; clk                        ; -1.102 ; -1.102        ;
+; clk_div:clk_div1|vga_clk   ; 0.532  ; 0.000         ;
 +----------------------------+--------+---------------+
 
 
@@ -328,9 +329,9 @@ No paths to report.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clk_div:clk_div1|fract_clk ; -2.225 ; -540.640      ;
-; clk                        ; -0.867 ; -40.952       ;
-; clk_div:clk_div1|vga_clk   ; -0.453 ; -56.191       ;
+; clk_div:clk_div1|fract_clk ; -2.225 ; -532.267      ;
+; clk                        ; -0.644 ; -39.048       ;
+; clk_div:clk_div1|vga_clk   ; -0.414 ; -53.550       ;
 +----------------------------+--------+---------------+
 
 
@@ -339,9 +340,9 @@ No paths to report.
 +-----------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+--------+--------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; -0.638 ; -0.188 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; -0.362 ; 0.246  ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 2.085  ; 2.570  ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; -0.641 ; -0.171 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; -0.799 ; -0.293 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 2.836  ; 3.589  ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -350,9 +351,9 @@ No paths to report.
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; 3.115 ; 2.730 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; 2.882 ; 2.370 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 2.736 ; 2.326 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; 3.131 ; 2.723 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; 3.292 ; 2.867 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 2.738 ; 2.271 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -361,24 +362,24 @@ No paths to report.
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 12.497 ; 12.952 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 12.426 ; 12.952 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 12.275 ; 12.718 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 12.497 ; 12.946 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 11.473 ; 12.138 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 11.264 ; 9.497  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 10.081 ; 11.763 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 10.081 ; 11.763 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 8.856  ; 9.978  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 6.920  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 11.026 ; 12.909 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 11.026 ; 12.909 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 9.012  ; 10.220 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 9.691  ; 11.086 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.691  ; 11.086 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 9.260  ; 10.445 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 10.242 ; 8.702  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 8.157  ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 14.036 ; 15.235 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 14.036 ; 15.235 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 12.593 ; 13.092 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 12.675 ; 13.162 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 13.054 ; 14.335 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 10.204 ; 8.637  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 8.547  ; 9.869  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 8.547  ; 9.869  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 8.185  ; 9.217  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 6.047  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 10.973 ; 13.036 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 10.973 ; 13.036 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 8.595  ; 9.717  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 9.351  ; 10.848 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.351  ; 10.848 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 8.334  ; 9.399  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 10.725 ; 9.098  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 7.033  ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -387,24 +388,24 @@ No paths to report.
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 8.953  ; 9.313  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 9.072  ; 9.483  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 8.953  ; 9.313  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 9.163  ; 9.532  ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 9.100  ; 9.633  ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 10.124 ; 8.603  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 8.001  ; 8.951  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 9.116  ; 10.558 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 8.001  ; 8.951  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 6.416  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 8.157  ; 9.205  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 9.970  ; 11.575 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 8.157  ; 9.205  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 8.371  ; 9.385  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 8.783  ; 9.999  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 8.371  ; 9.385  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 9.151  ; 7.855  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 7.485  ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 9.260  ; 9.666  ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 10.443 ; 11.309 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 9.260  ; 9.666  ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 9.317  ; 9.706  ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 10.521 ; 11.560 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 9.117  ; 7.791  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 7.409  ; 8.305  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 7.735  ; 8.884  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 7.409  ; 8.305  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 5.559  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 7.779  ; 8.742  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 9.907  ; 11.679 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 7.779  ; 8.742  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 7.554  ; 8.483  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 8.412  ; 9.697  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 7.554  ; 8.483  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 9.573  ; 8.217  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 6.319  ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -419,9 +420,9 @@ No synchronizer chains to report.
 +----------------------------+---------+---------------+
 ; Clock                      ; Slack   ; End Point TNS ;
 +----------------------------+---------+---------------+
-; clk_div:clk_div1|vga_clk   ; -21.856 ; -426.802      ;
-; clk_div:clk_div1|fract_clk ; -9.231  ; -2181.339     ;
-; clk                        ; -2.090  ; -121.050      ;
+; clk_div:clk_div1|vga_clk   ; -22.339 ; -394.312      ;
+; clk_div:clk_div1|fract_clk ; -8.988  ; -2184.962     ;
+; clk                        ; -1.956  ; -122.729      ;
 +----------------------------+---------+---------------+
 
 
@@ -430,9 +431,9 @@ No synchronizer chains to report.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clk                        ; -0.524 ; -0.524        ;
-; clk_div:clk_div1|fract_clk ; -0.421 ; -1.489        ;
-; clk_div:clk_div1|vga_clk   ; 0.183  ; 0.000         ;
+; clk_div:clk_div1|fract_clk ; -0.851 ; -3.149        ;
+; clk                        ; -0.613 ; -0.613        ;
+; clk_div:clk_div1|vga_clk   ; 0.247  ; 0.000         ;
 +----------------------------+--------+---------------+
 
 
@@ -454,8 +455,8 @@ No paths to report.
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
 ; clk_div:clk_div1|fract_clk ; -1.702 ; -149.776      ;
-; clk                        ; -0.781 ; -7.274        ;
-; clk_div:clk_div1|vga_clk   ; -0.200 ; -3.025        ;
+; clk                        ; -0.584 ; -7.169        ;
+; clk_div:clk_div1|vga_clk   ; -0.170 ; -2.557        ;
 +----------------------------+--------+---------------+
 
 
@@ -464,9 +465,9 @@ No paths to report.
 +-----------+----------------------------+--------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise   ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+--------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; -0.400 ; 0.238 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; -0.239 ; 0.499 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 1.236  ; 1.868 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; -0.434 ; 0.190 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; -0.473 ; 0.208 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 1.705  ; 2.643 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+--------+-------+------------+----------------------------+
 
 
@@ -475,9 +476,9 @@ No paths to report.
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; 1.744 ; 1.146 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; 1.563 ; 0.878 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 1.530 ; 0.907 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; 1.742 ; 1.156 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; 1.821 ; 1.201 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 1.468 ; 0.778 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -486,24 +487,24 @@ No paths to report.
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 7.531 ; 8.016 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 7.491 ; 8.016 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 7.413 ; 7.852 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 7.531 ; 8.013 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 7.006 ; 7.641 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 7.915 ; 6.364 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 6.747 ; 8.238 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 6.747 ; 8.238 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 5.953 ; 6.923 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 4.663 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 7.364 ; 9.081 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 7.364 ; 9.081 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 6.002 ; 7.088 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 6.470 ; 7.735 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 6.470 ; 7.735 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 6.208 ; 7.283 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 7.204 ; 5.823 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 5.746 ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 8.676 ; 9.764 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 8.676 ; 9.764 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 7.604 ; 8.059 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 7.663 ; 8.148 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 8.147 ; 9.317 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 7.152 ; 5.789 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 5.679 ; 6.847 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 5.679 ; 6.847 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 5.366 ; 6.289 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 3.966 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 7.392 ; 9.292 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 7.392 ; 9.292 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.684 ; 6.694 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 6.244 ; 7.597 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 6.244 ; 7.597 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.479 ; 6.451 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 7.470 ; 6.019 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 4.795 ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -512,24 +513,24 @@ No paths to report.
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 5.623 ; 5.996 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 5.679 ; 6.108 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 5.623 ; 5.996 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 5.739 ; 6.154 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 5.735 ; 6.255 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 7.187 ; 5.814 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 5.417 ; 6.260 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 6.156 ; 7.481 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 5.417 ; 6.260 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 4.384 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 5.476 ; 6.457 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.719 ; 8.252 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.476 ; 6.457 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 5.649 ; 6.604 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.910 ; 7.061 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.649 ; 6.604 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.505 ; 5.292 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 5.354 ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 5.817 ; 6.215 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 6.707 ; 7.519 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 5.817 ; 6.215 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 5.855 ; 6.259 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 6.776 ; 7.741 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 6.454 ; 5.260 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 4.895 ; 5.730 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 5.182 ; 6.236 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 4.895 ; 5.730 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 3.702 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 5.187 ; 6.084 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.734 ; 8.444 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.187 ; 6.084 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 5.003 ; 5.889 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.657 ; 6.859 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.003 ; 5.889 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.749 ; 5.483 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 4.377 ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -544,9 +545,9 @@ No synchronizer chains to report.
 +----------------------------+---------+---------------+
 ; Clock                      ; Slack   ; End Point TNS ;
 +----------------------------+---------+---------------+
-; clk_div:clk_div1|vga_clk   ; -20.613 ; -391.541      ;
-; clk_div:clk_div1|fract_clk ; -8.737  ; -1984.006     ;
-; clk                        ; -2.106  ; -111.404      ;
+; clk_div:clk_div1|vga_clk   ; -21.099 ; -364.209      ;
+; clk_div:clk_div1|fract_clk ; -8.505  ; -1975.237     ;
+; clk                        ; -1.788  ; -112.316      ;
 +----------------------------+---------+---------------+
 
 
@@ -555,9 +556,9 @@ No synchronizer chains to report.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clk                        ; -0.503 ; -0.503        ;
-; clk_div:clk_div1|fract_clk ; -0.486 ; -1.690        ;
-; clk_div:clk_div1|vga_clk   ; 0.175  ; 0.000         ;
+; clk_div:clk_div1|fract_clk ; -0.810 ; -2.956        ;
+; clk                        ; -0.564 ; -0.564        ;
+; clk_div:clk_div1|vga_clk   ; 0.219  ; 0.000         ;
 +----------------------------+--------+---------------+
 
 
@@ -579,8 +580,8 @@ No paths to report.
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
 ; clk_div:clk_div1|fract_clk ; -1.702 ; -149.776      ;
-; clk                        ; -0.766 ; -7.265        ;
-; clk_div:clk_div1|vga_clk   ; -0.149 ; -1.626        ;
+; clk                        ; -0.579 ; -7.146        ;
+; clk_div:clk_div1|vga_clk   ; -0.118 ; -1.246        ;
 +----------------------------+--------+---------------+
 
 
@@ -589,9 +590,9 @@ No paths to report.
 +-----------+----------------------------+--------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise   ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+--------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; -0.380 ; 0.260 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; -0.232 ; 0.495 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 1.162  ; 1.778 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; -0.364 ; 0.266 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; -0.419 ; 0.254 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 1.644  ; 2.528 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+--------+-------+------------+----------------------------+
 
 
@@ -600,9 +601,9 @@ No paths to report.
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; 1.700 ; 1.100 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; 1.534 ; 0.865 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 1.490 ; 0.873 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; 1.647 ; 1.054 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; 1.741 ; 1.121 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 1.399 ; 0.726 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -611,24 +612,24 @@ No paths to report.
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 7.136 ; 7.570 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 7.115 ; 7.570 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 7.044 ; 7.417 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 7.136 ; 7.564 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 6.578 ; 7.160 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 7.339 ; 6.051 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 6.390 ; 7.641 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 6.390 ; 7.641 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 5.538 ; 6.369 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 4.396 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 6.959 ; 8.441 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.959 ; 8.441 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.579 ; 6.516 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 6.090 ; 7.171 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 6.090 ; 7.171 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.769 ; 6.710 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.686 ; 5.516 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 5.304 ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 8.244 ; 9.178 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 8.244 ; 9.178 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 7.118 ; 7.529 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 7.180 ; 7.618 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 7.695 ; 8.723 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 6.642 ; 5.510 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 5.350 ; 6.327 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 5.350 ; 6.327 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 4.971 ; 5.759 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 3.632 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 7.069 ; 8.693 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 7.069 ; 8.693 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.293 ; 6.150 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 5.907 ; 7.057 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.907 ; 7.057 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.092 ; 5.927 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.895 ; 5.665 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 4.343 ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -637,24 +638,24 @@ No paths to report.
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 5.276 ; 5.588 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 5.327 ; 5.702 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 5.276 ; 5.588 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 5.368 ; 5.738 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 5.337 ; 5.823 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 6.641 ; 5.518 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 5.026 ; 5.741 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 5.818 ; 6.911 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 5.026 ; 5.741 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 4.130 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 5.080 ; 5.909 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.337 ; 7.631 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.080 ; 5.909 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 5.239 ; 6.062 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.550 ; 6.510 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.239 ; 6.062 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.004 ; 5.001 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 4.925 ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 5.361 ; 5.711 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 6.302 ; 7.005 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 5.361 ; 5.711 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 5.401 ; 5.772 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 6.352 ; 7.207 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 5.964 ; 4.997 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 4.526 ; 5.223 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 4.871 ; 5.734 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 4.526 ; 5.223 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 3.390 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 4.819 ; 5.568 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.431 ; 7.856 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 4.819 ; 5.568 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 4.638 ; 5.383 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.342 ; 6.350 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 4.638 ; 5.383 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.202 ; 5.149 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 3.955 ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -669,14 +670,14 @@ No synchronizer chains to report.
 +-----------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                       ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack            ; -40.873   ; -1.338 ; N/A      ; N/A     ; -2.225              ;
-;  clk                        ; -4.562    ; -1.338 ; N/A      ; N/A     ; -0.867              ;
-;  clk_div:clk_div1|fract_clk ; -17.613   ; -0.660 ; N/A      ; N/A     ; -2.225              ;
-;  clk_div:clk_div1|vga_clk   ; -40.873   ; 0.175  ; N/A      ; N/A     ; -0.453              ;
-; Design-wide TNS             ; -4860.065 ; -3.759 ; 0.0      ; 0.0     ; -638.637            ;
-;  clk                        ; -273.569  ; -1.338 ; N/A      ; N/A     ; -40.952             ;
-;  clk_div:clk_div1|fract_clk ; -3866.253 ; -2.421 ; N/A      ; N/A     ; -547.785            ;
-;  clk_div:clk_div1|vga_clk   ; -720.549  ; 0.000  ; N/A      ; N/A     ; -56.191             ;
+; Worst-case Slack            ; -40.786   ; -1.357 ; N/A      ; N/A     ; -2.225              ;
+;  clk                        ; -4.318    ; -1.349 ; N/A      ; N/A     ; -0.644              ;
+;  clk_div:clk_div1|fract_clk ; -17.516   ; -1.357 ; N/A      ; N/A     ; -2.225              ;
+;  clk_div:clk_div1|vga_clk   ; -40.786   ; 0.219  ; N/A      ; N/A     ; -0.414              ;
+; Design-wide TNS             ; -4788.037 ; -6.361 ; 0.0      ; 0.0     ; -625.681            ;
+;  clk                        ; -278.014  ; -1.349 ; N/A      ; N/A     ; -39.048             ;
+;  clk_div:clk_div1|fract_clk ; -3844.109 ; -5.012 ; N/A      ; N/A     ; -536.048            ;
+;  clk_div:clk_div1|vga_clk   ; -669.537  ; 0.000  ; N/A      ; N/A     ; -54.017             ;
 +-----------------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -685,9 +686,9 @@ No synchronizer chains to report.
 +-----------+----------------------------+--------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise   ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+--------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; -0.380 ; 0.260 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; -0.232 ; 0.499 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 2.098  ; 2.573 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; -0.364 ; 0.266 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; -0.419 ; 0.254 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 2.880  ; 3.613 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+--------+-------+------------+----------------------------+
 
 
@@ -696,9 +697,9 @@ No synchronizer chains to report.
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
-; in_0      ; clk_div:clk_div1|fract_clk ; 3.126 ; 2.752 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; in_1      ; clk_div:clk_div1|fract_clk ; 2.899 ; 2.390 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; start     ; clk_div:clk_div1|fract_clk ; 2.774 ; 2.371 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_0      ; clk_div:clk_div1|fract_clk ; 3.204 ; 2.810 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; in_1      ; clk_div:clk_div1|fract_clk ; 3.326 ; 2.914 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; start     ; clk_div:clk_div1|fract_clk ; 2.785 ; 2.327 ; Rise       ; clk_div:clk_div1|fract_clk ;
 +-----------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -707,24 +708,24 @@ No synchronizer chains to report.
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 12.868 ; 13.281 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 12.773 ; 13.271 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 12.633 ; 13.048 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 12.868 ; 13.281 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 11.843 ; 12.445 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 11.389 ; 9.731  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 10.297 ; 11.907 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 10.297 ; 11.907 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 9.178  ; 10.226 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 7.173  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 11.222 ; 13.036 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 11.222 ; 13.036 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 9.374  ; 10.471 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 9.943  ; 11.258 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.943  ; 11.258 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 9.570  ; 10.688 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 10.373 ; 8.923  ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 8.306  ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 14.391 ; 15.552 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 14.391 ; 15.552 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 13.089 ; 13.525 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 13.156 ; 13.593 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 13.370 ; 14.586 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 10.312 ; 8.846  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 8.798  ; 10.047 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 8.798  ; 10.047 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 8.531  ; 9.473  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 6.396  ;        ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 11.040 ; 13.074 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 11.040 ; 13.074 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 8.908  ; 9.956  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 9.587  ; 10.999 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 9.587  ; 10.999 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 8.644  ; 9.632  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 10.879 ; 9.323  ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;        ; 7.315  ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+--------+--------+------------+----------------------------+
 
 
@@ -733,24 +734,24 @@ No synchronizer chains to report.
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 ; Data Port     ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
-; p_in[*]       ; clk_div:clk_div1|fract_clk ; 5.276 ; 5.588 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 5.327 ; 5.702 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 5.276 ; 5.588 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 5.368 ; 5.738 ; Rise       ; clk_div:clk_div1|fract_clk ;
-;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 5.337 ; 5.823 ; Rise       ; clk_div:clk_div1|fract_clk ;
-; hsynch        ; clk_div:clk_div1|vga_clk   ; 6.641 ; 5.518 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 5.026 ; 5.741 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 5.818 ; 6.911 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 5.026 ; 5.741 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ; 4.130 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 5.080 ; 5.909 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.337 ; 7.631 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 5.080 ; 5.909 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 5.239 ; 6.062 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.550 ; 6.510 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 5.239 ; 6.062 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.004 ; 5.001 ; Rise       ; clk_div:clk_div1|vga_clk   ;
-; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 4.925 ; Fall       ; clk_div:clk_div1|vga_clk   ;
+; p_in[*]       ; clk_div:clk_div1|fract_clk ; 5.361 ; 5.711 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[0]      ; clk_div:clk_div1|fract_clk ; 6.302 ; 7.005 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[1]      ; clk_div:clk_div1|fract_clk ; 5.361 ; 5.711 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[2]      ; clk_div:clk_div1|fract_clk ; 5.401 ; 5.772 ; Rise       ; clk_div:clk_div1|fract_clk ;
+;  p_in[3]      ; clk_div:clk_div1|fract_clk ; 6.352 ; 7.207 ; Rise       ; clk_div:clk_div1|fract_clk ;
+; hsynch        ; clk_div:clk_div1|vga_clk   ; 5.964 ; 4.997 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_blue[*]   ; clk_div:clk_div1|vga_clk   ; 4.526 ; 5.223 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[6]  ; clk_div:clk_div1|vga_clk   ; 4.871 ; 5.734 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_blue[7]  ; clk_div:clk_div1|vga_clk   ; 4.526 ; 5.223 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ; 3.390 ;       ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_green[*]  ; clk_div:clk_div1|vga_clk   ; 4.819 ; 5.568 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[6] ; clk_div:clk_div1|vga_clk   ; 6.431 ; 7.856 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_green[7] ; clk_div:clk_div1|vga_clk   ; 4.819 ; 5.568 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_red[*]    ; clk_div:clk_div1|vga_clk   ; 4.638 ; 5.383 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[6]   ; clk_div:clk_div1|vga_clk   ; 5.342 ; 6.350 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+;  vga_red[7]   ; clk_div:clk_div1|vga_clk   ; 4.638 ; 5.383 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vsynch        ; clk_div:clk_div1|vga_clk   ; 6.202 ; 5.149 ; Rise       ; clk_div:clk_div1|vga_clk   ;
+; vga_clk       ; clk_div:clk_div1|vga_clk   ;       ; 3.955 ; Fall       ; clk_div:clk_div1|vga_clk   ;
 +---------------+----------------------------+-------+-------+------------+----------------------------+
 
 
@@ -979,9 +980,9 @@ No synchronizer chains to report.
 ; clk                        ; clk                        ; 36432        ; 0        ; 0        ; 0        ;
 ; clk_div:clk_div1|vga_clk   ; clk                        ; 1            ; 1        ; 0        ; 0        ;
 ; clk                        ; clk_div:clk_div1|fract_clk ; 4            ; 0        ; 0        ; 0        ;
-; clk_div:clk_div1|fract_clk ; clk_div:clk_div1|fract_clk ; 31047387     ; 0        ; 0        ; 0        ;
+; clk_div:clk_div1|fract_clk ; clk_div:clk_div1|fract_clk ; 31045712     ; 0        ; 0        ; 0        ;
 ; clk_div:clk_div1|fract_clk ; clk_div:clk_div1|vga_clk   ; > 2147483647 ; 0        ; 0        ; 0        ;
-; clk_div:clk_div1|vga_clk   ; clk_div:clk_div1|vga_clk   ; 58880440     ; 0        ; 0        ; 0        ;
+; clk_div:clk_div1|vga_clk   ; clk_div:clk_div1|vga_clk   ; 58880072     ; 0        ; 0        ; 0        ;
 +----------------------------+----------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -994,9 +995,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clk                        ; clk                        ; 36432        ; 0        ; 0        ; 0        ;
 ; clk_div:clk_div1|vga_clk   ; clk                        ; 1            ; 1        ; 0        ; 0        ;
 ; clk                        ; clk_div:clk_div1|fract_clk ; 4            ; 0        ; 0        ; 0        ;
-; clk_div:clk_div1|fract_clk ; clk_div:clk_div1|fract_clk ; 31047387     ; 0        ; 0        ; 0        ;
+; clk_div:clk_div1|fract_clk ; clk_div:clk_div1|fract_clk ; 31045712     ; 0        ; 0        ; 0        ;
 ; clk_div:clk_div1|fract_clk ; clk_div:clk_div1|vga_clk   ; > 2147483647 ; 0        ; 0        ; 0        ;
-; clk_div:clk_div1|vga_clk   ; clk_div:clk_div1|vga_clk   ; 58880440     ; 0        ; 0        ; 0        ;
+; clk_div:clk_div1|vga_clk   ; clk_div:clk_div1|vga_clk   ; 58880072     ; 0        ; 0        ; 0        ;
 +----------------------------+----------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1033,7 +1034,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Jul 04 18:30:25 2022
+    Info: Processing started: Mon Jul 04 21:58:50 2022
 Info: Command: quartus_sta verilog_outlines -c verilog_outlines
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
@@ -1051,26 +1052,26 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -40.076
+Info (332146): Worst-case setup slack is -40.079
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -40.076            -720.549 clk_div:clk_div1|vga_clk 
-    Info (332119):   -17.172           -3851.495 clk_div:clk_div1|fract_clk 
-    Info (332119):    -4.131            -269.696 clk 
-Info (332146): Worst-case hold slack is -1.338
+    Info (332119):   -40.079            -669.168 clk_div:clk_div1|vga_clk 
+    Info (332119):   -17.107           -3844.109 clk_div:clk_div1|fract_clk 
+    Info (332119):    -4.279            -274.760 clk 
+Info (332146): Worst-case hold slack is -1.357
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.338              -1.338 clk 
-    Info (332119):    -0.660              -2.421 clk_div:clk_div1|fract_clk 
-    Info (332119):     0.469               0.000 clk_div:clk_div1|vga_clk 
+    Info (332119):    -1.357              -5.012 clk_div:clk_div1|fract_clk 
+    Info (332119):    -1.349              -1.349 clk 
+    Info (332119):     0.543               0.000 clk_div:clk_div1|vga_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -547.785 clk_div:clk_div1|fract_clk 
-    Info (332119):    -0.821             -36.147 clk 
-    Info (332119):    -0.440             -54.705 clk_div:clk_div1|vga_clk 
+    Info (332119):    -2.225            -536.048 clk_div:clk_div1|fract_clk 
+    Info (332119):    -0.617             -35.616 clk 
+    Info (332119):    -0.413             -54.017 clk_div:clk_div1|vga_clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
@@ -1078,26 +1079,26 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -40.873
+Info (332146): Worst-case setup slack is -40.786
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -40.873            -720.243 clk_div:clk_div1|vga_clk 
-    Info (332119):   -17.613           -3866.253 clk_div:clk_div1|fract_clk 
-    Info (332119):    -4.562            -273.569 clk 
-Info (332146): Worst-case hold slack is -1.151
+    Info (332119):   -40.786            -669.537 clk_div:clk_div1|vga_clk 
+    Info (332119):   -17.516           -3834.700 clk_div:clk_div1|fract_clk 
+    Info (332119):    -4.318            -278.014 clk 
+Info (332146): Worst-case hold slack is -1.184
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.151              -1.151 clk 
-    Info (332119):    -0.606              -2.113 clk_div:clk_div1|fract_clk 
-    Info (332119):     0.486               0.000 clk_div:clk_div1|vga_clk 
+    Info (332119):    -1.184              -4.302 clk_div:clk_div1|fract_clk 
+    Info (332119):    -1.102              -1.102 clk 
+    Info (332119):     0.532               0.000 clk_div:clk_div1|vga_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -540.640 clk_div:clk_div1|fract_clk 
-    Info (332119):    -0.867             -40.952 clk 
-    Info (332119):    -0.453             -56.191 clk_div:clk_div1|vga_clk 
+    Info (332119):    -2.225            -532.267 clk_div:clk_div1|fract_clk 
+    Info (332119):    -0.644             -39.048 clk 
+    Info (332119):    -0.414             -53.550 clk_div:clk_div1|vga_clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
@@ -1105,56 +1106,56 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -21.856
+Info (332146): Worst-case setup slack is -22.339
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -21.856            -426.802 clk_div:clk_div1|vga_clk 
-    Info (332119):    -9.231           -2181.339 clk_div:clk_div1|fract_clk 
-    Info (332119):    -2.090            -121.050 clk 
-Info (332146): Worst-case hold slack is -0.524
+    Info (332119):   -22.339            -394.312 clk_div:clk_div1|vga_clk 
+    Info (332119):    -8.988           -2184.962 clk_div:clk_div1|fract_clk 
+    Info (332119):    -1.956            -122.729 clk 
+Info (332146): Worst-case hold slack is -0.851
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.524              -0.524 clk 
-    Info (332119):    -0.421              -1.489 clk_div:clk_div1|fract_clk 
-    Info (332119):     0.183               0.000 clk_div:clk_div1|vga_clk 
+    Info (332119):    -0.851              -3.149 clk_div:clk_div1|fract_clk 
+    Info (332119):    -0.613              -0.613 clk 
+    Info (332119):     0.247               0.000 clk_div:clk_div1|vga_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -1.702            -149.776 clk_div:clk_div1|fract_clk 
-    Info (332119):    -0.781              -7.274 clk 
-    Info (332119):    -0.200              -3.025 clk_div:clk_div1|vga_clk 
+    Info (332119):    -0.584              -7.169 clk 
+    Info (332119):    -0.170              -2.557 clk_div:clk_div1|vga_clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -20.613
+Info (332146): Worst-case setup slack is -21.099
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -20.613            -391.541 clk_div:clk_div1|vga_clk 
-    Info (332119):    -8.737           -1984.006 clk_div:clk_div1|fract_clk 
-    Info (332119):    -2.106            -111.404 clk 
-Info (332146): Worst-case hold slack is -0.503
+    Info (332119):   -21.099            -364.209 clk_div:clk_div1|vga_clk 
+    Info (332119):    -8.505           -1975.237 clk_div:clk_div1|fract_clk 
+    Info (332119):    -1.788            -112.316 clk 
+Info (332146): Worst-case hold slack is -0.810
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.503              -0.503 clk 
-    Info (332119):    -0.486              -1.690 clk_div:clk_div1|fract_clk 
-    Info (332119):     0.175               0.000 clk_div:clk_div1|vga_clk 
+    Info (332119):    -0.810              -2.956 clk_div:clk_div1|fract_clk 
+    Info (332119):    -0.564              -0.564 clk 
+    Info (332119):     0.219               0.000 clk_div:clk_div1|vga_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -1.702            -149.776 clk_div:clk_div1|fract_clk 
-    Info (332119):    -0.766              -7.265 clk 
-    Info (332119):    -0.149              -1.626 clk_div:clk_div1|vga_clk 
+    Info (332119):    -0.579              -7.146 clk 
+    Info (332119):    -0.118              -1.246 clk_div:clk_div1|vga_clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5258 megabytes
-    Info: Processing ended: Mon Jul 04 18:30:39 2022
+    Info: Peak virtual memory: 5256 megabytes
+    Info: Processing ended: Mon Jul 04 21:59:04 2022
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:54
+    Info: Total CPU time (on all processors): 00:00:55
 
 

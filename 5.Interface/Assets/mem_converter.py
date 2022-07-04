@@ -9,9 +9,9 @@ def to_bin(data,res):
         data-=int(data/128)*128
         data=data*2
     return message
-b = open(file_name+"_b.mem","w")
-g = open(file_name+"_g.mem","w")
-r = open(file_name+"_r.mem","w")
+b = open(file_name+"_b_1bit.mem","w")
+g = open(file_name+"_g_1bit.mem","w")
+r = open(file_name+"_r_1bit.mem","w")
 image=cv2.imread(file_name+".bmp")
 
 for i in range(image.shape[0]):
@@ -23,9 +23,9 @@ b.close()
 g.close()
 r.close()
 img=np.zeros((image.shape[0],image.shape[1],3),dtype=np.uint8)
-b = open(file_name+"_b.mem","r")
-g = open(file_name+"_g.mem","r")
-r = open(file_name+"_r.mem","r")
+b = open(file_name+"_b_1bit.mem","r")
+g = open(file_name+"_g_1bit.mem","r")
+r = open(file_name+"_r_1bit.mem","r")
 def to_num(data,res):
     return int(data,2)*2**(8-res) +2**(8-res)/2
 for i in range(img.shape[0]):

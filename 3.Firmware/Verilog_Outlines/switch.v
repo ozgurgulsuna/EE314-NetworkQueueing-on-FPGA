@@ -20,7 +20,8 @@ module switch(
 	always @(posedge fract_clk) begin
 		write[3:0] = 0;
 		
-		if (start == 1) begin
+		// Detecting rising edge of startn for active low buttons
+		if (start == 0) begin
 			count4 = 3'd0;
 			stop = 0;
 			p_out[3:0] = 4'd0;

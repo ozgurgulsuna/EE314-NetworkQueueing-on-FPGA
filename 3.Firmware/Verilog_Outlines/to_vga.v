@@ -169,34 +169,34 @@ module to_vga(
 		vga_blue = 0;
 		
 		// import image pixels from .mem files
-//		$readmemb("WIN95_r.mem",background_r);
-//		$readmemb("WIN95_g.mem",background_g);
-//		$readmemb("WIN95_b.mem",background_b);
+//		$readmemb("WIN95_r_1bit.mem",background_r);
+//		$readmemb("WIN95_g_1bit.mem",background_g);
+//		$readmemb("WIN95_b_1bit.mem",background_b);
 		
 		
-		$readmemb("green-digits_r.mem",green_digits_r);
-		$readmemb("green-digits_g.mem",green_digits_g);
-		$readmemb("green-digits_b.mem",green_digits_b);
+		$readmemb("green_digits_r_1bit.mem",green_digits_r);
+		$readmemb("green_digits_g_1bit.mem",green_digits_g);
+		$readmemb("green_digits_b_1bit.mem",green_digits_b);
 		
 		
-		$readmemb("blue-digits_r.mem",blue_digits_r);
-		$readmemb("blue-digits_g.mem",blue_digits_g);
-		$readmemb("blue-digits_b.mem",blue_digits_b);
+		$readmemb("blue_digits_r_1bit.mem",blue_digits_r);
+		$readmemb("blue_digits_g_1bit.mem",blue_digits_g);
+		$readmemb("blue_digits_b_1bit.mem",blue_digits_b);
 		
 		
-		$readmemb("gray-digits_r.mem",gray_digits_r);
-		$readmemb("gray-digits_g.mem",gray_digits_g);
-		$readmemb("gray-digits_b.mem",gray_digits_b);
+		$readmemb("gray_digits_r_1bit.mem",gray_digits_r);
+		$readmemb("gray_digits_g_1bit.mem",gray_digits_g);
+		$readmemb("gray_digits_b_1bit.mem",gray_digits_b);
 		
 		
-		$readmemb("red-digits_r.mem",red_digits_r);
-		$readmemb("red-digits_g.mem",red_digits_g);
-		$readmemb("red-digits_b.mem",red_digits_b);
+		$readmemb("red_digits_r_1bit.mem",red_digits_r);
+		$readmemb("red_digits_g_1bit.mem",red_digits_g);
+		$readmemb("red_digits_b_1bit.mem",red_digits_b);
 		
 		
-		$readmemb("yellow-digits_r.mem",yellow_digits_r);
-		$readmemb("yellow-digits_g.mem",yellow_digits_g);
-		$readmemb("yellow-digits_b.mem",yellow_digits_b);
+		$readmemb("yellow_digits_r_1bit.mem",yellow_digits_r);
+		$readmemb("yellow_digits_g_1bit.mem",yellow_digits_g);
+		$readmemb("yellow_digits_b_1bit.mem",yellow_digits_b);
 		
 	end
 	
