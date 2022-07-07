@@ -1,17 +1,40 @@
 clc
 clear
 
-load('C:\Users\Powerlab\Documents\GitHub\EE314-TermProject\2.Simulation\Results\2206201600\obj.mat')
-figure
+load('D:\2021-22\Okul\Dersler\EE314\TermProject\2.Simulation\Results\2206201600\obj.mat')
+figure;
+
+set(gcf,'Position',[0 0 1000 650]);
+
 for i=1:length(obj(:,1))
-    plot3(obj(i,1),obj(i,2),obj(i,3),"bo",'MarkerFaceColor','b')
+    plot3(obj(i,1),obj(i,2),obj(i,3),"ko",'MarkerFaceColor','k','MarkerSize',4)
     hold on
 %     xlim([0 200])
     set(gca,'xscale','log')
 %     ylim([0 200])
     set(gca,'yscale','log')
     zlim([min(obj(:,3)) max(obj(:,3))])
+    grid on
 end
+hold on
+[Xs,Ys] = meshgrid(1:0.2:10,1:0.2:10);
+Zs= 0.0006629.*(Xs-5.693).^2+0.0002484.*(Ys-9.689).^2+0.9492;
+Xs=exp(Xs);
+Ys=exp(Ys);
+surf(Xs,Ys,Zs,'EdgeColor','interp','FaceAlpha',0.9)
+
+xlim([0 10^3])
+ylim([0 10^4])
+zlim([0.946 0.982])
+
+
+set(0,'defaulttextinterpreter','latex')
+set(gca, 'YGrid', 'on', 'XGrid', 'on')
+xlabel("Latency Requirement",'FontSize',22);
+ylabel("Reliability Requirement",'FontSize',22);
+zlabel("Minimal Drop Requirement",'FontSize',22);
+title("\bf{Pareto Front}",'FontSize',24);
+
 %%
 
 %%
@@ -54,6 +77,7 @@ mesh(X,Y,Z) %interpolated
 
 axis tight; hold on
 plot3(x,y,z,'.','MarkerSize',15) %nonuniform
+grid on
 
 %%
 
