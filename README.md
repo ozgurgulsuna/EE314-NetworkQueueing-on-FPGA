@@ -4,13 +4,6 @@
    
  <h3 align="center" style=" border-bottom: none ;">FPGA Implementation of a Not-So-Very-Simple Network Quality of Service (QoS) Algorithm </h3>
 <p align="center">
-   
-
-<h4 align="center" style=" border-bottom: none ;">Group Members</h4>
-<p align="center">      
-Özgür Gülsuna </br>
-Işık Emir Altunkol
-</p>
 
 
 <h2 align="center" style=" border-bottom: none ;"> Project Summary </h2>
